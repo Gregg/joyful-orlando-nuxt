@@ -2,7 +2,7 @@
 	.navbar-collapse {
 		text-align: end;
 	}
-	
+
 	.hero-section {
 		padding-top: 70px;
 		padding-bottom: 70px;
@@ -61,7 +61,7 @@
 		left: 50px;
 	}
 
-	.serach-area-shap img{
+	.search-area-shape img{
 		display:none;
 	}
 	.filtter-dropdown{
@@ -75,7 +75,7 @@
 		width: 135px;
 		bottom: 12px;
 	}
-	.serch-area-btn {
+	.search-area-btn {
 		margin-bottom: 15px;
 	}
 	.event-detail{
@@ -141,7 +141,7 @@
 	  }
 }
 
-@media screen and (min-width:576px) and (max-width:767.98px) { 
+@media screen and (min-width:576px) and (max-width:767.98px) {
 	.sec-heading h2{
 		font-size: 32px;
 		line-height: 42px;
@@ -209,7 +209,7 @@
 	.hero-content {
 		padding-right: 0px;
 	  }
-	.serach-area-shap img{
+	.search-area-shape img{
 		display:none;
 	}
 	.filtter-dropdown{
@@ -223,7 +223,7 @@
 			width: 135px;
 			bottom: 12px;
 		}
-		.serch-area-btn {
+		.search-area-btn {
 			margin-bottom: 15px;
 		}
 		.event-detail{
@@ -283,7 +283,7 @@
 	  }
 }
 
-@media screen and (min-width:768px) and (max-width:991.98px) { 
+@media screen and (min-width:768px) and (max-width:991.98px) {
     .hero-section {
 		padding-top: 70px;
 		padding-bottom: 70px;
@@ -341,8 +341,8 @@
 		left: 160px;
 	}
 
-	
-	.serach-area-shap img{
+
+	.search-area-shape img{
 		display:none;
 	}
 
@@ -403,10 +403,10 @@
 		top: 42%;
   left: 46%;
 	}
-	
+
 }
 
-@media screen and (min-width:992px) and (max-width:1199.98px) { 
+@media screen and (min-width:992px) and (max-width:1199.98px) {
     .form-input a {
 		padding: 20px 50px;
 		width: 50%;
@@ -445,7 +445,7 @@
 			width: 195px;
 			bottom: 12px;
 		}
-		.serach-area-shap img {
+		.search-area-shape img {
 			width: 156px;
 			height: auto;
 		  }
@@ -481,7 +481,7 @@
 		.member-profile{
 			text-align: center;
 		}
-		
+
 }
 
 @media screen and (min-width:1200px) and (max-width:1399.98px) {
