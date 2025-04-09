@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+const navBarShown = ref(false);
 </script>
 
 <template>
@@ -38,14 +38,14 @@
 					<button
 						class="navbar-toggler"
 						type="button"
-						data-bs-toggle="collapse"
-						data-bs-target="#navbarNav">
+						@click="navBarShown = !navBarShown">
 						<span class="navbar-toggler-icon" />
 					</button>
 
 					<div
 						id="navbarNav"
-						class="collapse navbar-collapse">
+						class="collapse navbar-collapse"
+						:class="{ show: navBarShown }">
 						<ul class="navbar-nav ms-auto">
 							<!-- Search Inside Navbar for Larger Screens -->
 							<li class="nav-item d-none d-lg-flex">
