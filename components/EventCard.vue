@@ -1,18 +1,15 @@
 <script setup lang="ts">
+import type { IEvent } from "~/types/event";
+
 defineProps<{
-	event: {
-		id: string;
-		name: string;
-		date: string;
-		imageUrl: string;
-	};
+	event: IEvent;
 }>();
 </script>
 
 <template>
 	<div class="col-xl-4 col-lg-6 col-md-12 event-card-outer">
-		<a
-			href="#"
+		<NuxtLink
+			:to="`/event/${event.slug}`"
 			role="button">
 			<div class="event-card">
 				<div class="event-thumb-img">
@@ -26,7 +23,7 @@ defineProps<{
 					<p>{{ event.date }}</p>
 				</div>
 			</div>
-		</a>
+		</NuxtLink>
 	</div>
 </template>
 
