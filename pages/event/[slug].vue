@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import { events } from "~/data-temp/tempEvents";
 
+definePageMeta({
+	validate: async (route) => {
+		const slug = route.params.slug as string;
+		// Note: we'll need to check it differently when connecting to the backend
+		return !!events.find(event => event.slug === slug);
+	},
+});
+
 const route = useRoute();
 const slug = route.params.slug as string;
 
