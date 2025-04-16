@@ -227,5 +227,16 @@ const navBarShown = ref(false);
 </template>
 
 <style scoped>
+.collapse:not(.show) {
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: opacity 0s 0.4s ease, height 0.35s ease;
+}
 
+.collapse.show {
+	opacity: 1;
+	height: 100px;
+	transition: opacity 0s 0s ease, height 0.35s ease;
+}
 </style>
