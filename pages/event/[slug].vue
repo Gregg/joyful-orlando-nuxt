@@ -68,7 +68,7 @@ const event = computed(() => events.find(event => event.slug === slug));
 								<i class="fa fa-calendar" />
 								<p>{{ event.date }}</p>
 							</div>
-							<p>{{ event.details }}</p>
+							<p>{{ event.description }}</p>
 							<a
 								href="about.html"
 								class="btn btn-dark"

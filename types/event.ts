@@ -4,7 +4,7 @@ export interface IEvent {
 	date: string;
 	imageUrl: string;
 	slug: string;
-	details: string;
+	description: string;
 	locationName: string;
 	locationAddress: string;
 }
