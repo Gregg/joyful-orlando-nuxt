@@ -85,7 +85,7 @@ const events = computed(() => {
 				<div class="row">
 					<div class="col">
 						<div class="event-detail">
-							<p>Typically immersive experiences where participants relax while being enveloped in soothing sounds from instruments like singing bowls, gongs, and chimes. These sessions are designed to promote deep relaxation, reduce stress, and support meditation through vibrational healing.</p>
+							<p>{{ category.description }}</p>
 						</div>
 					</div>
 				</div>

@@ -5,4 +5,5 @@ export interface ICategory {
 	icon: string;
 	color: string;
 	featured: boolean;
+	description: string;
 }
