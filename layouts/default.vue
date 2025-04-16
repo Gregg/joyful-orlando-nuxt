@@ -8,14 +8,14 @@ const navBarShown = ref(false);
 		<header>
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
-					<a
+					<NuxtLink
 						class="navbar-brand"
-						href="#">
+						to="/">
 						<span class="logo-icon"><img
 							src="/images/joyful-orlando-icon.webp"
 							alt=""></span>
 						<span class="logo-text d-none d-lg-block">Joyful Orlando</span>
-					</a>
+					</NuxtLink>
 					<!-- Search Icon beside Toggler on Mobile -->
 					<!-- <div class="mobile-search d-lg-none ms-auto">
      <div class="search-container">
@@ -29,9 +29,9 @@ const navBarShown = ref(false);
 						class=" ">
 						<ul class="navbar-nav ms-auto">
 							<li class="nav-item d-lg-none">
-								<a
+								<NuxtLink
 									class="nav-link"
-									href="#">Browse Events</a>
+									to="/events">Browse Events</NuxtLink>
 							</li>
 						</ul>
 					</div>
@@ -58,9 +58,9 @@ const navBarShown = ref(false);
 								</div>
 							</li>
 							<li class="nav-item d-none d-lg-flex">
-								<a
+								<NuxtLink
 									class="nav-link"
-									href="#">Browse Events</a>
+									to="/events">Browse Events</NuxtLink>
 							</li>
 							<li class="nav-item">
 								<a
@@ -70,7 +70,6 @@ const navBarShown = ref(false);
 						</ul>
 						<!-- Sign Up Button -->
 						<a
-							id=""
 							href="#signupform"
 							role="button"
 							class="btn btn-dark">Sign Up</a>
@@ -176,9 +175,9 @@ const navBarShown = ref(false);
 							<div class="oue-links">
 								<h6>Our Link</h6>
 								<ul class="list-inline">
-									<li><a href="#">- Home</a></li>
-									<li><a href="#">- About Us</a></li>
-									<li><a href="#">- Browse Events</a></li>
+									<li><NuxtLink to="/">- Home</NuxtLink></li>
+									<li><NuxtLink to="/about">- About Us</NuxtLink></li>
+									<li><NuxtLink to="/events">- Browse Events</NuxtLink></li>
 									<li><a href="#">- Submit Event</a></li>
 								</ul>
 							</div>
