@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { featuredCategories } = useCategories();
+const { featuredEvents } = useEvents();
 </script>
 
 <template>
@@ -65,60 +66,11 @@ const { featuredCategories } = useCategories();
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-xl-4 col-lg-6 col-md-12 event-card-outer">
-						<a
-							href="#"
-							role="button">
-							<div class="event-card">
-								<div class="event-thumb-img">
-									<img
-										src="/images/event-1.webp"
-										class="img-fluid"
-										alt="">
-								</div>
-								<div class="event-list-content">
-									<h5>New Moon Community Event and Drum Circle</h5>
-									<p>February 2, 4 PM</p>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="col-xl-4 col-lg-6 col-md-12 event-card-outer">
-						<a
-							href="eventinformation.html"
-							role="button">
-							<div class="event-card">
-								<div class="event-thumb-img">
-									<img
-										src="/images/event-2.webp"
-										class="img-fluid"
-										alt="">
-								</div>
-								<div class="event-list-content">
-									<h5>Cuddles &amp; Consent: Platonic Touch in a Facilitated Cuddle Space</h5>
-									<p>February 23, 6:30 PM</p>
-								</div>
-							</div>
-						</a>
-					</div>
-					<div class="col-xl-4 col-lg-6 col-md-12 event-card-outer">
-						<a
-							href="#"
-							role="button">
-							<div class="event-card">
-								<div class="event-thumb-img">
-									<img
-										src="/images/event-3.webp"
-										class="img-fluid"
-										alt="">
-								</div>
-								<div class="event-list-content">
-									<h5>Akashic Horizons: Group Meditation Experience</h5>
-									<p>February 12, 1 PM</p>
-								</div>
-							</div>
-						</a>
-					</div>
+					<EventCard
+						v-for="event in featuredEvents"
+						:key="event.id"
+						:event="event" />
+
 					<div class="col-12 text-center">
 						<a
 							href="eventbrowse.html"
