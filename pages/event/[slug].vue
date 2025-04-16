@@ -1,18 +1,24 @@
 <script setup lang="ts">
-import { events } from "~/data-temp/tempEvents";
+// import { events } from "~/data-temp/tempEvents";
+import { dateFormat } from "~/utils/dateFormat";
+
+const { data: events } = await useFetch("/api/events");
 
 definePageMeta({
-	validate: async (route) => {
-		const slug = route.params.slug as string;
-		// Note: we'll need to check it differently when connecting to the backend
-		return !!events.find(event => event.slug === slug);
-	},
+	// validate: async (route) => {
+	// 	const slug = route.params.slug as string;
+	// 	// Note: we'll need to check it differently when connecting to the backend
+	// 	return !!events.value?.find(event => event.slug === slug);
+	// },
 });
 
 const route = useRoute();
 const slug = route.params.slug as string;
 
-const event = computed(() => events.find(event => event.slug === slug));
+const event = computed(() => events.value?.find(event => event.slug === slug));
+
+const { getLocationById } = useLocations();
+const location = computed(() => event.value ? getLocationById(event.value.locationId) : null);
 </script>
 
 <template>
@@ -66,7 +72,7 @@ const event = computed(() => events.find(event => event.slug === slug));
 							</div>
 							<div class="time-detail">
 								<i class="fa fa-calendar" />
-								<p>{{ event.date }}</p>
+								<p>{{ dateFormat(event.date) }}</p>
 							</div>
 							<p>{{ event.description }}</p>
 							<a
@@ -78,7 +84,7 @@ const event = computed(() => events.find(event => event.slug === slug));
 					<div class="col-xl-5 col-lg-5 col-md-12">
 						<div class="right-content text-end order-lg-last order-first">
 							<img
-								src="/images/event.webp"
+								:src="event?.imageUrl"
 								class="img-fluid"
 								alt="">
 							<img
@@ -112,8 +118,8 @@ const event = computed(() => events.find(event => event.slug === slug));
 								<img
 									src="/images/location.webp"
 									alt="">
-								<h6>{{ event.locationName }}</h6>
-								<p>{{ event.locationAddress }}</p>
+								<h6>{{ location?.name }}</h6>
+								<p>{{ location?.address }}</p>
 							</div>
 						</div>
 					</div>

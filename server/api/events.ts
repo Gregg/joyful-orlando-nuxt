@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
 				locationId: (record.get("Location") as Array<string>)[0] as string,
 				description: record.get("Description") as string,
 				imageUrl: image[0].url,
-				slug: (record.get("Name") as string).replace(/\s+/g, "-").toLowerCase(),
+				slug: record.id,
 			};
 			events.push(fetchedEvent);
 		});
