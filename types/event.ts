@@ -5,6 +5,5 @@ export interface IEvent {
 	imageUrl: string;
 	slug: string;
 	description: string;
-	locationName: string;
-	locationAddress: string;
+	locationId: string;
 }
