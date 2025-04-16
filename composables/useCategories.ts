@@ -22,5 +22,11 @@ export function useCategories() {
 		}
 	};
 
-	return { categories, getCategoryById, getCategoryBySlug, getColor, featuredCategories };
+	const sortedCategories = computed(() => {
+		return categories.value?.sort((a, b) => {
+			return a.name.localeCompare(b.name);
+		});
+	});
+
+	return { categories, sortedCategories, getCategoryById, getCategoryBySlug, getColor, featuredCategories };
 }

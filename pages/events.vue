@@ -1,5 +1,8 @@
 <script setup lang="ts">
 const { events } = useEvents();
+const filterDropdownShown = ref(false);
+
+const { sortedCategories } = useCategories();
 </script>
 
 <template>
@@ -47,26 +50,20 @@ const { events } = useEvents();
 									class="btn btn-secondary dropdown-toggle"
 									type="button"
 									data-bs-toggle="dropdown"
-									aria-expanded="false">
+									:aria-expanded="filterDropdownShown"
+									@click="filterDropdownShown = !filterDropdownShown">
 									Filter By Category
 								</button>
 								<ul
 									class="dropdown-menu"
+									:class="{ show: filterDropdownShown }"
 									aria-labelledby="dropdownMenuButton1">
-									<li>
-										<a
+									<li
+										v-for="category in sortedCategories"
+										:key="category.id">
+										<NuxtLink
 											class="dropdown-item"
-											href="#">Action</a>
-									</li>
-									<li>
-										<a
-											class="dropdown-item"
-											href="#">Another action</a>
-									</li>
-									<li>
-										<a
-											class="dropdown-item"
-											href="#">Something else here</a>
+											:to="`/category/${category.slug}`">{{ category.name }}</NuxtLink>
 									</li>
 								</ul>
 							</div>
