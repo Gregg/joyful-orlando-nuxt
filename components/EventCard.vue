@@ -2,9 +2,12 @@
 import type { IEvent } from "~/types/event";
 import { dateFormat } from "~/utils/dateFormat";
 
-defineProps<{
+const { event } = defineProps<{
 	event: IEvent;
 }>();
+
+const { getCategoryById } = useCategories();
+const categories = computed(() => event ? event.categories.map(categoryId => getCategoryById(categoryId)) : null);
 </script>
 
 <template>
@@ -12,7 +15,8 @@ defineProps<{
 		<NuxtLink
 			:to="`/event/${event.slug}`"
 			role="button">
-			<div class="event-card">
+			<div
+				class="event-card">
 				<div class="event-thumb-img">
 					<img
 						:src="event.imageUrl"
@@ -22,6 +26,18 @@ defineProps<{
 				<div class="event-list-content">
 					<h5>{{ event.name }}</h5>
 					<p>{{ dateFormat(event.date) }}</p>
+					<p>
+						<span
+							v-for="category in categories"
+							:key="category?.id"
+							class="category-tag">
+							<span class="category-tag-content">
+								<img
+									:src="category?.icon"
+									alt=""> {{ category?.name }}
+							</span>
+						</span>
+					</p>
 				</div>
 			</div>
 		</NuxtLink>
@@ -29,5 +45,28 @@ defineProps<{
 </template>
 
 <style scoped>
+.category-tag {
+	opacity: 0.9;
+	background-color: #F5F5F5;
+	border-radius: 70px;
+	padding: 5px 15px;
+}
 
+.category-tag-content {
+	height: 28px;
+	border-color: #F5F5F5;
+	color: #222222;
+	font-weight: 600;
+	font-size: 15px;
+	display: inline-flex;
+	align-items: center;
+	gap: 10px;
+	text-transform: inherit;
+	margin-top: 14px;
+}
+
+.category-tag-content img {
+	width: 15px;
+	height: 15px;
+}
 </style>

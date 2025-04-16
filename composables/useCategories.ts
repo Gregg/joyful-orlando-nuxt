@@ -1,3 +1,5 @@
+import type { IEvent } from "~/types/event";
+
 export function useCategories() {
 	const { data: categories } = useFetch("/api/categories");
 
@@ -13,5 +15,12 @@ export function useCategories() {
 		return categories.value?.filter(category => category.featured === true);
 	});
 
-	return { categories, getCategoryById, getCategoryBySlug, featuredCategories };
+	const getColor = (event: IEvent) => {
+		const category = getCategoryById(event.categories[0]);
+		if (category) {
+			return category.color;
+		}
+	};
+
+	return { categories, getCategoryById, getCategoryBySlug, getColor, featuredCategories };
 }
