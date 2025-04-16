@@ -54,11 +54,11 @@ const events = computed(() => {
 				<div class="row search-area">
 					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 align-content-center">
 						<div class="search-area-btn">
-							<button
+							<NuxtLink
 								class="btn btn-outline-secondary"
-								type="button">
-								View All  Events
-							</button>
+								to="/events">
+								View All Events
+							</NuxtLink>
 						</div>
 					</div>
 					<div class="col-xl-4 col-lg-4 col-md-0 col-sm-12 order-md-last  text-center">
