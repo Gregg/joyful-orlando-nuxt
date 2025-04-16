@@ -72,9 +72,9 @@ const { featuredEvents } = useEvents();
 						:event="event" />
 
 					<div class="col-12 text-center">
-						<a
-							href="eventbrowse.html"
-							class="btn btn-dark">View More Events</a>
+						<NuxtLink
+							to="/events"
+							class="btn btn-dark">View More Events</NuxtLink>
 					</div>
 				</div>
 			</div>
