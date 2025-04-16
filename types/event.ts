@@ -6,4 +6,5 @@ export interface IEvent {
 	slug: string;
 	description: string;
 	locationId: string;
+	categories: Array<string>;
 }

@@ -19,6 +19,9 @@ const event = computed(() => events.value?.find(event => event.slug === slug));
 
 const { getLocationById } = useLocations();
 const location = computed(() => event.value ? getLocationById(event.value.locationId) : null);
+
+const { getCategoryById } = useCategories();
+const categories = computed(() => event.value ? event.value.categories.map(categoryId => getCategoryById(categoryId)) : null);
 </script>
 
 <template>
@@ -58,17 +61,13 @@ const location = computed(() => event.value ? getLocationById(event.value.locati
 					<div class="col-xl-7 col-lg-7 col-md-12 order-lg-first order-last">
 						<div class="left-content">
 							<h5>{{ event.name }}</h5>
-							<div class="event-btns-group">
-								<button class="btn btn-secondary">
-									<img
-										src="/images/ic-self-compassion.webp"
-										alt=""> Self-Compassion
-								</button>
-								<button class="btn btn-secondary">
-									<img
-										src="/images/ic-authentic-connection.webp"
-										alt=""> Authentic Connection
-								</button>
+							<div
+								v-if="categories"
+								class="event-btns-group">
+								<CategoryButton
+									v-for="category in categories"
+									:key="category?.id"
+									:category="category" />
 							</div>
 							<div class="time-detail">
 								<i class="fa fa-calendar" />
