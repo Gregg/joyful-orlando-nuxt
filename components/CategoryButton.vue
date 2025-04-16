@@ -12,7 +12,7 @@ defineEmits(["click"]);
 	<button
 		v-if="category"
 		class="btn btn-secondary"
-		@click="$emit('click')">
+		@click="$router.push(`/category/${category.slug}`)">
 		<img
 			:src="category.icon"
 			alt=""> {{ category.name }}

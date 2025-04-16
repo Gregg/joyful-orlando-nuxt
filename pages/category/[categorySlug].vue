@@ -1,5 +1,21 @@
 <script setup lang="ts">
-import { events } from "~/data-temp/tempEvents";
+const { getEventsByCategoryId } = useEvents();
+const { getCategoryBySlug } = useCategories();
+
+const route = useRoute();
+
+const category = computed(() => {
+	const categorySlug = route.params.categorySlug as string;
+	return getCategoryBySlug(categorySlug);
+});
+
+const events = computed(() => {
+	const categoryId = category.value?.id;
+	if (!categoryId) {
+		return [];
+	}
+	return getEventsByCategoryId(categoryId);
+});
 </script>
 
 <template>
@@ -16,7 +32,7 @@ import { events } from "~/data-temp/tempEvents";
 				<div class="row align-items-center gx-0 mt-40">
 					<div class="col-xl-12">
 						<div class="hero-content text-center">
-							<h1>Sound Bath Events</h1>
+							<h1>{{ category?.name }} Events</h1>
 						</div>
 						<img
 							src="/images/white-star.webp"
@@ -37,7 +53,7 @@ import { events } from "~/data-temp/tempEvents";
 			<div class="container">
 				<div class="row search-area">
 					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 align-content-center">
-						<div class="serch-area-btn">
+						<div class="search-area-btn">
 							<button
 								class="btn btn-outline-secondary"
 								type="button">
@@ -46,7 +62,7 @@ import { events } from "~/data-temp/tempEvents";
 						</div>
 					</div>
 					<div class="col-xl-4 col-lg-4 col-md-0 col-sm-12 order-md-last  text-center">
-						<div class="serach-area-shap ">
+						<div class="search-area-shape">
 							<img
 								src="/images/star-vector.webp"
 								alt="">
@@ -59,7 +75,7 @@ import { events } from "~/data-temp/tempEvents";
 								alt="">
 							<input
 								id=""
-								class="serch-input"
+								class="search-input"
 								type="search"
 								name=""
 								placeholder="Search by Title">
