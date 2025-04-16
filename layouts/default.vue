@@ -229,6 +229,7 @@ const navBarShown = ref(false);
 .collapse:not(.show) {
 	height: 0;
 	opacity: 0;
+	display: block;
 	overflow: hidden;
 	transition: opacity 0s 0.4s ease, height 0.35s ease;
 }
