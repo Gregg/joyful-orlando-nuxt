@@ -4,4 +4,5 @@ export interface ICategory {
 	slug: string;
 	icon: string;
 	color: string;
+	featured: boolean;
 }

@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
 	const categories: Array<ICategory> = [];
 
 	await base("Categories").select({
-		fields: ["Name", "Slug", "Color", "Icon"],
+		fields: ["Name", "Slug", "Color", "Icon", "Featured"],
 		view: "Grid view",
 	}).eachPage((records, processNextPage) => {
 		records.forEach(function (record) {
@@ -15,6 +15,7 @@ export default defineEventHandler(async (event) => {
 				slug: record.get("Slug") as string,
 				icon: record.get("Icon") as string,
 				color: record.get("Color") as string,
+				featured: record.get("Featured") as boolean,
 			});
 		});
 

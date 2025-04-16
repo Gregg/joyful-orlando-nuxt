@@ -5,5 +5,9 @@ export function useCategories() {
 		return categories.value?.find(category => category.id === id);
 	}
 
-	return { categories, getCategoryById };
+	const featuredCategories = computed(() => {
+		return categories.value?.filter(category => category.featured === true);
+	});
+
+	return { categories, getCategoryById, featuredCategories };
 }

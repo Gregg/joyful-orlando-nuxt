@@ -1,5 +1,5 @@
 <script setup lang="ts">
-
+const { featuredCategories } = useCategories();
 </script>
 
 <template>
@@ -57,31 +57,10 @@
 				<div class="row">
 					<div class="col-xl-12">
 						<div class="event-btns-group">
-							<button class="btn btn-secondary">
-								<img
-									src="/images/ic-authentic-connection.webp"
-									alt=""> Authentic Connection
-							</button>
-							<button class="btn btn-secondary">
-								<img
-									src="/images/ic-dancing-movement.webp"
-									alt=""> Dancing &amp; Movement
-							</button>
-							<button class="btn btn-secondary">
-								<img
-									src="/images/ic-self-compassion.webp"
-									alt=""> Self-Compassion
-							</button>
-							<button class="btn btn-secondary">
-								<img
-									src="/images/ic-sound-healing.webp"
-									alt=""> Sound Healing
-							</button>
-							<button class="btn btn-secondary">
-								<img
-									src="/images/ic-spiritual.webp"
-									alt=""> Spiritual
-							</button>
+							<CategoryButton
+								v-for="category in featuredCategories"
+								:key="category.id"
+								:category="category" />
 						</div>
 					</div>
 				</div>
