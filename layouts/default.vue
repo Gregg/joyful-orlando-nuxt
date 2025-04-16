@@ -1,5 +1,7 @@
 <script setup lang="ts">
 const navBarShown = ref(false);
+
+const isLargeScreen = useMediaQuery("(min-width: 992px)", { ssrWidth: 360 });
 </script>
 
 <template>
@@ -45,7 +47,7 @@ const navBarShown = ref(false);
 					<div
 						id="navbarNav"
 						class="collapse navbar-collapse"
-						:class="{ show: navBarShown }">
+						:class="{ show: isLargeScreen || navBarShown }">
 						<ul class="navbar-nav ms-auto">
 							<!-- Search Inside Navbar for Larger Screens -->
 							<li class="nav-item d-none d-lg-flex">
@@ -53,7 +55,7 @@ const navBarShown = ref(false);
 									<i class="far fa-search search-icon" />
 									<input
 										type="text"
-										class="search-input"
+										class="navbar-search-input"
 										placeholder="Search...">
 								</div>
 							</li>
