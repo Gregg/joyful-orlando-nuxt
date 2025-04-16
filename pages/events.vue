@@ -37,7 +37,7 @@ import { events } from "~/data-temp/tempEvents";
 			<div class="container">
 				<div class="row search-area">
 					<div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 align-content-center">
-						<div class="filtter-dropdown position-relative">
+						<div class="filter-dropdown position-relative">
 							<div class="dropdown">
 								<img
 									src="/images/filter-icon.webp"
