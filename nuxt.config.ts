@@ -14,7 +14,7 @@ export default defineNuxtConfig({
 			],
 		},
 	},
-	css: ["~/assets/styles/responsive.css", "~/assets/styles/style.css", "~/assets/styles/all.css"],
+	css: ["~/assets/styles/style.css", "~/assets/styles/responsive.css", "~/assets/styles/all.css"],
 	compatibilityDate: "2024-11-01",
 	eslint: {
 		config: {
