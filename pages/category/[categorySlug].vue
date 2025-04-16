@@ -42,7 +42,7 @@ const events = computed(() => {
 				</div>
 			</div>
 			<img
-				src="/images/category-vector.webp"
+				src="/images/cloudwhite.webp"
 				class="category-right-shape"
 				alt="">
 		</section>
@@ -108,5 +108,7 @@ const events = computed(() => {
 </template>
 
 <style scoped>
-
+.category-right-shape {
+	transform: rotateY(180deg);
+}
 </style>
