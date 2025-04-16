@@ -7,4 +7,5 @@ export interface IEvent {
 	description: string;
 	locationId: string;
 	categories: Array<string>;
+	featured: boolean;
 }

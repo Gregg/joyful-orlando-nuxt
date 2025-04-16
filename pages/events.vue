@@ -1,8 +1,5 @@
 <script setup lang="ts">
-// import { events } from "~/data-temp/tempEvents";
-
-const { data: events } = await useFetch("/api/events");
-console.log(events.value);
+const { events } = useEvents();
 </script>
 
 <template>

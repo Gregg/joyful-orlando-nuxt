@@ -20,6 +20,7 @@ export default defineEventHandler(async (event) => {
 				imageUrl: image[0].url,
 				slug: record.id,
 				categories: record.get("Categories") as Array<string>,
+				featured: record.get("Featured") as boolean,
 			};
 			events.push(fetchedEvent);
 		});
