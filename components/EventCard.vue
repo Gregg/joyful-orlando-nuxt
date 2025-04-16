@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { IEvent } from "~/types/event";
+import { dateFormat } from "~/utils/dateFormat";
 
 defineProps<{
 	event: IEvent;
@@ -20,7 +21,7 @@ defineProps<{
 				</div>
 				<div class="event-list-content">
 					<h5>{{ event.name }}</h5>
-					<p>{{ event.date }}</p>
+					<p>{{ dateFormat(event.date) }}</p>
 				</div>
 			</div>
 		</NuxtLink>
