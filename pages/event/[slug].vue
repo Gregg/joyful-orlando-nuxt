@@ -60,7 +60,9 @@ const categories = computed(() => event.value ? event.value.categories.map(categ
 				<div class="row align-items-center gx-0 consent-detail">
 					<div class="col-xl-7 col-lg-7 col-md-12 order-lg-first order-last">
 						<div class="left-content">
-							<h5>{{ event.name }}</h5>
+							<h5 v-if="event">
+								{{ event.name }}
+							</h5>
 							<div
 								v-if="categories"
 								class="event-btns-group">
@@ -71,9 +73,13 @@ const categories = computed(() => event.value ? event.value.categories.map(categ
 							</div>
 							<div class="time-detail">
 								<i class="fa fa-calendar" />
-								<p>{{ dateFormat(event.date) }}</p>
+								<p v-if="event">
+									{{ dateFormat(event.date) }}
+								</p>
 							</div>
-							<p>{{ event.description }}</p>
+							<p v-if="event">
+								{{ event.description }}
+							</p>
 							<a
 								href="about.html"
 								class="btn btn-dark"
