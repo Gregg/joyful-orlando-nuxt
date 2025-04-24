@@ -14,7 +14,7 @@ defineEmits(["click"]);
 		class="btn btn-secondary"
 		@click="$router.push(`/category/${category.slug}`)">
 		<img
-			:src="category.icon"
+			:src="`/images/icons/${category.icon}`"
 			alt=""> {{ category.name }}
 	</button>
 </template>

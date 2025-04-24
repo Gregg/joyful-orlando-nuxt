@@ -33,7 +33,7 @@ const categories = computed(() => event ? event.categories.map(categoryId => get
 							class="category-tag">
 							<span class="category-tag-content">
 								<img
-									:src="category?.icon"
+									:src="`/images/icons/${category?.icon}`"
 									alt=""> {{ category?.name }}
 							</span>
 						</span>
