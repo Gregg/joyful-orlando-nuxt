@@ -18,7 +18,7 @@ export default defineEventHandler(async (event) => {
 				locationId: (record.get("Location") as Array<string>)[0] as string,
 				description: record.get("Description") as string,
 				imageUrl: image[0].url,
-				slug: record.id,
+				slug: record.get("Slug") as string,
 				categories: record.get("Categories") as Array<string>,
 				featured: record.get("Featured") as boolean,
 			};
