@@ -401,7 +401,7 @@ background-color: transparent;
 	position: relative;
 	display: flex;
 	align-items: center;
-	width: 100%;
+	/* width: 100%; */
 }
 .form-input .input-box img{
 	position: absolute;
