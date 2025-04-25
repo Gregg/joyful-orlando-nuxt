@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	modules: ["@nuxt/eslint", "@vueuse/nuxt"],
+	modules: ["@nuxt/eslint", "@vueuse/nuxt", "@nuxtjs/seo"],
 	devtools: { enabled: true },
 	app: {
 		head: {
