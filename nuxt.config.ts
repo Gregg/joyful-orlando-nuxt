@@ -25,4 +25,9 @@ export default defineNuxtConfig({
 			},
 		},
 	},
+	sitemap: {
+		sources: [
+			"/api/__sitemap__/urls",
+		],
+	},
 });
