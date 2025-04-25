@@ -3,6 +3,16 @@ const { events } = useEvents();
 const filterDropdownShown = ref(false);
 
 const { sortedCategories } = useCategories();
+
+const searchQuery = ref("");
+const queriedEvents = computed(() => {
+	if (!searchQuery.value) {
+		return events.value;
+	}
+	return events.value?.filter((event) => {
+		return event.name.toLowerCase().includes(searchQuery.value.toLowerCase());
+	});
+});
 </script>
 
 <template>
@@ -82,17 +92,16 @@ const { sortedCategories } = useCategories();
 								src="/images/search-normal.webp"
 								alt="">
 							<input
-								id=""
+								v-model="searchQuery"
 								class="search-input"
 								type="search"
-								name=""
 								placeholder="Search by Title">
 						</div>
 					</div>
 				</div>
 				<div class="row">
 					<EventCard
-						v-for="event in events"
+						v-for="event in queriedEvents"
 						:key="event.id"
 						:event="event" />
 
