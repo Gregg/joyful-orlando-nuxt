@@ -22,6 +22,16 @@ const location = computed(() => event.value ? getLocationById(event.value.locati
 
 const { getCategoryById } = useCategories();
 const categories = computed(() => event.value ? event.value.categories.map(categoryId => getCategoryById(categoryId)) : null);
+
+useSchemaOrg([
+	defineEvent({
+		name: event.value?.name,
+		description: event.value?.description,
+		image: event.value?.imageUrl,
+		startDate: event.value?.date,
+		eventStatus: "EventScheduled",
+	}),
+]);
 </script>
 
 <template>
