@@ -16,6 +16,16 @@ const events = computed(() => {
 	}
 	return getEventsByCategoryId(categoryId);
 });
+
+const searchQuery = ref("");
+const queriedEvents = computed(() => {
+	if (!searchQuery.value) {
+		return events.value;
+	}
+	return events.value?.filter((event) => {
+		return event.name.toLowerCase().includes(searchQuery.value.toLowerCase());
+	});
+});
 </script>
 
 <template>
@@ -74,10 +84,9 @@ const events = computed(() => {
 								src="/images/search-normal-green.webp"
 								alt="">
 							<input
-								id=""
+								v-model="searchQuery"
 								class="search-input"
 								type="search"
-								name=""
 								placeholder="Search by Title">
 						</div>
 					</div>
@@ -91,7 +100,7 @@ const events = computed(() => {
 				</div>
 				<div class="row">
 					<EventCard
-						v-for="event in events"
+						v-for="event in queriedEvents"
 						:key="event.id"
 						:event="event" />
 
