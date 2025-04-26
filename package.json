@@ -21,6 +21,7 @@
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
+    "testcafe": "^3.7.2",
     "vitest": "^3.1.1"
   }
 }
