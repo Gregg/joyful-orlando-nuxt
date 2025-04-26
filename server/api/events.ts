@@ -2,9 +2,9 @@ import type { Attachment } from "airtable";
 import { base } from "../client";
 import type { IEvent } from "~/types/event";
 
-export default defineEventHandler(async (event) => {
-	const events: Array<IEvent> = [];
+const events: Array<IEvent> = [];
 
+async function fetchEvents() {
 	await base("Events").select({
 		view: "Grid view",
 	}).eachPage((records, processNextPage) => {
@@ -27,6 +27,12 @@ export default defineEventHandler(async (event) => {
 
 		processNextPage();
 	});
+}
+
+export default defineEventHandler(async (event) => {
+	if (events.length === 0) {
+		await fetchEvents();
+	}
 
 	return [...events];
 });

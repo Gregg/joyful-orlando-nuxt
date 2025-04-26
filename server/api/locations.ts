@@ -1,9 +1,9 @@
 import type { ILocation } from "~/types/location";
 import { base } from "~/server/client";
 
-export default defineEventHandler(async (event) => {
-	const locations: Array<ILocation> = [];
+const locations: Array<ILocation> = [];
 
+async function fetchLocations() {
 	await base("Locations").select({
 		fields: ["Name", "Address"],
 		view: "Grid view",
@@ -18,6 +18,11 @@ export default defineEventHandler(async (event) => {
 
 		processNextPage();
 	});
+}
+export default defineEventHandler(async (event) => {
+	if (locations.length === 0) {
+		await fetchLocations();
+	}
 
 	return [...locations];
 });

@@ -1,9 +1,9 @@
 import type { ICategory } from "~/types/category";
 import { base } from "~/server/client";
 
-export default defineEventHandler(async (event) => {
-	const categories: Array<ICategory> = [];
+const categories: Array<ICategory> = [];
 
+async function fetchCategories() {
 	await base("Categories").select({
 		fields: ["Name", "Slug", "Color", "Icon", "Featured", "Description"],
 		view: "Grid view",
@@ -22,6 +22,12 @@ export default defineEventHandler(async (event) => {
 
 		processNextPage();
 	});
+}
+
+export default defineEventHandler(async (event) => {
+	if (categories.length === 0) {
+		await fetchCategories();
+	}
 
 	return [...categories];
 });
