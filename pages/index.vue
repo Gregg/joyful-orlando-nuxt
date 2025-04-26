@@ -21,7 +21,8 @@ const { featuredEvents } = useEvents();
 							<p>Joyful Orlando is on a mission to spotlight conscious &amp; wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram). </p>
 							<a
 								href="#signupform"
-								class="btn btn-light">Join Now</a>
+								class="btn btn-light"
+								data-test="join-now-button">Join Now</a>
 						</div>
 					</div>
 					<div class="col-xl-6 col-lg-5 col-md-12 order-lg-last order-first">
