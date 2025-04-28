@@ -1,3 +1,5 @@
+const searchQuery = ref<string>("");
+
 export function useEvents() {
 	const { data: events } = useFetch("/api/events");
 
@@ -13,5 +15,5 @@ export function useEvents() {
 		return events.value?.filter(event => event.featured === true);
 	});
 
-	return { events, getEventBySlug, getEventsByCategoryId, featuredEvents };
+	return { events, getEventBySlug, getEventsByCategoryId, featuredEvents, searchQuery };
 }

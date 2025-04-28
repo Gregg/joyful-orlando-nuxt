@@ -1,7 +1,20 @@
 <script setup lang="ts">
+const router = useRouter();
+const route = useRoute();
+const { searchQuery } = useEvents();
 const navBarShown = ref(false);
 
 const isLargeScreen = useMediaQuery("(min-width: 992px)", { ssrWidth: 360 });
+
+const isInEventsPage = computed(() => {
+	return route.path === "/events";
+});
+
+const searchInputHandler = () => {
+	if (searchQuery.value && !isInEventsPage.value) {
+		router.push("/events");
+	}
+};
 </script>
 
 <template>
@@ -54,9 +67,11 @@ const isLargeScreen = useMediaQuery("(min-width: 992px)", { ssrWidth: 360 });
 								<div class="search-container">
 									<i class="far fa-search search-icon" />
 									<input
+										v-model="searchQuery"
 										type="text"
 										class="navbar-search-input"
-										placeholder="Search...">
+										placeholder="Search..."
+										@input="searchInputHandler">
 								</div>
 							</li>
 							<li class="nav-item d-none d-lg-flex">

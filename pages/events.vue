@@ -1,10 +1,9 @@
 <script setup lang="ts">
-const { events } = useEvents();
+const { events, searchQuery } = useEvents();
 const filterDropdownShown = ref(false);
 
 const { sortedCategories } = useCategories();
 
-const searchQuery = ref("");
 const queriedEvents = computed(() => {
 	if (!searchQuery.value) {
 		return events.value;
