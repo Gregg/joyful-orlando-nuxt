@@ -103,12 +103,6 @@ const queriedEvents = computed(() => {
 						v-for="event in queriedEvents"
 						:key="event.id"
 						:event="event" />
-
-					<div class="col-12 text-center">
-						<a
-							href="categoryevent.html"
-							class="btn btn-dark">Load More</a>
-					</div>
 				</div>
 			</div>
 		</section>
