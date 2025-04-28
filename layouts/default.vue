@@ -86,9 +86,9 @@ useHead({
 									to="/events">Browse Events</NuxtLink>
 							</li>
 							<li class="nav-item">
-								<a
+								<NuxtLink
 									class="nav-link"
-									href="#">Submit Event</a>
+									to="/submit">Submit Event</NuxtLink>
 							</li>
 						</ul>
 						<!-- Sign Up Button -->
@@ -201,7 +201,7 @@ useHead({
 									<li><NuxtLink to="/">- Home</NuxtLink></li>
 									<li><NuxtLink to="/about">- About Us</NuxtLink></li>
 									<li><NuxtLink to="/events">- Browse Events</NuxtLink></li>
-									<li><a href="#">- Submit Event</a></li>
+									<li><NuxtLink to="/submit">- Submit Event</NuxtLink></li>
 								</ul>
 							</div>
 						</div>
