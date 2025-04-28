@@ -26,6 +26,21 @@ const queriedEvents = computed(() => {
 		return event.name.toLowerCase().includes(searchQuery.value.toLowerCase());
 	});
 });
+
+useHead({
+	title: `${category.value?.name} Events`,
+	meta: [
+		{
+			name: "description",
+			content: category.value?.description,
+		},
+	],
+});
+
+useSeoMeta({
+	twitterTitle: `Joyful Orlando | ${category.value?.name} Events`,
+	twitterDescription: category.value?.description,
+});
 </script>
 
 <template>

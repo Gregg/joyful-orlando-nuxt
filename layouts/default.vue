@@ -15,6 +15,12 @@ const searchInputHandler = () => {
 		router.push("/events");
 	}
 };
+
+useHead({
+	htmlAttrs: {
+		lang: "en",
+	},
+});
 </script>
 
 <template>

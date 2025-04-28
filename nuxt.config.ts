@@ -15,6 +15,11 @@ export default defineNuxtConfig({
 		},
 	},
 	css: ["~/assets/styles/style.css", "~/assets/styles/responsive.css", "~/assets/styles/all.css"],
+	site: {
+		// url: "", // Site URL Here
+		name: "Joyful Orlando",
+		titleTemplate: (title?: string) => `${title} | Joyful Orlando`,
+	},
 	compatibilityDate: "2024-11-01",
 	eslint: {
 		config: {

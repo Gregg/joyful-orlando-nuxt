@@ -32,6 +32,23 @@ useSchemaOrg([
 		eventStatus: "EventScheduled",
 	}),
 ]);
+
+useHead({
+	title: `${event.value?.name} | Event Details`,
+	meta: [
+		{
+			name: "description",
+			content: event.value?.description,
+		},
+	],
+});
+
+useSeoMeta({
+	ogImage: event.value?.imageUrl,
+	twitterTitle: `Joyful Orlando | ${event.value?.name}`,
+	twitterDescription: event.value?.description,
+	twitterImage: event.value?.imageUrl,
+});
 </script>
 
 <template>

@@ -12,6 +12,21 @@ const queriedEvents = computed(() => {
 		return event.name.toLowerCase().includes(searchQuery.value.toLowerCase());
 	});
 });
+
+useHead({
+	title: "Events",
+	meta: [
+		{
+			name: "description",
+			content: "Browse events in Orlando, Florida. Find the best events happening in your area.",
+		},
+	],
+});
+
+useSeoMeta({
+	twitterTitle: `Joyful Orlando | Events`,
+	twitterDescription: "Browse events in Orlando, Florida. Find the best events happening in your area.",
+});
 </script>
 
 <template>
