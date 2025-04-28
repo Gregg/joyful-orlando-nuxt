@@ -21,6 +21,7 @@ async function fetchEvents() {
 				slug: record.get("Slug") as string,
 				categories: record.get("Categories") as Array<string>,
 				featured: record.get("Featured") as boolean,
+				url: record.get("URL") as string,
 			};
 			events.push(fetchedEvent);
 		});

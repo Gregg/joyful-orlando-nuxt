@@ -8,4 +8,5 @@ export interface IEvent {
 	locationId: string;
 	categories: Array<string>;
 	featured: boolean;
+	url: string;
 }

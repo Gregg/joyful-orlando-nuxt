@@ -69,8 +69,10 @@ useSchemaOrg([
 			<div class="container">
 				<div class="row align-items-center gx-0 consent-detail">
 					<div class="col-xl-7 col-lg-7 col-md-12 order-lg-first order-last">
-						<div class="left-content">
-							<h5 v-if="event">
+						<div
+							v-if="event"
+							class="left-content">
+							<h5>
 								{{ event.name }}
 							</h5>
 							<div
@@ -83,17 +85,18 @@ useSchemaOrg([
 							</div>
 							<div class="time-detail">
 								<i class="fa fa-calendar" />
-								<p v-if="event">
+								<p>
 									{{ dateFormat(event.date) }}
 								</p>
 							</div>
-							<p v-if="event">
+							<p>
 								{{ event.description }}
 							</p>
 							<a
-								href="about.html"
+								:href="event.url"
 								class="btn btn-dark"
-								role="button">Learn More</a>
+								role="button"
+								rel="noopener noreferrer">Learn More</a>
 						</div>
 					</div>
 					<div class="col-xl-5 col-lg-5 col-md-12">
