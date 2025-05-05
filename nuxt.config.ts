@@ -20,6 +20,11 @@ export default defineNuxtConfig({
 		name: "Joyful Orlando",
 		titleTemplate: (title?: string) => `${title} | Joyful Orlando`,
 	},
+	runtimeConfig: {
+		public: {
+			gMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
+		},
+	},
 	compatibilityDate: "2024-11-01",
 	eslint: {
 		config: {

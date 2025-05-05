@@ -25,6 +25,7 @@ Create a `.env` file in the root directory and add the following variables:
 AIRTABLE_ENDPOINT="the airtable endpoint"
 AIRTABLE_API_KEY="the airtable API key"
 AIRTABLE_BASE="the airtable base id"
+GOOGLE_MAPS_API_KEY="the google maps API key"
 ````
 
 You can create a personal airtable access token [here](https://airtable.com/create/tokens).

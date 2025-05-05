@@ -4,6 +4,9 @@ import { dateFormat } from "~/utils/dateFormat";
 
 const { data: events } = await useFetch("/api/events");
 
+const config = useRuntimeConfig();
+const GOOGLE_MAPS_API_KEY = config.public.gMapsApiKey;
+
 definePageMeta({
 	// validate: async (route) => {
 	// 	const slug = route.params.slug as string;
@@ -22,6 +25,14 @@ const location = computed(() => event.value ? getLocationById(event.value.locati
 
 const { getCategoryById } = useCategories();
 const categories = computed(() => event.value ? event.value.categories.map(categoryId => getCategoryById(categoryId)) : null);
+
+const mapSource = computed(() => {
+	if (!location.value) {
+		return "";
+	}
+	return `https://www.google.com/maps/embed/v1/place?key=${GOOGLE_MAPS_API_KEY}
+    &q=${encodeURIComponent(location.value.name)},${encodeURIComponent(location.value.address)}`;
+});
 
 useSchemaOrg([
 	defineEvent({
@@ -159,10 +170,14 @@ useSeoMeta({
 						</div>
 					</div>
 				</div>
-				<img
-					src="/images/location-map.webp"
+				<iframe
+					v-if="mapSource"
+					height="400"
 					class="location-map-image"
-					alt="">
+					style="border:0"
+					loading="lazy"
+					referrerpolicy="no-referrer-when-downgrade"
+					:src="mapSource" />
 			</div>
 		</section>
 		<!--    Location Map Section end -->
