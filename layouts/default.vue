@@ -20,6 +20,12 @@ useHead({
 	htmlAttrs: {
 		lang: "en",
 	},
+	link: [
+		{ rel: "icon", type: "image/png", href: "/favicon-96x96.png", sizes: "96x96" },
+		{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
+		{ rel: "apple-touch-icon", href: "/apple-touch-icon.png", sizes: "180x180" },
+		{ rel: "shortcut icon", href: "/favicon.ico" },
+	],
 });
 </script>
 
