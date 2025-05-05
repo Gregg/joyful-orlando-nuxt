@@ -1,5 +1,10 @@
 <script setup lang="ts">
-
+useSeoMeta({
+	description: "Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram).",
+	ogDescription: "Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram).",
+	twitterTitle: "Joyful Orlando | About",
+	twitterDescription: "Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram).",
+});
 </script>
 
 <template>

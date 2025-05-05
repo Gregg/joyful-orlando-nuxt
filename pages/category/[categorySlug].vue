@@ -39,7 +39,9 @@ useHead({
 
 useSeoMeta({
 	twitterTitle: `Joyful Orlando | ${category.value?.name} Events`,
+	description: category.value?.description,
 	twitterDescription: category.value?.description,
+	ogDescription: category.value?.description,
 });
 </script>
 

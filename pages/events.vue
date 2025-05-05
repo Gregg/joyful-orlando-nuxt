@@ -25,7 +25,9 @@ useHead({
 
 useSeoMeta({
 	twitterTitle: `Joyful Orlando | Events`,
+	description: "Browse events in Orlando, Florida. Find the best events happening in your area.",
 	twitterDescription: "Browse events in Orlando, Florida. Find the best events happening in your area.",
+	ogDescription: "Browse events in Orlando, Florida. Find the best events happening in your area.",
 });
 </script>
 
