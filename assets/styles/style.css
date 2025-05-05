@@ -311,11 +311,14 @@ background-color: transparent;
 	font-size: 20px;
 	line-height: 26px;
 	margin-bottom: 35px;
+	color: #fff;
 }
 .event-list-content p{
 	font-weight: 500;
 	font-size: 16px;
 	line-height: 26px;
+	margin-bottom: 12px;
+	color: #ffff;
 }
 
 .event-card-outer:nth-child(5n + 1) .event-card{ background-color: #9F64FC; } /* Purple */
@@ -337,6 +340,22 @@ background-color: transparent;
 }
 .event-card-outer{
 	margin-bottom: 55px;
+}
+.event-list-icon{
+	padding: 5px 10px;
+    border-radius: 12px 0px 6px 12px;
+	color: #ffffff;
+	font-size: 12px;
+	display: inline-flex;
+	justify-content: center;
+	gap: 4px;
+	border-bottom: 1px solid #fff;
+	border-left: 2px solid #fff;
+}
+.event-list-icon img{
+	width: 16px;
+	height: 16px;
+	filter: brightness(100);
 }
 /*  Event list section css end  */
 

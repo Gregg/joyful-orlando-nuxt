@@ -26,18 +26,14 @@ const categories = computed(() => event ? event.categories.map(categoryId => get
 				<div class="event-list-content">
 					<h5>{{ event.name }}</h5>
 					<p>{{ dateFormat(event.date) }}</p>
-					<p>
-						<span
-							v-for="category in categories"
-							:key="category?.id"
-							class="category-tag">
-							<span class="category-tag-content">
-								<img
-									:src="`/images/icons/${category?.icon}`"
-									alt=""> {{ category?.name }}
-							</span>
-						</span>
-					</p>
+					<div
+						v-for="category in categories"
+						:key="category?.id"
+						class="event-list-icon">
+						<img
+							:src="`/images/icons/${category?.icon}`"
+							alt=""> {{ category?.name }}
+					</div>
 				</div>
 			</div>
 		</NuxtLink>
