@@ -6,7 +6,7 @@ export default defineNuxtConfig({
 	site: {
 		// url: "", // Site URL Here
 		name: "Joyful Orlando",
-		titleTemplate: (title?: string) => `${title} | Joyful Orlando`,
+		titleTemplate: "%s | Joyful Orlando",
 	},
 	runtimeConfig: {
 		public: {
