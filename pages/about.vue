@@ -37,7 +37,7 @@ useSeoMeta({
 		</section>
 		<!--    Hero section end    -->
 
-		<!--    Event list section start    -->
+		<!--   
 		<section class="sec-padding">
 			<div class="container">
 				<div class="sec-heading sec-head-has-shape sec-head-center mb-0">
@@ -79,7 +79,7 @@ useSeoMeta({
 				</div>
 			</div>
 		</section>
-		<!--    Event list section end    -->
+		-->
 
 		<!--   Mission section start   -->
 		<section
@@ -87,37 +87,33 @@ useSeoMeta({
 			style="background-image: url(/images/missionbg.webp);">
 			<div class="container">
 				<div class="row align-items-center">
-					<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 ">
-						<div class="mission-left">
-							<img
-								src="/images/mission.png"
-								class="img-fluid"
-								alt="">
+					<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
+						<div class="mission-left" style="display: flex; justify-content: center; align-items: center; height: 100%;">
+							<iframe width="315" height="560" src="https://www.youtube.com/embed/T3vCVNKuj38?si=g4mPDoO7_gHCBHLT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 						</div>
 					</div>
-					<div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 align-content-center">
+					<div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 align-content-center">
 						<div class="mission-content-right ">
 							<div class="title-content">
 								<h2>Our Mission</h2>
 							</div>
 							<p>
-								Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram). Joyful Orlando is on a mission to spotlight conscious & <br> <br>
-
-								Lorem ipsum dolor sit amet consectetur. Proin nibh duis quis mattis ut habitasse.. Augue amet in mauris semper. Sed sit neque cursus non dictum libero vel commodo id.. Faucibus tincidunt pharetra nibh nisl euismod pellentesque.. Neque aliquet nec pellentesque dignissim.
-							</p>
+							Our mission is to spotlight Orlando’s vibrant conscious and wellness community — from breathwork and meditation to dance, sound healing, and authentic connection. We believe these spaces help people slow down, tune in, and cultivate a more meaningful, joyful life. <br><br>
+We’re not just curating events; we’re building a movement toward a more connected, compassionate Orlando. By bringing people together in spaces of healing and presence, we hope to ripple well-being through neighborhoods, relationships, and the city as a whole.
+</p>
 							<div class="mission-steps">
 								<div>
 									<div class="outer-box">
 										<i
 											class="fa fa-check-circle"
 											style="color: #FE7D15;" />
-										<p>Psychodynamic Therapy</p>
+										<p>Mindfulness & Meditation</p>
 									</div>
 									<div class="outer-box">
 										<i
 											class="fa fa-check-circle"
 											style="color: #9F64FC;" />
-										<p>Consultation</p>
+										<p>Movement & Expression</p>
 									</div>
 								</div>
 								<div>
@@ -125,13 +121,13 @@ useSeoMeta({
 										<i
 											class="fa fa-check-circle"
 											style="color: #62CBFB;" />
-										<p>Couple Problem</p>
+										<p>Healing & Energy Work</p>
 									</div>
 									<div class="outer-box">
 										<i
 											class="fa fa-check-circle"
 											style="color: #FF839F;" />
-										<p>Mental Health</p>
+										<p>Community & Connection</p>
 									</div>
 								</div>
 							</div>
@@ -154,7 +150,7 @@ useSeoMeta({
 				<div class="sec-heading  sec-head-center">
 					<div class="row">
 						<div class="col">
-							<h2>Our Team</h2>
+							<h2>The Joy Engineers</h2>
 						</div>
 					</div>
 					<div class="row">
@@ -162,13 +158,13 @@ useSeoMeta({
 							<div class="team-member-detail">
 								<div class="member-profile">
 									<img
-										src="/images/member1.webp"
+										src="/images/Ishaan.jpg"
 										alt="">
 								</div>
 								<div class="team-detail">
-									<p>Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram). Joyful Orlando is on a mission to spotlight conscious </p>
-									<h6>Johnthan Doe</h6>
-									<span>CEO</span>
+									<p>Ishaan brings humor, warmth, and soulful presence to every space. He has a gift for making people feel seen, breaking down walls, and turning gatherings into moments of joy and authentic connection.</p>
+									<h6>Ishaan Vadhera</h6>
+									<span>Director of Human Sunshine</span>
 								</div>
 							</div>
 						</div>
@@ -176,13 +172,13 @@ useSeoMeta({
 							<div class="team-member-detail">
 								<div class="member-profile">
 									<img
-										src="/images/member2.webp"
+										src="/images/Gregg.jpg"
 										alt="">
 								</div>
 								<div class="team-detail">
-									<p>Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram). Joyful Orlando is on a mission to spotlight conscious </p>
-									<h6>Catherine Lubowitz</h6>
-									<span>CEO</span>
+									<p>Gregg creates spaces where people slow down, open up, and connect deeply. With his mix of intention and playfulness, he’s building a more conscious, compassionate Orlando — one gathering at a time.</p>
+									<h6>Gregg Pollack</h6>
+									<span>Captain of Conscious Connection</span>
 								</div>
 							</div>
 						</div>

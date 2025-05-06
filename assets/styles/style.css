@@ -779,7 +779,6 @@ width: 302px;
 }
 .team-member-detail span{
 	font-size: 16px;
-	text-transform: uppercase;
 }
 .team-outer:nth-child(5n+1) .team-member-detail{
 	border: 3px solid #9F64FC;

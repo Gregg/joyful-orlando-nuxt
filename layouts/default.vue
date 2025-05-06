@@ -125,8 +125,8 @@ useHead({
 					</div>
 					<div class="row justify-content-center">
 						<div class="col-xl-8">
-							<h2>Get access to curated events delivered to your mailbox twice a month</h2>
-							<p>Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram). Joyful Orlando is on a mission to spotlight conscious & </p>
+							<h2>Get access to curated events that feed your soul — twice a month</h2>
+							<p>We’ll send you the best of Orlando — no spam, just joyful connection and inspiration.</p>
 						</div>
 					</div>
 					<div class="row">
@@ -187,17 +187,17 @@ useHead({
 										src="/images/footer-logo.webp"
 										alt="">
 								</div>
-								<p>Waters divided said aims kind seicond winged form it tree after female the deep at itself creepeth land bring place day sea dont caus may thing open who their midst to seas</p>
-								<div class="social-media">
+								<p>Joyful Orlando curates the best conscious and wellness events in the city, helping you build meaningful connections, boost your well-being, and find your community.</p>
+								<!-- <div class="social-media">
 									<h6>Follow us</h6>
 									<ul class="list-inline">
 										<li><a href="#"><i class="fab fa-facebook-f" /></a></li>
 										<li><a href="#"><i class="fab fa-twitter" /></a></li>
 										<li><a href="#"><i class="fab fa-pinterest" /></a></li>
-										<li><a href="#"><i class="fab fa-instagram" /></a></li>
+										<li><a href="https://www.instagram.com/orlandoisjoyful"><i class="fab fa-instagram" /></a></li>
 										<li><a href="#"><i class="fab fa-linkedin" /></a></li>
 									</ul>
-								</div>
+								</div> -->
 							</div>
 						</div>
 						<div class="col-xl-2 col-lg-3 col-md-4">
@@ -217,13 +217,11 @@ useHead({
 									<div class="contact-info">
 										<h6>Contact Info</h6>
 										<div class="contact-detail">
-											<p>House no 35, Palmall street,London, England</p>
+											<p>Orlando, Florida</p>
 											<span>Email:</span><br>
-											<a href="#">info@basictheme.com</a><br><br>
-											<span>Support:</span><br>
-											<a href="#">+1 325 562 3265</a><br><br>
+											<p>ishaan [at] joyfulorlando [dot] com</p>
 											<span>Website:</span><br>
-											<a href="#">www.abcinco.com</a>
+											<a href="https://www.joyfulorlando.com" target="_blank">www.joyfulorlando.com</a>
 										</div>
 									</div>
 								</div>
@@ -232,9 +230,9 @@ useHead({
 										<h6>Follow Us on Instagram</h6>
 										<p>Stay updated with our latest events and community moments.</p>
 										<a
-											href="about.html"
+											href="https://www.instagram.com/orlandoisjoyful"
 											role="button"
-											target="_blank">@orlandoisjoyful</a>
+											target="_blank">@OrlandoIsJoyful</a>
 									</div>
 								</div>
 							</div>

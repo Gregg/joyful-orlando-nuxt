@@ -24,8 +24,8 @@ useSeoMeta({
 				<div class="row align-items-center gx-0 mt-40">
 					<div class="col-xl-6 col-lg-7 col-md-12 col-sm-12 order-lg-first order-last">
 						<div class="hero-content">
-							<h1>Want to improve your well-being while making friends in Orlando?</h1>
-							<p>Joyful Orlando is on a mission to spotlight conscious &amp; wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram). </p>
+							<h1>Ready to improve your well-being and find your people in Orlando?</h1>
+							<p>Joyful Orlando spotlights conscious and wellness events that help you slow down, show up fully, and nourish your well-being — not just for Instagram, but for real life.</p>
 							<a
 								href="#signupform"
 								class="btn btn-light"
