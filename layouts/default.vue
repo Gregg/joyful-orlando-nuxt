@@ -109,68 +109,7 @@ useHead({
 		<!--    Header section end    -->
 		<slot />
 		<!--    News letter section start -->
-		<section
-			id="signupform"
-			class="sec-padding news-letter">
-			<div class="container">
-				<div class="sec-heading sec-head-has-shape sec-head-center">
-					<div class="row">
-						<div class="col-xl-12">
-							<div class="news-star">
-								<img
-									src="/images/newsstar.png"
-									alt="">
-							</div>
-						</div>
-					</div>
-					<div class="row justify-content-center">
-						<div class="col-xl-8">
-							<h2>Get access to curated events that feed your soul — twice a month</h2>
-							<p>We’ll send you the best of Orlando — no spam, just joyful connection and inspiration.</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-xl-12 ">
-							<form
-								action=""
-								class="form-input">
-								<div class="input-box">
-									<img
-										src="/images/profile.webp"
-										alt="">
-									<input
-										id=""
-										class="form-control"
-										type="text"
-										name=""
-										placeholder="First name">
-								</div>
-								<div class="input-box">
-									<img
-										src="/images/sms.webp"
-										alt="">
-									<input
-										id=""
-										class="form-control"
-										type="text"
-										name=""
-										placeholder="Email">
-								</div>
-								<a
-									href="#"
-									class="btn btn-dark"
-									type="button">Join Now</a>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="newsbg-image">
-				<img
-					src="/images/news-background.png"
-					alt="">
-			</div>
-		</section>
+		<FloDeskSignUp />
 		<!--    News letter section end -->
 
 		<!--   Footer section start   -->

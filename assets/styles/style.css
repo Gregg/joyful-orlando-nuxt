@@ -393,15 +393,19 @@ background-color: transparent;
 	padding: 41px 103px;
 	border-radius: 20px;
 	background-color: #FF839F;
+	/*display: flex;*/
+	/*gap: 29px;*/
+	margin-top: 60px;
+}
+.form-fields {
 	display: flex;
 	gap: 29px;
-	margin-top: 60px;
 }
 .form-input .input-box{
 	position: relative;
 	display: flex;
 	align-items: center;
-	width: 100%;
+	/* width: 100%; */
 }
 .form-input .input-box img{
 	position: absolute;
