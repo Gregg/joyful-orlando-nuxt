@@ -23,6 +23,9 @@
 		padding: 35px 22px;
 		display: block;
 	}
+	.form-fields {
+		display: block;
+	}
 	.form-input .input-box{
 		margin-bottom: 15px;
 	}
