@@ -28,6 +28,7 @@ useSeoMeta({
 	description: "Browse events in Orlando, Florida. Find the best events happening in your area.",
 	twitterDescription: "Browse events in Orlando, Florida. Find the best events happening in your area.",
 	ogDescription: "Browse events in Orlando, Florida. Find the best events happening in your area.",
+	ogImage: "/images/this-is-joyful-orlando.png",
 });
 </script>
 

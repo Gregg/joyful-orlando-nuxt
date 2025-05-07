@@ -7,6 +7,7 @@ useSeoMeta({
 	ogDescription: "Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram).",
 	twitterTitle: "Joyful Orlando | Home",
 	twitterDescription: "Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram).",
+	ogImage: "/images/this-is-joyful-orlando.png",
 });
 </script>
 

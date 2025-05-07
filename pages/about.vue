@@ -4,6 +4,7 @@ useSeoMeta({
 	ogDescription: "Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram).",
 	twitterTitle: "Joyful Orlando | About",
 	twitterDescription: "Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram).",
+	ogImage: "/images/this-is-joyful-orlando.png",
 });
 </script>
 
@@ -37,7 +38,7 @@ useSeoMeta({
 		</section>
 		<!--    Hero section end    -->
 
-		<!--   
+		<!--
 		<section class="sec-padding">
 			<div class="container">
 				<div class="sec-heading sec-head-has-shape sec-head-center mb-0">
@@ -88,8 +89,18 @@ useSeoMeta({
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-xl-4 col-lg-4 col-md-12 col-sm-12">
-						<div class="mission-left" style="display: flex; justify-content: center; align-items: center; height: 100%;">
-							<iframe width="315" height="560" src="https://www.youtube.com/embed/T3vCVNKuj38?si=g4mPDoO7_gHCBHLT" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+						<div
+							class="mission-left"
+							style="display: flex; justify-content: center; align-items: center; height: 100%;">
+							<iframe
+								width="315"
+								height="560"
+								src="https://www.youtube.com/embed/T3vCVNKuj38?si=g4mPDoO7_gHCBHLT"
+								title="YouTube video player"
+								frameborder="0"
+								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+								referrerpolicy="strict-origin-when-cross-origin"
+								allowfullscreen />
 						</div>
 					</div>
 					<div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 align-content-center">
@@ -98,9 +109,9 @@ useSeoMeta({
 								<h2>Our Mission</h2>
 							</div>
 							<p>
-							Our mission is to spotlight Orlando’s vibrant conscious and wellness community — from breathwork and meditation to dance, sound healing, and authentic connection. We believe these spaces help people slow down, tune in, and cultivate a more meaningful, joyful life. <br><br>
-We’re not just curating events; we’re building a movement toward a more connected, compassionate Orlando. By bringing people together in spaces of healing and presence, we hope to ripple well-being through neighborhoods, relationships, and the city as a whole.
-</p>
+								Our mission is to spotlight Orlando’s vibrant conscious and wellness community — from breathwork and meditation to dance, sound healing, and authentic connection. We believe these spaces help people slow down, tune in, and cultivate a more meaningful, joyful life. <br><br>
+								We’re not just curating events; we’re building a movement toward a more connected, compassionate Orlando. By bringing people together in spaces of healing and presence, we hope to ripple well-being through neighborhoods, relationships, and the city as a whole.
+							</p>
 							<div class="mission-steps">
 								<div>
 									<div class="outer-box">

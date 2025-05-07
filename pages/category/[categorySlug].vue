@@ -42,6 +42,7 @@ useSeoMeta({
 	description: category.value?.description,
 	twitterDescription: category.value?.description,
 	ogDescription: category.value?.description,
+	ogImage: "/images/this-is-joyful-orlando.png",
 });
 </script>
 
