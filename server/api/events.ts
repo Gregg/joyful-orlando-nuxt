@@ -9,7 +9,7 @@ async function fetchEvents() {
 		view: "Grid view",
 	}).eachPage((records, processNextPage) => {
 		records.forEach(function (record) {
-			const image = record.get("Image") as Array<Attachment>;
+			// const image = record.get("Image") as Array<Attachment>;
 
 			const fetchedEvent: IEvent = {
 				id: record.id,
@@ -17,7 +17,8 @@ async function fetchEvents() {
 				date: record.get("Date") as string,
 				locationId: (record.get("Location") as Array<string>)[0] as string,
 				description: record.get("Description") as string,
-				imageUrl: image[0].url,
+				// imageUrl: image[0].url,
+				imageUrl: "",
 				slug: record.get("Slug") as string,
 				categories: record.get("Categories") as Array<string>,
 				featured: record.get("Featured") as boolean,
