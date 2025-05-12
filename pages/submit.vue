@@ -7,6 +7,12 @@ useHead({
 			content: "Submit your event to Joyful Orlando. Share your event with the community.",
 		},
 	],
+	script: [
+		{
+			src: "https://server.fillout.com/embed/v1/",
+			async: true,
+		},
+	],
 });
 
 useSeoMeta({
@@ -50,12 +56,12 @@ useSeoMeta({
 
 		<section class="sec-padding">
 			<div class="container">
-				<iframe
-					class="airtable-embed"
-					src="https://airtable.com/embed/appLiRwcX9kvByYtR/pagwYD39iSGl4Kp4g/form"
-					width="100%"
-					height="900"
-					style="background: transparent; border: 1px solid #ccc;" />
+				<div
+					style="width:100%;height:500px;"
+					data-fillout-id="xtxLLQc1iSus"
+					data-fillout-embed-type="standard"
+					data-fillout-inherit-parameters
+					data-fillout-dynamic-resize />
 			</div>
 		</section>
 	</div>
