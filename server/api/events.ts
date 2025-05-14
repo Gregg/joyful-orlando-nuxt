@@ -4,9 +4,7 @@ import type { IEvent } from "~/types/event";
 const events: Array<IEvent> = [];
 
 async function fetchEvents() {
-	await base("Events").select({
-		view: "Grid view",
-	}).eachPage((records, processNextPage) => {
+	await base("Events").select().eachPage((records, processNextPage) => {
 		records.forEach(function (record) {
 			const fetchedEvent: IEvent = {
 				id: record.id,

@@ -6,7 +6,6 @@ const categories: Array<ICategory> = [];
 async function fetchCategories() {
 	await base("Categories").select({
 		fields: ["Name", "Slug", "Color", "Icon", "Featured", "Description"],
-		view: "Grid view",
 	}).eachPage((records, processNextPage) => {
 		records.forEach(function (record) {
 			categories.push({

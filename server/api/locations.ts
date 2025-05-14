@@ -6,7 +6,6 @@ const locations: Array<ILocation> = [];
 async function fetchLocations() {
 	await base("Locations").select({
 		fields: ["Name", "Address"],
-		view: "Grid view",
 	}).eachPage((records, processNextPage) => {
 		records.forEach(function (record) {
 			locations.push({
