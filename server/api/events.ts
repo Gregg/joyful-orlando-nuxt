@@ -1,4 +1,3 @@
-import type { Attachment } from "airtable";
 import { base } from "../client";
 import type { IEvent } from "~/types/event";
 
