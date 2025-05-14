@@ -119,7 +119,10 @@ onMounted(() => {
 									<div>
 										<div>
 											<div data-paragraph="true">
-												Thank you for subscribing!
+												<p>Thank you for joining!</p>
+												<br>
+												<h3>We just sent you a confirmation email, please take a moment to confirm your subscription. 🙏</h3>
+												<p><br>If you don't see it, maybe check your spam folder and mark it as not spam to make sure you get our emails!</p>											
 											</div>
 										</div>
 									</div>
@@ -142,12 +145,24 @@ onMounted(() => {
 </template>
 
 <style>
+.fd-form-check__label {
+	color: white;
+	font-size: 1.5em;
+}
+
+.fd-form-check__input {
+    width: 20px;
+    height: 20px;
+}
+
 .fd-form-success {
 	display: none;
+	color: white;
 }
 
 .fd-has-success .fd-form-success {
 	display: block;
+	color: white;
 }
 
 .ff-68000160305e6b614244935a .fd-form-feedback {
