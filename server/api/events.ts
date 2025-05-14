@@ -5,7 +5,7 @@ const events: Array<IEvent> = [];
 
 async function fetchEvents() {
 	await base("Events").select({
-		view: "All Events",
+		view: "Upcoming Events",
 	}).eachPage((records, processNextPage) => {
 		records.forEach(function (record) {
 			const imageArray = record.get("ImageUrl") as Array<string>;
