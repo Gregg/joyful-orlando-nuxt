@@ -124,7 +124,8 @@ useSeoMeta({
 								:href="event.url"
 								class="btn btn-dark"
 								role="button"
-								rel="noopener noreferrer">Learn More</a>
+								rel="noopener noreferrer"
+								target="_blank">Learn More</a>
 						</div>
 					</div>
 					<div class="col-xl-5 col-lg-5 col-md-12">
