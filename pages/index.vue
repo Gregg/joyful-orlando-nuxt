@@ -23,7 +23,7 @@ useSeoMeta({
 				alt="">
 			<div class="container">
 				<div class="row align-items-center gx-0 mt-40">
-					<div class="col-xl-6 col-lg-7 col-md-12 col-sm-12 order-lg-first order-last">
+					<div class="col-xl-6 col-lg-7 col-md-6 col-sm-12 order-lg-first order-last">
 						<div class="hero-content">
 							<h1>Ready to improve your well-being and find your people in Orlando?</h1>
 							<p>Joyful Orlando spotlights conscious and wellness events that help you slow down, show up fully, and nourish your well-being — not just for Instagram, but for real life.</p>
@@ -33,12 +33,17 @@ useSeoMeta({
 								data-test="join-now-button">Join Now</a>
 						</div>
 					</div>
-					<div class="col-xl-6 col-lg-5 col-md-12 order-lg-last order-first">
+					<div class="col-xl-6 col-lg-5 col-md-6 order-lg-last order-first">
 						<div class="hero-thumb">
-							<img
-								src="/images/hero-img.webp"
-								alt="Event Image"
-								class="hero-img img-fluid">
+							<iframe
+								src="https://player.cloudinary.com/embed/?cloud_name=dxyuki6gm&public_id=Joyful_Orlando_Homepage_Intro_Video_zr1vn2&profile=cld-default"
+								class="hero-img img-fluid"
+								width="360"
+								height="640"
+								style="aspect-ratio: 360 / 640;"
+								allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+								allowfullscreen
+								frameborder="0" />
 						</div>
 					</div>
 				</div>

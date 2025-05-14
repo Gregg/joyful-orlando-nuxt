@@ -225,6 +225,9 @@ background-color: transparent;
 	left: 30%;
 	z-index: 0;
 }
+.hero-thumb {
+	padding: 0 16px;
+}
 
 /*  Hero section css end  */
 
