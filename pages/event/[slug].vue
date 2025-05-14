@@ -34,6 +34,24 @@ const mapSource = computed(() => {
     &q=${encodeURIComponent(location.value.name)},${encodeURIComponent(location.value.address)}`;
 });
 
+const formattedDescription = computed(() => {
+  const raw = event.value?.description || ''
+
+  // Strip all HTML tags
+  const cleanText = raw.replace(/<\/?[^>]+(>|$)/g, '')
+
+  // Split into paragraph chunks using 2+ newlines
+  const paragraphs = cleanText
+    .split(/\n{2,}/)
+    .map(paragraph => {
+      // Within each paragraph, replace single newlines with <br />
+      const withLineBreaks = paragraph.trim().replace(/\n/g, '<br />')
+      return `<p>${withLineBreaks}</p>`
+    })
+
+  return paragraphs.join('')
+})
+
 useSchemaOrg([
 	defineEvent({
 		name: event.value?.name,
@@ -117,9 +135,9 @@ useSeoMeta({
 									{{ dateFormat(event.date) }}
 								</p>
 							</div>
-							<p>
-								{{ event.description }}
-							</p>
+							<div
+							v-html="formattedDescription">
+						</div>
 							<a
 								:href="event.url"
 								class="btn btn-dark"
