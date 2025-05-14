@@ -1,3 +1,4 @@
+import type { Attachment } from "airtable";
 import { base } from "../client";
 import type { IEvent } from "~/types/event";
 
@@ -7,7 +8,9 @@ async function fetchEvents() {
 	await base("Events").select().eachPage((records, processNextPage) => {
 		records.forEach(function (record) {
 			const imageArray = record.get("ImageUrl") as Array<string>;
-			const imageUrl = imageArray[0] ? imageArray[0] : "";
+			const standardImageUrl = imageArray[0] ? imageArray[0] : "";
+			const imageId = standardImageUrl.split("/").pop();
+			const imageUrl = `https://res.cloudinary.com/dxyuki6gm/image/upload/t_SquareCrop/${imageId}`;
 
 			const fetchedEvent: IEvent = {
 				id: record.id,
