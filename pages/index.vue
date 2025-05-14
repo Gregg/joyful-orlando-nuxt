@@ -14,36 +14,36 @@ useSeoMeta({
 <template>
 	<div>
 		<!--    Hero section start    -->
-		<section
-			class="hero-section"
-			style="background-color: #9F64FC;">
+		<section class="hero-section py-5" style="background-color: #9F64FC;">
 			<img
 				src="/images/hero-shape.webp"
 				class="hero-sec-shape"
 				alt="">
 			<div class="container">
-				<div class="row align-items-center gx-0 mt-40">
-					<div class="col-xl-6 col-lg-7 col-md-6 col-sm-12 order-lg-first order-last">
+				<div class="row align-items-center justify-content-center">
+					<!-- Text content - 8/12 on xl (2/3), full width on small screens -->
+					<div class="col-xl-8 col-lg-7 col-md-12 text-center text-lg-start mb-4 mb-lg-0 order-2 order-lg-1">
 						<div class="hero-content">
-							<h1>Ready to improve your well-being and find your people in Orlando?</h1>
-							<p>Joyful Orlando spotlights conscious and wellness events that help you slow down, show up fully, and nourish your well-being — not just for Instagram, but for real life.</p>
-							<a
-								href="#signupform"
-								class="btn btn-light"
-								data-test="join-now-button">Join Now</a>
+							<h1 class="text-white fw-bold mb-3">Ready to improve your well-being and find your people in Orlando?</h1>
+							<p class="text-light mb-4">Joyful Orlando spotlights conscious and wellness events that help you slow down, show up fully, and nourish your well-being — not just for Instagram, but for real life.</p>
+							<a href="#signupform" class="btn btn-light" data-test="join-now-button">Join Now</a>
 						</div>
 					</div>
-					<div class="col-xl-6 col-lg-5 col-md-6 order-lg-last order-first">
-						<div class="hero-thumb">
+
+					<!-- Video iframe - 4/12 on xl (1/3), centered on small screens -->
+					<div class="col-xl-4 col-lg-5 col-md-8 col-sm-10 mx-auto order-1 order-lg-2">
+						<div class="hero-thumb text-center">
 							<iframe
-								src="https://player.cloudinary.com/embed/?cloud_name=dxyuki6gm&public_id=Joyful_Orlando_Homepage_Intro_Video_zr1vn2&profile=cld-default"
+								src="https://player.cloudinary.com/embed/?cloud_name=dxyuki6gm&public_id=Joyful_Orlando_Homepage_Intro_Video_zr1vn2&profile=cld-default&autoplay=true&loop=true&muted=true"
 								class="hero-img img-fluid"
 								width="360"
 								height="640"
 								style="aspect-ratio: 360 / 640;"
 								allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
 								allowfullscreen
-								frameborder="0" />
+								frameborder="0">
+								</iframe>
+							</div>
 						</div>
 					</div>
 				</div>
