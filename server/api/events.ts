@@ -4,7 +4,9 @@ import type { IEvent } from "~/types/event";
 const events: Array<IEvent> = [];
 
 async function fetchEvents() {
-	await base("Events").select().eachPage((records, processNextPage) => {
+	await base("Events").select({
+		view: "All Events",
+	}).eachPage((records, processNextPage) => {
 		records.forEach(function (record) {
 			const imageArray = record.get("ImageUrl") as Array<string>;
 			const standardImageUrl = imageArray[0] ? imageArray[0] : "";
