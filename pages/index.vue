@@ -18,7 +18,7 @@ useSeoMeta({
 			<img
 				src="/images/hero-shape.webp"
 				class="hero-sec-shape"
-				alt="Joy Logo" />
+				alt="Joy Logo" /> 
 			<div class="container">
 				<div class="row align-items-center justify-content-center">
 					<!-- Text content - 8/12 on xl (2/3), full width on small screens -->
@@ -42,8 +42,7 @@ useSeoMeta({
 								allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
 								allowfullscreen
 								frameborder="0">
-								</iframe>
-							</div>
+							</iframe>
 						</div>
 					</div>
 				</div>
