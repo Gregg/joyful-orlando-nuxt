@@ -1,7 +1,13 @@
 const searchQuery = ref<string>("");
 
 export function useEvents() {
-	const { data: events } = useFetch("/api/events");
+	const { data: eventsRaw } = useFetch("/api/events");
+
+	const events = computed(() => eventsRaw.value?.filter((event) => {
+		const eventDate = new Date(event.date);
+		const today = new Date();
+		return eventDate >= today;
+	}));
 
 	function getEventBySlug(slug: string) {
 		return events.value?.find(event => event.slug === slug);
@@ -12,7 +18,7 @@ export function useEvents() {
 	}
 
 	const featuredEvents = computed(() => {
-		return events.value?.filter(event => event.featured === true);
+		return events.value?.filter(event => event.featured === true).slice(0, 3);
 	});
 
 	return { events, getEventBySlug, getEventsByCategoryId, featuredEvents, searchQuery };
