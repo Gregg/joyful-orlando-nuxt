@@ -92,15 +92,10 @@ useSeoMeta({
 						<div
 							class="mission-left"
 							style="display: flex; justify-content: center; align-items: center; height: 100%;">
-							<iframe
-								width="315"
-								height="560"
-								src="https://www.youtube.com/embed/T3vCVNKuj38?si=g4mPDoO7_gHCBHLT"
-								title="YouTube video player"
-								frameborder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								referrerpolicy="strict-origin-when-cross-origin"
-								allowfullscreen />
+							<img
+								src="/images/aboutus-freehugs.webp"
+								alt="Free Hugs"
+								class="img-fluid">
 						</div>
 					</div>
 					<div class="col-xl-8 col-lg-8 col-md-12 col-sm-12 align-content-center">
