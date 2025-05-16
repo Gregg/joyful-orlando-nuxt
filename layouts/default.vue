@@ -141,12 +141,12 @@ useHead({
 						</div>
 						<div class="col-xl-2 col-lg-3 col-md-4">
 							<div class="oue-links">
-								<h6>Our Link</h6>
-								<ul class="list-inline">
-									<li><NuxtLink to="/">- Home</NuxtLink></li>
-									<li><NuxtLink to="/about">- About Us</NuxtLink></li>
-									<li><NuxtLink to="/events">- Browse Events</NuxtLink></li>
-									<li><NuxtLink to="/submit">- Submit Event</NuxtLink></li>
+								<h6>Our Links</h6>
+								<ul>
+									<li><NuxtLink to="/">Home</NuxtLink></li>
+									<li><NuxtLink to="/about">About Us</NuxtLink></li>
+									<li><NuxtLink to="/events">Browse Events</NuxtLink></li>
+									<li><NuxtLink to="/submit">Submit Event</NuxtLink></li>
 								</ul>
 							</div>
 						</div>
