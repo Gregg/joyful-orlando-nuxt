@@ -96,6 +96,11 @@ useHead({
 									class="nav-link"
 									to="/submit">Submit Event</NuxtLink>
 							</li>
+							<li class="nav-item">
+								<NuxtLink
+									class="nav-link"
+									to="/about">About Us</NuxtLink>
+							</li>
 						</ul>
 						<!-- Sign Up Button -->
 						<a
@@ -156,7 +161,7 @@ useHead({
 									<div class="contact-info">
 										<h6>Contact Info</h6>
 										<div class="contact-detail">
-											<p>Orlando, Florida</p>
+											<p>1001 North Orange Avenue<br>Orlando, FL, 32801</p>
 											<span>Email:</span><br>
 											<p>ishaan [at] joyfulorlando [dot] com</p>
 											<span>Website:</span><br>
