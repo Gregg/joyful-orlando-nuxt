@@ -35,22 +35,22 @@ const mapSource = computed(() => {
 });
 
 const formattedDescription = computed(() => {
-  const raw = event.value?.description || ''
+	const raw = event.value?.description || "";
 
-  // Strip all HTML tags
-  const cleanText = raw.replace(/<\/?[^>]+(>|$)/g, '')
+	// Strip all HTML tags
+	const cleanText = raw.replace(/<\/?[^>]+(>|$)/g, "");
 
-  // Split into paragraph chunks using 2+ newlines
-  const paragraphs = cleanText
-    .split(/\n{2,}/)
-    .map(paragraph => {
-      // Within each paragraph, replace single newlines with <br />
-      const withLineBreaks = paragraph.trim().replace(/\n/g, '<br />')
-      return `<p>${withLineBreaks}</p>`
-    })
+	// Split into paragraph chunks using 2+ newlines
+	const paragraphs = cleanText
+		.split(/\n{2,}/)
+		.map((paragraph) => {
+			// Within each paragraph, replace single newlines with <br />
+			const withLineBreaks = paragraph.trim().replace(/\n/g, "<br />");
+			return `<p>${withLineBreaks}</p>`;
+		});
 
-  return paragraphs.join('')
-})
+	return paragraphs.join("");
+});
 
 useSchemaOrg([
 	defineEvent({
@@ -136,8 +136,7 @@ useSeoMeta({
 								</p>
 							</div>
 							<div
-							v-html="formattedDescription">
-						</div>
+								v-html="formattedDescription" />
 							<a
 								:href="event.url"
 								class="btn btn-dark"
