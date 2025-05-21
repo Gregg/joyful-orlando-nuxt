@@ -17,6 +17,7 @@ export default defineNuxtConfig({
 		"/": { isr: 12 * 60 * 60 },
 		"/about": { prerender: true },
 		"/submit": { prerender: true },
+		"/giveaway": { prerender: true },
 		"/events": { isr: 12 * 60 * 60 },
 		"/event/**": { isr: true },
 		"/category/**": { isr: 12 * 60 * 60 },
