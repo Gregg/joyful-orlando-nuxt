@@ -165,7 +165,9 @@ useHead({
 											<span>Email:</span><br>
 											<p>ishaan [at] joyfulorlando [dot] com</p>
 											<span>Website:</span><br>
-											<a href="https://www.joyfulorlando.com" target="_blank">www.joyfulorlando.com</a>
+											<a
+												href="https://www.joyfulorlando.com"
+												target="_blank">www.joyfulorlando.com</a>
 										</div>
 									</div>
 								</div>
@@ -207,7 +209,7 @@ useHead({
 
 .collapse.show {
 	opacity: 1;
-	height: 100px;
+	height: 120px;
 	transition: opacity 0s 0s ease, height 0.35s ease;
 }
 </style>
