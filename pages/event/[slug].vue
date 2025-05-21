@@ -9,6 +9,14 @@ const slug = route.params.slug as string;
 
 const { data: event } = await useFetch(`/api/event/${slug}`);
 
+if (!event.value) {
+	throw createError({
+		statusCode: 404,
+		statusMessage: "Event not found",
+		message: "The event you are looking for does not exist.",
+	});
+}
+
 const { getLocationById } = useLocations();
 const location = computed(() => event.value ? getLocationById(event.value.locationId) : null);
 
