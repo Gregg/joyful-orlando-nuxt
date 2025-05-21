@@ -1,24 +1,13 @@
 <script setup lang="ts">
-// import { events } from "~/data-temp/tempEvents";
 import { dateFormat } from "~/utils/dateFormat";
-
-const { data: events } = await useFetch("/api/events");
 
 const config = useRuntimeConfig();
 const GOOGLE_MAPS_API_KEY = config.public.gMapsApiKey;
 
-definePageMeta({
-	// validate: async (route) => {
-	// 	const slug = route.params.slug as string;
-	// 	// Note: we'll need to check it differently when connecting to the backend
-	// 	return !!events.value?.find(event => event.slug === slug);
-	// },
-});
-
 const route = useRoute();
 const slug = route.params.slug as string;
 
-const event = computed(() => events.value?.find(event => event.slug === slug));
+const { data: event } = await useFetch(`/api/event/${slug}`);
 
 const { getLocationById } = useLocations();
 const location = computed(() => event.value ? getLocationById(event.value.locationId) : null);

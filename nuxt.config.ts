@@ -13,6 +13,14 @@ export default defineNuxtConfig({
 			gMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
 		},
 	},
+	routeRules: {
+		"/": { isr: 12 * 60 * 60 },
+		"/about": { prerender: true },
+		"/submit": { prerender: true },
+		"/events": { isr: 12 * 60 * 60 },
+		"/event/**": { isr: true },
+		"/category/**": { isr: 12 * 60 * 60 },
+	},
 	compatibilityDate: "2024-11-01",
 	eslint: {
 		config: {
