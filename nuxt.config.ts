@@ -5,6 +5,7 @@ export default defineNuxtConfig({
 		"@vueuse/nuxt",
 		"@nuxtjs/seo",
 		"nuxt-gtag",
+		"nuxt-meta-pixel",
 	],
 	devtools: { enabled: true },
 	css: ["~/assets/styles/style.css", "~/assets/styles/responsive.css", "~/assets/styles/all.css"],
@@ -16,6 +17,11 @@ export default defineNuxtConfig({
 	runtimeConfig: {
 		public: {
 			gMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
+			metapixel: {
+				default: {
+					id: "561652373662473",
+				},
+			},
 		},
 	},
 	routeRules: {
