@@ -1,6 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	modules: ["@nuxt/eslint", "@vueuse/nuxt", "@nuxtjs/seo"],
+	modules: [
+		"@nuxt/eslint",
+		"@vueuse/nuxt",
+		"@nuxtjs/seo",
+		"nuxt-gtag",
+	],
 	devtools: { enabled: true },
 	css: ["~/assets/styles/style.css", "~/assets/styles/responsive.css", "~/assets/styles/all.css"],
 	site: {
@@ -31,6 +36,10 @@ export default defineNuxtConfig({
 				quotes: "double",
 			},
 		},
+	},
+	gtag: {
+		enabled: process.env.NODE_ENV === "production",
+		id: "G-0M978QS65C",
 	},
 	sitemap: {
 		sources: [
