@@ -1,4 +1,5 @@
 <script setup lang="ts">
+const { getCurrentGiveaway } = useGiveaway();
 onMounted(() => {
 	const script = document.createElement("script");
 	script.src = "https://sweepwidget.com/w/j/w_init.js";
@@ -58,9 +59,10 @@ useSeoMeta({
 		<!--    Giveaway section start    -->
 		<section>
 			<div
-				id="90656-ibxpestf"
+				:id="getCurrentGiveaway.giveawayId"
 				class="sw_container" />
 		</section>
+		<GiveawayTester />
 	</div>
 </template>
 

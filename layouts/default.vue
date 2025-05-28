@@ -3,6 +3,7 @@ const router = useRouter();
 const route = useRoute();
 const { searchQuery } = useEvents();
 const navBarShown = ref(false);
+const { getCurrentGiveaway } = useGiveaway();
 
 const isLargeScreen = useMediaQuery("(min-width: 992px)", { ssrWidth: 360 });
 
@@ -36,7 +37,7 @@ useHead({
 			<div class="alert alert-success mb-0 text-center py-3" style="background-color: rgb(254, 125, 21); border: none; color: white; font-weight: bold;">
 				<div class="container d-flex align-items-center justify-content-center gap-2">
 					<i class="fas fa-gift fa-lg"></i>
-					<span>Enter here to win a free burrito from Earthy Picks - 14 Days of Joy</span>
+					<span>{{ getCurrentGiveaway.bannerText }}</span>
 					<i class="fas fa-arrow-right"></i>
 				</div>
 			</div>
@@ -205,6 +206,7 @@ useHead({
 			</div>
 		</footer>
 		<!--   Footer section end   -->
+		<GiveawayTester />
 	</div>
 </template>
 
