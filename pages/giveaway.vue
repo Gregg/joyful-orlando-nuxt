@@ -5,6 +5,24 @@ onMounted(() => {
 	script.async = true;
 	document.body.appendChild(script);
 });
+
+useHead({
+	title: "14 Days of Giveaways to Celebrate Joyful Orlando",
+	meta: [
+		{
+			name: "description",
+			content: "Celebrate the launch of Joyful Orlando with 14 days of joyful giveaways! From June 1–14, enter daily to win prizes curated for your inner wellness nerd and outer sparkle enthusiast.",
+		},
+	],
+});
+
+useSeoMeta({
+	twitterTitle: "14 Days of Giveaways to Celebrate Joyful Orlando | Joyful Orlando",
+	description: "Celebrate the launch of Joyful Orlando with 14 days of joyful giveaways! From June 1–14, enter daily to win prizes curated for your inner wellness nerd and outer sparkle enthusiast.",
+	twitterDescription: "Celebrate the launch of Joyful Orlando with 14 days of joyful giveaways! From June 1–14, enter daily to win prizes curated for your inner wellness nerd and outer sparkle enthusiast.",
+	ogDescription: "Celebrate the launch of Joyful Orlando with 14 days of joyful giveaways! From June 1–14, enter daily to win prizes curated for your inner wellness nerd and outer sparkle enthusiast.",
+	ogImage: "/images/this-is-joyful-orlando.png",
+});
 </script>
 
 <template>
@@ -21,7 +39,7 @@ onMounted(() => {
 				<div class="row align-items-center gx-0 mt-40">
 					<div class="col-xl-12">
 						<div class="hero-content text-center">
-							<h1>Giveaway</h1>
+							<h1>14 Days of Giveaways to Spark Joy</h1>
 						</div>
 						<img
 							src="/images/white-star.webp"

@@ -46,7 +46,7 @@ useSchemaOrg([
 ]);
 
 useHead({
-	title: `${event.value?.name} | Event Details`,
+	title: `${event.value?.name}`,
 	meta: [
 		{
 			name: "description",
@@ -57,7 +57,7 @@ useHead({
 
 useSeoMeta({
 	ogImage: event.value?.imageUrl,
-	twitterTitle: `Joyful Orlando | ${event.value?.name}`,
+	twitterTitle: `${event.value?.name} | Joyful Orlando`,
 	twitterDescription: event.value?.description,
 	twitterImage: event.value?.imageUrl,
 });

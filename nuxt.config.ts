@@ -10,7 +10,7 @@ export default defineNuxtConfig({
 	devtools: { enabled: true },
 	css: ["~/assets/styles/style.css", "~/assets/styles/responsive.css", "~/assets/styles/all.css"],
 	site: {
-		url: "https://joyfulorlando.com",
+		url: "https://www.joyfulorlando.com",
 		name: "Joyful Orlando",
 		titleTemplate: "%s | Joyful Orlando",
 	},

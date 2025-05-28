@@ -1,9 +1,20 @@
 <script setup lang="ts">
+
+useHead({
+	title: "About Us – The Heart Behind Joyful Orlando",
+	meta: [
+		{
+			name: "description",
+			content: "Joyful Orlando was born from a passion for conscious connection, community joy, and heart-centered events. Meet the team and discover what drives our mission to spread joy across the city.",
+		},
+	],
+});
+
 useSeoMeta({
-	description: "Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram).",
-	ogDescription: "Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram).",
-	twitterTitle: "Joyful Orlando | About",
-	twitterDescription: "Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram).",
+	description: "Joyful Orlando was born from a passion for conscious connection, community joy, and heart-centered events. Meet the team and discover what drives our mission to spread joy across the city.",
+	ogDescription: "Joyful Orlando was born from a passion for conscious connection, community joy, and heart-centered events. Meet the team and discover what drives our mission to spread joy across the city.",
+	twitterTitle: "About Us – The Heart Behind Joyful Orlando",
+	twitterDescription: "Joyful Orlando was born from a passion for conscious connection, community joy, and heart-centered events. Meet the team and discover what drives our mission to spread joy across the city.",
 	ogImage: "/images/this-is-joyful-orlando.png",
 });
 </script>

@@ -3,10 +3,10 @@ const { featuredCategories } = useCategories();
 const { featuredEvents } = useEvents();
 
 useSeoMeta({
-	description: "Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram).",
-	ogDescription: "Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram).",
-	twitterTitle: "Joyful Orlando | Home",
-	twitterDescription: "Joyful Orlando is on a mission to spotlight conscious & wellness events that help you slow down, show up, and feel actually good (not just “pretend good” for Instagram).",
+	description: "Discover the heartbeat of Orlando's conscious community. Joyful Orlando connects you to local events that nourish the soul, inspire connection, and spark joy—one gathering at a time.",
+	ogDescription: "Discover the heartbeat of Orlando's conscious community. Joyful Orlando connects you to local events that nourish the soul, inspire connection, and spark joy—one gathering at a time.",
+	twitterTitle: "Joyful Orlando – Discover Events that Uplift, Connect, and Inspire",
+	twitterDescription: "Discover the heartbeat of Orlando's conscious community. Joyful Orlando connects you to local events that nourish the soul, inspire connection, and spark joy—one gathering at a time.",
 	ogImage: "/images/this-is-joyful-orlando.png",
 });
 </script>

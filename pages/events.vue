@@ -14,20 +14,20 @@ const queriedEvents = computed(() => {
 });
 
 useHead({
-	title: "Events",
+	title: "Upcoming Events to Spark Joy & Connection",
 	meta: [
 		{
 			name: "description",
-			content: "Browse events in Orlando, Florida. Find the best events happening in your area.",
+			content: "Looking for something meaningful to do in Orlando? Explore our handpicked calendar of heart-centered events that uplift, connect, and inspire joy in every corner of the city.",
 		},
 	],
 });
 
 useSeoMeta({
-	twitterTitle: `Joyful Orlando | Events`,
-	description: "Browse events in Orlando, Florida. Find the best events happening in your area.",
-	twitterDescription: "Browse events in Orlando, Florida. Find the best events happening in your area.",
-	ogDescription: "Browse events in Orlando, Florida. Find the best events happening in your area.",
+	twitterTitle: "Upcoming Events to Spark Joy & Connection | Joyful Orlando",
+	description: "Looking for something meaningful to do in Orlando? Explore our handpicked calendar of heart-centered events that uplift, connect, and inspire joy in every corner of the city.",
+	twitterDescription: "Looking for something meaningful to do in Orlando? Explore our handpicked calendar of heart-centered events that uplift, connect, and inspire joy in every corner of the city.",
+	ogDescription: "Looking for something meaningful to do in Orlando? Explore our handpicked calendar of heart-centered events that uplift, connect, and inspire joy in every corner of the city.",
 	ogImage: "/images/this-is-joyful-orlando.png",
 });
 </script>

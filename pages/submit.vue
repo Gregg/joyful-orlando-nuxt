@@ -16,7 +16,7 @@ useHead({
 });
 
 useSeoMeta({
-	twitterTitle: `Joyful Orlando | Submit Events`,
+	twitterTitle: `Submit Events | Joyful Orlando`,
 	description: "Submit your event to Joyful Orlando. Share your event with the community.",
 	twitterDescription: "Submit your event to Joyful Orlando. Share your event with the community.",
 	ogDescription: "Submit your event to Joyful Orlando. Share your event with the community.",
