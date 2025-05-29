@@ -6,7 +6,7 @@ interface GiveawayDay {
 // Schedule runs from before June 2nd until June 15th
 // Each giveaway starts at 12:00 AM on its designated day
 const giveawaySchedule: GiveawayDay[] = [
-  // Default/Initial (Before June 2nd 12:00 AM)
+  // Day 1 (Before June 2nd 12:00 AM)
   {
     bannerText: "Win Tickets to Center Street's Aqua Social - Day 1 of 14 Days of Joy!",
     giveawayId: "90877-yrnjoapt"
