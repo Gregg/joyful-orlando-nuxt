@@ -2,10 +2,15 @@ import type { FieldSet, Record } from "airtable";
 import type { IEvent } from "~/types/event";
 
 export function generateEvent(record: Record<FieldSet>): IEvent {
-	const imageArray = record.get("ImageUrl") as Array<string>;
-	const standardImageUrl = imageArray[0] ? imageArray[0] : "";
-	const imageId = standardImageUrl.split("/").pop();
-	const imageUrl = `https://res.cloudinary.com/dxyuki6gm/image/upload/t_SquareCrop/${imageId}`;
+	const defaultImageUrl = "https://res.cloudinary.com/dxyuki6gm/image/upload/t_SquareCrop/recuC9QcOp2VFyYy1.png";
+	const imageArray = record.get("ImageUrl") as Array<string> | undefined;
+	
+	// Determine the image URL based on whether we have a valid image array
+	let imageUrl = defaultImageUrl;
+	if (imageArray?.length > 0) {
+		const imageId = imageArray[0].split("/").pop();
+		imageUrl = `https://res.cloudinary.com/dxyuki6gm/image/upload/t_SquareCrop/${imageId}`;
+	}
 
 	return {
 		id: record.id,
