@@ -1,7 +1,14 @@
 <script setup lang="js">
-const handleEventsClick = () => {
-  // If we're already on the events page, just scroll to top
-  if (window.location.pathname === '/events') {
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const handleEventsClick = async (event) => {
+  // If we're already on the events page
+  if (router.currentRoute.value.path === '/events') {
+    event.preventDefault(); // Prevent default navigation
+    // Use nextTick to ensure DOM is ready
+    await nextTick();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 };
