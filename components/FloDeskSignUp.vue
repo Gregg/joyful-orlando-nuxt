@@ -1,4 +1,11 @@
 <script setup lang="js">
+const handleEventsClick = () => {
+  // If we're already on the events page, just scroll to top
+  if (window.location.pathname === '/events') {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+};
+
 onMounted(() => {
 	(function (w, d, t, h, s, n) {
 		w.FlodeskObject = n;
@@ -122,7 +129,15 @@ onMounted(() => {
 												<p>Thank you for joining!</p>
 												<br>
 												<h3>We just sent you a confirmation email, please take a moment to confirm your subscription. 🙏</h3>
-												<p><br>If you don't see it, maybe check your spam folder and mark it as not spam to make sure you get our emails!</p>											
+												<p><br>If you don't see it, maybe check your spam folder and mark it as not spam to make sure you get our emails!</p>
+												<div class="text-center mt-4">
+													<NuxtLink
+														to="/events"
+														class="btn btn-dark btn-lg"
+														@click="handleEventsClick">
+														View Latest Events
+													</NuxtLink>
+												</div>											
 											</div>
 										</div>
 									</div>

@@ -146,11 +146,8 @@ useHead({
 								<!-- <div class="social-media">
 									<h6>Follow us</h6>
 									<ul class="list-inline">
-										<li><a href="#"><i class="fab fa-facebook-f" /></a></li>
-										<li><a href="#"><i class="fab fa-twitter" /></a></li>
-										<li><a href="#"><i class="fab fa-pinterest" /></a></li>
+										<li><a href="https://www.facebook.com/orlandoisjoyful/"><i class="fab fa-facebook-f" /></a></li>
 										<li><a href="https://www.instagram.com/orlandoisjoyful"><i class="fab fa-instagram" /></a></li>
-										<li><a href="#"><i class="fab fa-linkedin" /></a></li>
 									</ul>
 								</div> -->
 							</div>
