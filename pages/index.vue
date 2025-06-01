@@ -2,6 +2,16 @@
 const { featuredCategories } = useCategories();
 const { featuredEvents } = useEvents();
 
+useHead({
+  title: "Discover Conscious Community & Events in Orlando",
+  meta: [
+		{
+			name: "description",
+			content: "Discover the heartbeat of Orlando's conscious community. Joyful Orlando connects you to local events that nourish the soul, inspire connection, and spark joy—one gathering at a time.",
+		},
+	],
+});
+
 useSeoMeta({
 	description: "Discover the heartbeat of Orlando's conscious community. Joyful Orlando connects you to local events that nourish the soul, inspire connection, and spark joy—one gathering at a time.",
 	ogDescription: "Discover the heartbeat of Orlando's conscious community. Joyful Orlando connects you to local events that nourish the soul, inspire connection, and spark joy—one gathering at a time.",
