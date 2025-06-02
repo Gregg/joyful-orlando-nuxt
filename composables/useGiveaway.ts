@@ -13,12 +13,12 @@ const giveawaySchedule: GiveawayDay[] = [
   },
   // Day 2 (June 2nd 12:00 AM - June 3rd 12:00 AM)
   {
-    bannerText: "Win Tickets to Conscious Nona's Summer Solstice Event - Day 2 of 14 Days of Joy!",
-    giveawayId: "90656-ibxpestf"
+    bannerText: "Win a 5-Class Pack by Full Circle Yoga - Day 2 of 14 Days of Joy!",
+    giveawayId: "90931-acbg349i"
   },
   // Day 3 (June 3rd 12:00 AM - June 4th 12:00 AM)
   {
-    bannerText: "Win a 5-Class Pack by Full Circle Yoga - Day 3 of 14 Days of Joy!",
+    bannerText: "Win Tickets to Conscious Nona's Summer Solstice Event - Day 3 of 14 Days of Joy!",
     giveawayId: "90879-r4n9687b"
   },
   // Day 4 (June 4th 12:00 AM - June 5th 12:00 AM)
