@@ -18,8 +18,8 @@ const giveawaySchedule: GiveawayDay[] = [
   },
   // Day 3 (June 3rd 12:00 AM - June 4th 12:00 AM)
   {
-    bannerText: "Win Tickets to Conscious Nona's Summer Solstice Event - Day 3 of 14 Days of Joy!",
-    giveawayId: "90879-r4n9687b"
+    bannerText: "Win a Meal for 2 At Earthy Picks - Day 3 of 14 Days of Joy!",
+    giveawayId: "91016-rvo0qfgh"
   },
   // Day 4 (June 4th 12:00 AM - June 5th 12:00 AM)
   {
