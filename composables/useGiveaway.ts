@@ -23,8 +23,8 @@ const giveawaySchedule: GiveawayDay[] = [
   },
   // Day 4 (June 4th 12:00 AM - June 5th 12:00 AM)
   {
-    bannerText: "Win a _____ at ______ - Day 4 of 14 Days of Joy!",
-    giveawayId: "replace_with_id"
+    bannerText: "Win 2 tickets to Conscious Nona's Summer Solstice Celebration - Day 4 of 14 Days of Joy!",
+    giveawayId: "91047-a34l6n2x"
   },
   // Day 5 (June 5th 12:00 AM - June 6th 12:00 AM)
   {
