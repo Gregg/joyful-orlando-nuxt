@@ -28,8 +28,8 @@ const giveawaySchedule: GiveawayDay[] = [
   },
   // Day 5 (June 5th 12:00 AM - June 6th 12:00 AM)
   {
-    bannerText: "Win a _____ at _______ - Day 5 of 14 Days of Joy!",
-    giveawayId: "replace_with_id"
+    bannerText: "Win 2 Tickets to Conscious Dance Orlando - Day 5 of 14 Days of Joy!",
+    giveawayId: "91076-s92eb5k8"
   },
   // Day 6 (June 6th 12:00 AM - June 7th 12:00 AM)
   {
