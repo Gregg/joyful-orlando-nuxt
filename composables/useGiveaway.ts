@@ -33,8 +33,8 @@ const giveawaySchedule: GiveawayDay[] = [
   },
   // Day 6 (June 6th 12:00 AM - June 7th 12:00 AM)
   {
-    bannerText: "Win a _____ at _______ - Day 6 of 14 Days of Joy!",
-    giveawayId: "replace_with_id"
+    bannerText: "Win a Two Hour 1:1 Hypnotherapy Session - Day 6 of 14 Days of Joy!",
+    giveawayId: "91104-5mqpl3co"
   },
   // Day 7 (June 7th 12:00 AM - June 8th 12:00 AM)
   {
