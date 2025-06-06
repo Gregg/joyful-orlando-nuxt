@@ -25,6 +25,15 @@ html {
 	font-display: swap;
 	src: url("../fonts/AlbraTextTRIAL-Medium.woff2") format('woff2');
 }
+@font-face{
+	font-family: 'More Sugar';
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("../fonts/more-sugar.woff2") format('woff2'),
+		 url("../fonts/more-sugar.woff") format('woff'),
+		 url("../fonts/more-sugar.ttf") format('truetype');
+}
 /*    Font family font face css end    */
 body {
   font-family: "Albert Sans", sans-serif;

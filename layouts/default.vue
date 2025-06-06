@@ -52,7 +52,7 @@ useHead({
 						<span class="logo-icon"><img
 							src="/images/joyful-orlando-icon.webp"
 							alt=""></span>
-						<span class="logo-text d-none d-lg-block" style="font-family: 'apercu-pro'; font-weight: 700;">Joyful Orlando</span>
+						<span class="logo-text d-none d-lg-block" style="font-family: 'More Sugar'; font-weight: 400;">Joyful Orlando</span>
 					</NuxtLink>
 					<!-- Search Icon beside Toggler on Mobile -->
 					<!-- <div class="mobile-search d-lg-none ms-auto">
