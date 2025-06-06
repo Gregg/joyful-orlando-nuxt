@@ -8,7 +8,11 @@ export default defineNuxtConfig({
 		"nuxt-meta-pixel",
 	],
 	devtools: { enabled: true },
-	css: ["~/assets/styles/style.css", "~/assets/styles/responsive.css", "~/assets/styles/all.css"],
+	css: [
+		"~/assets/styles/style.css",
+		"~/assets/styles/responsive.css",
+		"~/assets/styles/all.css",
+	],
 	site: {
 		url: "https://www.joyfulorlando.com",
 		name: "Joyful Orlando",
@@ -48,8 +52,11 @@ export default defineNuxtConfig({
 		id: "G-0M978QS65C",
 	},
 	sitemap: {
-		sources: [
-			"/api/__sitemap__/urls",
-		],
+		sources: ["/api/__sitemap__/urls"],
+	},
+	vite: {
+		server: {
+			allowedHosts: true,
+		},
 	},
 });
