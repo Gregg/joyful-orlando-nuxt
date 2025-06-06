@@ -30,9 +30,8 @@ html {
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url("../fonts/more-sugar.woff2") format('woff2'),
-		 url("../fonts/more-sugar.woff") format('woff'),
-		 url("../fonts/more-sugar.ttf") format('truetype');
+	src: url("../fonts/MoreSugar-Regular.otf") format('opentype'),
+		 url("../fonts/MoreSugar-Regular.ttf") format('truetype');
 }
 /*    Font family font face css end    */
 body {
@@ -118,8 +117,8 @@ background-color: transparent;
 	height: auto;
 }
 .navbar .navbar-brand .logo-text{
-	font-family: 'albratext';
-	font-weight: 500;
+	font-family: 'More Sugar';
+	font-weight: 400;
 	font-size: 28px;
 	color: #222222;
 }
