@@ -38,8 +38,8 @@ const giveawaySchedule: GiveawayDay[] = [
   },
   // Day 7 (June 7th 12:00 AM - June 8th 12:00 AM)
   {
-    bannerText: "Win a _____ at _______ - Day 7 of 14 Days of Joy!",
-    giveawayId: "replace_with_id"
+    bannerText: "Win 2 VIP Tickets to Global Peace Film Festival - Day 7 of 14 Days of Joy!",
+    giveawayId: "91119-7m3nfr2i"
   },
   // Day 8 (June 8th 12:00 AM - June 9th 12:00 AM)
   {
