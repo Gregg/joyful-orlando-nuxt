@@ -43,8 +43,8 @@ const giveawaySchedule: GiveawayDay[] = [
   },
   // Day 8 (June 8th 12:00 AM - June 9th 12:00 AM)
   {
-    bannerText: "Win a _____ at _______ - Day 8 of 14 Days of Joy!",
-    giveawayId: "replace_with_id"
+    bannerText: "Win a $108 Gift Card from Kava Culture Downtown Orlando - Day 8 of 14 Days of Joy!",
+    giveawayId: "91122-q73tdr96"
   },
   // Day 9 (June 9th 12:00 AM - June 10th 12:00 AM)
   {
