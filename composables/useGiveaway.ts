@@ -48,8 +48,8 @@ const giveawaySchedule: GiveawayDay[] = [
   },
   // Day 9 (June 9th 12:00 AM - June 10th 12:00 AM)
   {
-    bannerText: "Win a _____ at _______ - Day 9 of 14 Days of Joy!",
-    giveawayId: "replace_with_id"
+    bannerText: "Win a 1 Month Membership to The Urban Ashram - Day 9 of 14 Days of Joy!",
+    giveawayId: "91144-5nuemlwf"
   },
   // Day 10 (June 10th 12:00 AM - June 11th 12:00 AM)
   {
