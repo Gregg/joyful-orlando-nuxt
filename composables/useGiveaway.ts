@@ -53,8 +53,8 @@ const giveawaySchedule: GiveawayDay[] = [
   },
   // Day 10 (June 10th 12:00 AM - June 11th 12:00 AM)
   {
-    bannerText: "Win a _____ at _______ - Day 10 of 14 Days of Joy!",
-    giveawayId: "replace_with_id"
+    bannerText: "Win 3 Tix to Flow & Beats by Bambu Flow - Day 10 of 14 Days of Joy!",
+    giveawayId: "91162-2tvukyxl"
   },
   // Day 11 (June 11th 12:00 AM - June 12th 12:00 AM)
   {
