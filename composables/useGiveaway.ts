@@ -63,8 +63,8 @@ const giveawaySchedule: GiveawayDay[] = [
   },
   // Day 12 (June 12th 12:00 AM - June 13th 12:00 AM)
   {
-    bannerText: "Win a FREE Soulkit by Rise Up Live Bright - Day 12 of 14 Days of Joy!",
-    giveawayId: "91197-lijoxpbk"
+    bannerText: "Win 2 Tickets to Opera Orlando - Day 12 of 14 Days of Joy!",
+    giveawayId: "91228-f6z5wdnx"
   },
   // Day 13 (June 13th 12:00 AM - June 14th 12:00 AM)
   {
