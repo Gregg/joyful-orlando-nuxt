@@ -68,8 +68,8 @@ const giveawaySchedule: GiveawayDay[] = [
   },
   // Day 13 (June 13th 12:00 AM - June 14th 12:00 AM)
   {
-    bannerText: "Win a _____ at _______ - Day 13 of 14 Days of Joy!",
-    giveawayId: "replace_with_id"
+    bannerText: "Win a Grand Prize from Mehta Metaphysical Center - Day 13 of 14 Days of Joy!",
+    giveawayId: "91246-bn78py3t"
   },
   // Day 14 (June 14th 12:00 AM - June 15th 12:00 AM)
   {
