@@ -73,8 +73,8 @@ const giveawaySchedule: GiveawayDay[] = [
   },
   // Day 14 (June 14th 12:00 AM - June 15th 12:00 AM)
   {
-    bannerText: "Win a _____ at _______ - Day 14 of 14 Days of Joy!",
-    giveawayId: "replace_with_id"
+    bannerText: "Win a $100 gift card from Spiral Circle Bookstore - Day 14 of 14 Days of Joy!",
+    giveawayId: "91258-uqwfahpt"
   }
 ];
 
