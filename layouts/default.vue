@@ -3,7 +3,7 @@ const router = useRouter();
 const route = useRoute();
 const { searchQuery } = useEvents();
 const navBarShown = ref(false);
-const { getCurrentGiveaway } = useGiveaway();
+// const { getCurrentGiveaway } = useGiveaway();
 
 const isLargeScreen = useMediaQuery("(min-width: 992px)", { ssrWidth: 360 });
 
@@ -33,7 +33,7 @@ useHead({
 <template>
 	<div>
 		<!-- Promotional Banner -->
-		<NuxtLink to="/giveaway" class="text-decoration-none">
+		<!-- NuxtLink to="/giveaway" class="text-decoration-none">
 			<div class="alert alert-success mb-0 text-center py-3" style="background-color: rgb(254, 125, 21); border: none; color: white; font-weight: bold;">
 				<div class="container d-flex align-items-center justify-content-center gap-2">
 					<i class="fas fa-gift fa-lg"></i>
@@ -41,18 +41,15 @@ useHead({
 					<i class="fas fa-arrow-right"></i>
 				</div>
 			</div>
-		</NuxtLink>
+	</NuxtLink -->
 		<!--    Header section start    -->
 		<header>
 			<nav class="navbar navbar-expand-lg navbar-light">
 				<div class="container">
-					<NuxtLink
-						class="navbar-brand"
-						to="/">
-						<span class="logo-icon"><img
-							src="/images/joyful-orlando-icon.webp"
-							alt=""></span>
-						<span class="logo-text d-none d-lg-block" style="font-family: 'More Sugar'; font-weight: 400;">Joyful Orlando</span>
+					<NuxtLink class="navbar-brand" to="/">
+						<span class="logo-icon"><img src="/images/joyful-orlando-icon.webp" alt=""></span>
+						<span class="logo-text d-none d-lg-block" style="font-family: 'More Sugar'; font-weight: 400;">Joyful
+							Orlando</span>
 					</NuxtLink>
 					<!-- Search Icon beside Toggler on Mobile -->
 					<!-- <div class="mobile-search d-lg-none ms-auto">
@@ -62,62 +59,39 @@ useHead({
      </div>
     </div> -->
 					<!-- Navbar Toggler -->
-					<div
-						id=""
-						class=" ">
+					<div id="" class=" ">
 						<ul class="navbar-nav ms-auto">
 							<li class="nav-item d-lg-none">
-								<NuxtLink
-									class="nav-link"
-									to="/events">Browse Events</NuxtLink>
+								<NuxtLink class="nav-link" to="/events">Browse Events</NuxtLink>
 							</li>
 						</ul>
 					</div>
-					<button
-						class="navbar-toggler"
-						type="button"
-						@click="navBarShown = !navBarShown">
+					<button class="navbar-toggler" type="button" @click="navBarShown = !navBarShown">
 						<span class="navbar-toggler-icon" />
 					</button>
 
-					<div
-						id="navbarNav"
-						class="collapse navbar-collapse"
-						:class="{ show: isLargeScreen || navBarShown }">
+					<div id="navbarNav" class="collapse navbar-collapse" :class="{ show: isLargeScreen || navBarShown }">
 						<ul class="navbar-nav ms-auto">
 							<!-- Search Inside Navbar for Larger Screens -->
 							<li class="nav-item d-none d-lg-flex">
 								<div class="search-container">
 									<i class="far fa-search search-icon" />
-									<input
-										v-model="searchQuery"
-										type="text"
-										class="navbar-search-input"
-										placeholder="Search..."
+									<input v-model="searchQuery" type="text" class="navbar-search-input" placeholder="Search..."
 										@input="searchInputHandler">
 								</div>
 							</li>
 							<li class="nav-item d-none d-lg-flex">
-								<NuxtLink
-									class="nav-link"
-									to="/events">Browse Events</NuxtLink>
+								<NuxtLink class="nav-link" to="/events">Browse Events</NuxtLink>
 							</li>
 							<li class="nav-item">
-								<NuxtLink
-									class="nav-link"
-									to="/submit">Submit Event</NuxtLink>
+								<NuxtLink class="nav-link" to="/submit">Submit Event</NuxtLink>
 							</li>
 							<li class="nav-item">
-								<NuxtLink
-									class="nav-link"
-									to="/about">About Us</NuxtLink>
+								<NuxtLink class="nav-link" to="/about">About Us</NuxtLink>
 							</li>
 						</ul>
 						<!-- Sign Up Button -->
-						<a
-							href="#signupform"
-							role="button"
-							class="btn btn-dark">Sign Up</a>
+						<a href="#signupform" role="button" class="btn btn-dark">Sign Up</a>
 					</div>
 				</div>
 			</nav>
@@ -130,19 +104,16 @@ useHead({
 
 		<!--   Footer section start   -->
 		<footer>
-			<div
-				class="footer-sec"
-				style="background-color: #222222;">
+			<div class="footer-sec" style="background-color: #222222;">
 				<div class="container">
 					<div class="row foot-contact-detail">
 						<div class="col-xl-3 col-lg-4 col-md-8">
 							<div class="about-content">
 								<div class="company-logo">
-									<img
-										src="/images/footer-logo.webp"
-										alt="">
+									<img src="/images/footer-logo.webp" alt="">
 								</div>
-								<p>Joyful Orlando curates the best conscious and wellness events in the city, helping you build meaningful connections, boost your well-being, and find your community.</p>
+								<p>Joyful Orlando curates the best conscious and wellness events in the city, helping you build meaningful
+									connections, boost your well-being, and find your community.</p>
 								<!-- <div class="social-media">
 									<h6>Follow us</h6>
 									<ul class="list-inline">
@@ -156,10 +127,18 @@ useHead({
 							<div class="oue-links">
 								<h6>Our Links</h6>
 								<ul>
-									<li><NuxtLink to="/">Home</NuxtLink></li>
-									<li><NuxtLink to="/about">About Us</NuxtLink></li>
-									<li><NuxtLink to="/events">Browse Events</NuxtLink></li>
-									<li><NuxtLink to="/submit">Submit Event</NuxtLink></li>
+									<li>
+										<NuxtLink to="/">Home</NuxtLink>
+									</li>
+									<li>
+										<NuxtLink to="/about">About Us</NuxtLink>
+									</li>
+									<li>
+										<NuxtLink to="/events">Browse Events</NuxtLink>
+									</li>
+									<li>
+										<NuxtLink to="/submit">Submit Event</NuxtLink>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -173,9 +152,7 @@ useHead({
 											<span>Email:</span><br>
 											<p>ishaan [at] joyfulorlando [dot] com</p>
 											<span>Website:</span><br>
-											<a
-												href="https://www.joyfulorlando.com"
-												target="_blank">www.joyfulorlando.com</a>
+											<a href="https://www.joyfulorlando.com" target="_blank">www.joyfulorlando.com</a>
 										</div>
 									</div>
 								</div>
@@ -183,10 +160,7 @@ useHead({
 									<div class="instagram-detail">
 										<h6>Follow Us on Instagram</h6>
 										<p>Stay updated with our latest events and community moments.</p>
-										<a
-											href="https://www.instagram.com/orlandoisjoyful"
-											role="button"
-											target="_blank">@OrlandoIsJoyful</a>
+										<a href="https://www.instagram.com/orlandoisjoyful" role="button" target="_blank">@OrlandoIsJoyful</a>
 									</div>
 								</div>
 							</div>
@@ -203,7 +177,7 @@ useHead({
 			</div>
 		</footer>
 		<!--   Footer section end   -->
-		<GiveawayTester />
+		<!-- GiveawayTester / -->
 	</div>
 </template>
 
