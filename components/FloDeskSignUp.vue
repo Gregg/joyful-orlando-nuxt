@@ -1,5 +1,6 @@
 <script setup lang="js">
 import { useRouter } from 'vue-router';
+import { onMounted, nextTick } from 'vue';
 
 const router = useRouter();
 
@@ -83,7 +84,8 @@ onMounted(() => {
 								<div class="ff-68000160305e6b614244935a__field fd-form-group input-box">
 									<img
 										src="/images/profile.webp"
-										alt="">
+										alt=""
+										class="input-icon">
 									<input
 										id="ff-68000160305e6b614244935a-firstName"
 										class="ff-68000160305e6b614244935a__control fd-form-control form-control"
@@ -98,11 +100,12 @@ onMounted(() => {
 								<div class="ff-68000160305e6b614244935a__field fd-form-group input-box">
 									<img
 										src="/images/sms.webp"
-										alt="">
+										alt=""
+										class="input-icon">
 									<input
 										id="ff-68000160305e6b614244935a-email"
 										class="ff-68000160305e6b614244935a__control fd-form-control form-control"
-										type="text"
+										type="email"
 										maxlength="255"
 										name="email"
 										placeholder="Email address"
@@ -144,7 +147,7 @@ onMounted(() => {
 														@click="handleEventsClick">
 														View Latest Events
 													</NuxtLink>
-												</div>											
+												</div>
 											</div>
 										</div>
 									</div>
@@ -236,5 +239,38 @@ onMounted(() => {
 
 .ff-68000160305e6b614244935a[data-ff-stage="success"] .form-fields {
     display: none;
+}
+
+.input-box {
+	position: relative;
+	display: flex;
+	align-items: center;
+}
+
+.input-box img {
+	position: absolute;
+	left: 15px;
+	width: 20px;
+	height: 20px;
+	pointer-events: none;
+}
+
+.input-box input {
+	padding-left: 50px;
+	width: 100%;
+	height: 50px;
+	border-radius: 5px;
+	border: 1px solid #ccc;
+}
+
+.form-fields {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.fd-btn {
+	padding: 15px 30px;
+	font-size: 1.1em;
 }
 </style>
