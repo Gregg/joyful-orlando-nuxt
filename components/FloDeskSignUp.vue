@@ -84,8 +84,7 @@ onMounted(() => {
 								<div class="ff-68000160305e6b614244935a__field fd-form-group input-box">
 									<img
 										src="/images/profile.webp"
-										alt=""
-										class="input-icon">
+										alt="">
 									<input
 										id="ff-68000160305e6b614244935a-firstName"
 										class="ff-68000160305e6b614244935a__control fd-form-control form-control"
@@ -100,8 +99,7 @@ onMounted(() => {
 								<div class="ff-68000160305e6b614244935a__field fd-form-group input-box">
 									<img
 										src="/images/sms.webp"
-										alt=""
-										class="input-icon">
+										alt="">
 									<input
 										id="ff-68000160305e6b614244935a-email"
 										class="ff-68000160305e6b614244935a__control fd-form-control form-control"
