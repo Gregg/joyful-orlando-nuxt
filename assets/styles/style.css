@@ -380,6 +380,7 @@ background-color: transparent;
 	position: absolute;
 	top: 0;
 	width: 100%;
+	z-index: 0;
 }
 .news-letter .news-star img{
 	width: 175px;
@@ -407,6 +408,8 @@ background-color: transparent;
 	/*display: flex;*/
 	/*gap: 29px;*/
 	margin-top: 60px;
+	position: relative;
+	z-index: 1;
 }
 .form-fields {
 	display: flex;
