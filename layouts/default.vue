@@ -169,7 +169,8 @@ useHead({
 					<div class="row">
 						<div class="col">
 							<div class="copy-right-content">
-								<p>Copyright 2025 Joyful Orlando</p>
+								<p>Joyful Orlando is joyfully supported by <a href="https://www.globalpeace360.org/">Global Peace 360°</a>
+								</p>
 							</div>
 						</div>
 					</div>
