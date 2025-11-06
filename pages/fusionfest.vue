@@ -70,7 +70,7 @@ useSeoMeta({
                                                         </div>
                                                         <div class="flex-shrink-0">
                                                                 <a href="http://fusionfest.org" target="_blank" rel="noopener noreferrer">
-                                                                        <img src="/images/fusionfest.png" alt="FusionFest 2025" style="max-width: 200px; height: auto;">
+                                                                        <img src="/images/fusionfest.png" alt="FusionFest 2025" style="max-width: 400px; height: auto;">
                                                                 </a>
                                                         </div>
                                                 </div>
