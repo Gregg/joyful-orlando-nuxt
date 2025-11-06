@@ -58,7 +58,7 @@ useSeoMeta({
                         <div class="container">
                                 <div class="row justify-content-center mb-5">
                                         <div class="col-lg-10">
-                                                <div class="d-flex align-items-start gap-4">
+                                                <div class="d-flex flex-column flex-md-row align-items-start align-items-md-start gap-4">
                                                         <div class="flex-grow-1">
                                                                 <p style="font-size: 18px; line-height: 1.8;">
                                                                         Join us November 29–30 at <a href="http://fusionfest.org" target="_blank" rel="noopener noreferrer">FusionFest 2025</a>, held at the <a href="https://maps.app.goo.gl/7K7Dfdspi6Z59wCH9?g_st=ipc" target="_blank" rel="noopener noreferrer">Dr. Phillips Center for the Performing Arts</a> in downtown Orlando.
