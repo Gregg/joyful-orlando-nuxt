@@ -58,13 +58,22 @@ useSeoMeta({
                         <div class="container">
                                 <div class="row justify-content-center mb-5">
                                         <div class="col-lg-10">
-                                                <p style="font-size: 18px; line-height: 1.8; text-align: center;">
-                                                        Join us November 29–30 at <a href="http://fusionfest.org" target="_blank" rel="noopener noreferrer">FusionFest 2025</a>, held at the <a href="https://maps.app.goo.gl/7K7Dfdspi6Z59wCH9?g_st=ipc" target="_blank" rel="noopener noreferrer">Dr. Phillips Center for the Performing Arts</a> in downtown Orlando.
-                                                        <br><br>
-                                                        Step into a sanctuary of connection, creativity, and calm—where you can pause, breathe, and explore yoga, meditation, dance, and healing practices led by Orlando's most heart-centered facilitators.
-                                                        <br><br>
-                                                        Browse below and choose the sessions that speak to you.
-                                                </p>
+                                                <div class="d-flex align-items-start gap-4">
+                                                        <div class="flex-grow-1">
+                                                                <p style="font-size: 18px; line-height: 1.8;">
+                                                                        Join us November 29–30 at <a href="http://fusionfest.org" target="_blank" rel="noopener noreferrer">FusionFest 2025</a>, held at the <a href="https://maps.app.goo.gl/7K7Dfdspi6Z59wCH9?g_st=ipc" target="_blank" rel="noopener noreferrer">Dr. Phillips Center for the Performing Arts</a> in downtown Orlando.
+                                                                        <br><br>
+                                                                        Step into a sanctuary of connection, creativity, and calm—where you can pause, breathe, and explore yoga, meditation, dance, and healing practices led by Orlando's most heart-centered facilitators.
+                                                                        <br><br>
+                                                                        Browse below and choose the sessions that speak to you.
+                                                                </p>
+                                                        </div>
+                                                        <div class="flex-shrink-0">
+                                                                <a href="http://fusionfest.org" target="_blank" rel="noopener noreferrer">
+                                                                        <img src="/images/fusionfest.png" alt="FusionFest 2025" style="max-width: 200px; height: auto;">
+                                                                </a>
+                                                        </div>
+                                                </div>
                                         </div>
                                 </div>
                                 <!-- Add the following to your website's HTML. -->
