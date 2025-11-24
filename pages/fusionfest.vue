@@ -78,6 +78,14 @@ useSeoMeta({
                                 </div>
                                 <!-- Add the following to your website's HTML. -->
                                 <iframe data-checkout="joyful-orlando-at-fusionfest-2025"></iframe>
+                                
+                                <div class="row justify-content-center mt-5">
+                                        <div class="col-lg-10">
+                                                <p style="font-size: 18px; line-height: 1.8; text-align: center;">
+                                                        Take a moment to unwind with free massage experiences offered all weekend. <a href="https://bodyworklmtart.amtamembers.com/" target="_blank" rel="noopener noreferrer">Flor Matias</a> brings a decade of therapeutic bodywork to her calming chair massages, while <a href="https://journeytobliss.janeapp.com/" target="_blank" rel="noopener noreferrer">Laryssa Neel</a> offers AromaTouch hand massage with essential oils that soothe the nervous system. Tips appreciated.
+                                                </p>
+                                        </div>
+                                </div>
                         </div>
                 </section>
         </div>
