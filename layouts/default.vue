@@ -33,7 +33,7 @@ useHead({
 <template>
 	<div>
 		<!-- Promotional Banner -->
-		<NuxtLink to="/fusionfest" class="text-decoration-none">
+		<!-- NuxtLink to="/fusionfest" class="text-decoration-none">
 			<div class="alert alert-success mb-0 text-center py-3"
 				style="background-color: rgb(254, 125, 21); border: none; color: white; font-weight: bold;">
 				<div class="container d-flex align-items-center justify-content-center gap-2">
@@ -42,7 +42,7 @@ useHead({
 					<i class="fas fa-arrow-right"></i>
 				</div>
 			</div>
-		</NuxtLink>
+	    </NuxtLink -->
 		<!--    Header section start    -->
 		<header>
 			<nav class="navbar navbar-expand-lg navbar-light">
