@@ -57,17 +57,21 @@ useSeoMeta({
                 <section class="sec-padding">
                         <div class="container">
                                 <div class="row justify-content-center mb-5">
-                                        <div class="col-lg-10">
-                                                <div class="d-flex flex-column flex-md-row align-items-start align-items-md-start gap-4">
-                                                        <div class="flex-grow-1">
+                                        <div class="col-lg-12">
+                                                <div class="d-flex flex-column flex-md-row align-items-start gap-4">
+                                                        <div class="col-md-6">
                                                                 <p style="font-size: 18px; line-height: 1.8;">
-                                                                        On December 21 at 6:30am, we invite you to welcome the winter solstice with a sunrise experience designed to energize your body and soften your spirit. Together with Alex of PLA.Yoga and Kenissa Cox of Ambient Productions, we're transforming the CityArts Courtyard into an immersive open-air sanctuary for movement, music, and connection.
+                                                                        On <strong>December 21 at 6:30am</strong>, we invite you to welcome the winter solstice with a sunrise experience designed to energize your body and soften your spirit. Together with <strong><a href="http://pla.yoga/" target="_blank" rel="noopener noreferrer">Alex of PLA.Yoga</a></strong> and <strong>Kenissa Cox of Ambient Productions</strong>, we're transforming the <strong>CityArts Courtyard</strong> into an immersive open-air sanctuary for movement, music, and connection.
+                                                                </p>
+                                                                <p style="font-size: 18px; line-height: 1.8;">
+                                                                        We'll begin with a grounded yoga flow that melts into an ecstatic dance journey, all guided through <strong>wireless headphones</strong> so every breath, beat, and moment feels intimately your own. As the sun rises over downtown, guests can enjoy <strong>CityArts Café's signature coffee blend</strong>, served complimentary throughout the morning to keep you warm and connected.
+                                                                </p>
+                                                                <p style="font-size: 18px; line-height: 1.8;">
+                                                                        This is more than a class, it's a communal ritual to mark the shift in season, honor the light returning, and gather with people who want to start winter with intention, joy, and presence.
                                                                 </p>
                                                         </div>
-                                                        <div class="flex-shrink-0">
-                                                                <a href="http://fusionfest.org" target="_blank" rel="noopener noreferrer">
-                                                                        <img src="/images/fusionfest.png" alt="Winter Solstice" style="max-width: 400px; height: auto;">
-                                                                </a>
+                                                        <div class="col-md-6">
+                                                                <img src="/images/solstice-1.jpeg" alt="Winter Solstice Sunrise Experience" style="width: 100%; height: auto;">
                                                         </div>
                                                 </div>
                                         </div>
