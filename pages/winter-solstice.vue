@@ -45,21 +45,35 @@ useSeoMeta({
 
                 <section class="sec-padding">
                         <div class="container">
+                                <div class="row justify-content-center mb-4">
+                                        <div class="col-lg-10">
+                                                <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+                                                        <div class="flex-grow-1 order-2 order-md-1">
+                                                                <p style="font-size: 18px; line-height: 1.8; margin: 0;">
+                                                                        On <strong>December 21 at 6:30am</strong>, we invite you to welcome the winter solstice with a sunrise experience designed to energize your body and soften your spirit. Together with <strong><a href="http://pla.yoga/" target="_blank" rel="noopener noreferrer">Alex of PLA.Yoga</a></strong> and <strong>Kenissa Cox of Ambient Productions</strong>, we're transforming the <strong>CityArts Courtyard</strong> into an immersive open-air sanctuary for movement, music, and connection.
+                                                                </p>
+                                                        </div>
+                                                        <div class="flex-shrink-0 order-1 order-md-2">
+                                                                <img src="/images/solstice-1.jpeg" alt="Winter Solstice Sunrise Experience" class="solstice-img">
+                                                        </div>
+                                                </div>
+                                        </div>
+                                </div>
                                 <div class="row justify-content-center mb-5">
                                         <div class="col-lg-10">
-                                                <img src="/images/solstice-1.jpeg" alt="Winter Solstice Sunrise Experience" class="solstice-img-right">
-                                                <p style="font-size: 18px; line-height: 1.8;">
-                                                        On <strong>December 21 at 6:30am</strong>, we invite you to welcome the winter solstice with a sunrise experience designed to energize your body and soften your spirit. Together with <strong><a href="http://pla.yoga/" target="_blank" rel="noopener noreferrer">Alex of PLA.Yoga</a></strong> and <strong>Kenissa Cox of Ambient Productions</strong>, we're transforming the <strong>CityArts Courtyard</strong> into an immersive open-air sanctuary for movement, music, and connection.
-                                                </p>
-                                                <div style="clear: both;"></div>
-                                                <img src="/images/solstice-2.jpeg" alt="Yoga and Dance at Sunrise" class="solstice-img-left">
-                                                <p style="font-size: 18px; line-height: 1.8;">
-                                                        We'll begin with a grounded yoga flow that melts into an ecstatic dance journey, all guided through <strong>wireless headphones</strong> so every breath, beat, and moment feels intimately your own. As the sun rises over downtown, guests can enjoy <strong>CityArts Café's signature coffee blend</strong>, served complimentary throughout the morning to keep you warm and connected.
-                                                </p>
-                                                <p style="font-size: 18px; line-height: 1.8;">
-                                                        This is more than a class, it's a communal ritual to mark the shift in season, honor the light returning, and gather with people who want to start winter with intention, joy, and presence.
-                                                </p>
-                                                <div style="clear: both;"></div>
+                                                <div class="d-flex flex-column flex-md-row align-items-center gap-4">
+                                                        <div class="flex-shrink-0">
+                                                                <img src="/images/solstice-2.jpeg" alt="Yoga and Dance at Sunrise" class="solstice-img">
+                                                        </div>
+                                                        <div class="flex-grow-1">
+                                                                <p style="font-size: 18px; line-height: 1.8; margin: 0 0 1rem 0;">
+                                                                        We'll begin with a grounded yoga flow that melts into an ecstatic dance journey, all guided through <strong>wireless headphones</strong> so every breath, beat, and moment feels intimately your own. As the sun rises over downtown, guests can enjoy <strong>CityArts Café's signature coffee blend</strong>, served complimentary throughout the morning to keep you warm and connected.
+                                                                </p>
+                                                                <p style="font-size: 18px; line-height: 1.8; margin: 0;">
+                                                                        This is more than a class, it's a communal ritual to mark the shift in season, honor the light returning, and gather with people who want to start winter with intention, joy, and presence.
+                                                                </p>
+                                                        </div>
+                                                </div>
                                         </div>
                                 </div>
                                 <iframe data-checkout="sunrise-dance-and-yoga"></iframe>
@@ -69,32 +83,16 @@ useSeoMeta({
 </template>
 
 <style scoped>
-.solstice-img-right {
-        float: right;
+.solstice-img {
         width: 250px;
         height: 250px;
         object-fit: cover;
         border-radius: 20px;
-        margin-left: 20px;
-        margin-bottom: 10px;
 }
 
-.solstice-img-left {
-        float: left;
-        width: 250px;
-        height: 250px;
-        object-fit: cover;
-        border-radius: 20px;
-        margin-right: 20px;
-        margin-bottom: 10px;
-}
-
-@media (max-width: 576px) {
-
-        .solstice-img-right,
-        .solstice-img-left {
-                float: none;
-                display: block;
-                margin: 0 auto 20px auto;
+@media (max-width: 767px) {
+        .solstice-img {
+                margin: 0 auto;
         }
-}</style>
+}
+</style>
