@@ -65,7 +65,7 @@ useSeoMeta({
                                                                 </p>
                                                         </div>
                                                         <div class="col-md-6">
-                                                                <img src="/images/solstice-1.jpeg" alt="Winter Solstice Sunrise Experience" style="width: 100%; height: auto; max-height: 350px; object-fit: cover; border-radius: 20px;">
+                                                                <img src="/images/solstice-1.jpeg" alt="Winter Solstice Sunrise Experience" style="width: 250px; height: 250px; object-fit: cover; border-radius: 20px;">
                                                         </div>
                                                 </div>
                                         </div>
@@ -74,7 +74,7 @@ useSeoMeta({
                                         <div class="col-lg-12">
                                                 <div class="d-flex flex-column flex-md-row align-items-stretch gap-4">
                                                         <div class="col-md-6">
-                                                                <img src="/images/solstice-2.jpeg" alt="Yoga and Dance at Sunrise" style="width: 100%; height: auto; max-height: 350px; object-fit: cover; border-radius: 20px;">
+                                                                <img src="/images/solstice-2.jpeg" alt="Yoga and Dance at Sunrise" style="width: 250px; height: 250px; object-fit: cover; border-radius: 20px;">
                                                         </div>
                                                         <div class="col-md-6">
                                                                 <p style="font-size: 18px; line-height: 1.8;">
