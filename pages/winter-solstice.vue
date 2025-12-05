@@ -72,9 +72,9 @@ useSeoMeta({
                                 </div>
                                 <div class="row justify-content-center mb-5">
                                         <div class="col-lg-12">
-                                                <div class="d-flex flex-column flex-md-row align-items-start gap-4">
+                                                <div class="d-flex flex-column flex-md-row align-items-stretch gap-4">
                                                         <div class="col-md-6">
-                                                                <img src="/images/solstice-2.jpeg" alt="Yoga and Dance at Sunrise" style="width: 100%; height: auto; border-radius: 20px;">
+                                                                <img src="/images/solstice-2.jpeg" alt="Yoga and Dance at Sunrise" style="width: 100%; height: 100%; object-fit: cover; border-radius: 20px;">
                                                         </div>
                                                         <div class="col-md-6">
                                                                 <p style="font-size: 18px; line-height: 1.8;">

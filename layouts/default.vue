@@ -38,11 +38,11 @@ useHead({
 				style="background-color: rgb(254, 125, 21); border: none; color: white; font-weight: bold;">
 				<div class="container d-flex align-items-center justify-content-center gap-2">
 					<i class="fas fa-gift fa-lg"></i>
-					<span>Your free FusionFest experiences are here - explore and grab your spot!</span>
+					<span>Welcome the winter solstice with us at sunrise – claim your spot.</span>
 					<i class="fas fa-arrow-right"></i>
 				</div>
 			</div>
-	    </NuxtLink>
+		</NuxtLink>
 		<!--    Header section start    -->
 		<header>
 			<nav class="navbar navbar-expand-lg navbar-light">
