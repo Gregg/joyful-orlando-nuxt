@@ -1,16 +1,12 @@
 <script setup lang="ts">
+import { onMounted } from 'vue';
+
 useHead({
         title: "Winter Solstice Sunrise Experience",
         meta: [
                 {
                         name: "description",
                         content: "Welcome the winter solstice with a sunrise experience designed to energize your body and soften your spirit at CityArts Courtyard.",
-                },
-        ],
-        script: [
-                {
-                        src: "https://events.humanitix.com/scripts/widgets/inline.js",
-                        type: "module",
                 },
         ],
 });
@@ -21,6 +17,17 @@ useSeoMeta({
         twitterDescription: "Welcome the winter solstice with a sunrise experience designed to energize your body and soften your spirit at CityArts Courtyard.",
         ogDescription: "Welcome the winter solstice with a sunrise experience designed to energize your body and soften your spirit at CityArts Courtyard.",
         ogImage: "/images/this-is-joyful-orlando.png",
+});
+
+onMounted(() => {
+        const existingScript = document.querySelector('script[src="https://events.humanitix.com/scripts/widgets/inline.js"]');
+        if (existingScript) {
+                existingScript.remove();
+        }
+        const script = document.createElement('script');
+        script.src = 'https://events.humanitix.com/scripts/widgets/inline.js';
+        script.type = 'module';
+        document.head.appendChild(script);
 });
 </script>
 
