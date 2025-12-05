@@ -27,30 +27,19 @@ useSeoMeta({
 <template>
         <div>
                 <!--    Hero section start    -->
-                <section
-                        class="innpage-hero-section"
-                        style="background-color: #9F64FC;">
-                        <img
-                                src="/images/cloudwhite.webp"
-                                class="hero-left-shape"
-                                alt="">
+                <section class="innpage-hero-section" style="background-color: #9F64FC;">
+                        <img src="/images/cloudwhite.webp" class="hero-left-shape" alt="">
                         <div class="container">
                                 <div class="row align-items-center gx-0 mt-40">
                                         <div class="col-xl-12">
                                                 <div class="hero-content text-center">
                                                         <h1>Winter Solstice Sunrise Experience</h1>
                                                 </div>
-                                                <img
-                                                        src="/images/white-star.webp"
-                                                        class="hero-star-shape"
-                                                        alt="">
+                                                <img src="/images/white-star.webp" class="hero-star-shape" alt="">
                                         </div>
                                 </div>
                         </div>
-                        <img
-                                src="/images/colorscloud.webp"
-                                class="hero-right-shape"
-                                alt="">
+                        <img src="/images/colorscloud.webp" class="hero-right-shape" alt="">
                 </section>
                 <!--    Hero section end    -->
 
@@ -63,10 +52,6 @@ useSeoMeta({
                                                         On <strong>December 21 at 6:30am</strong>, we invite you to welcome the winter solstice with a sunrise experience designed to energize your body and soften your spirit. Together with <strong><a href="http://pla.yoga/" target="_blank" rel="noopener noreferrer">Alex of PLA.Yoga</a></strong> and <strong>Kenissa Cox of Ambient Productions</strong>, we're transforming the <strong>CityArts Courtyard</strong> into an immersive open-air sanctuary for movement, music, and connection.
                                                 </p>
                                                 <div style="clear: both;"></div>
-                                        </div>
-                                </div>
-                                <div class="row justify-content-center mb-5">
-                                        <div class="col-lg-10">
                                                 <img src="/images/solstice-2.jpeg" alt="Yoga and Dance at Sunrise" class="solstice-img-left">
                                                 <p style="font-size: 18px; line-height: 1.8;">
                                                         We'll begin with a grounded yoga flow that melts into an ecstatic dance journey, all guided through <strong>wireless headphones</strong> so every breath, beat, and moment feels intimately your own. As the sun rises over downtown, guests can enjoy <strong>CityArts Café's signature coffee blend</strong>, served complimentary throughout the morning to keep you warm and connected.
@@ -105,11 +90,11 @@ useSeoMeta({
 }
 
 @media (max-width: 576px) {
+
         .solstice-img-right,
         .solstice-img-left {
                 float: none;
                 display: block;
                 margin: 0 auto 20px auto;
         }
-}
-</style>
+}</style>
