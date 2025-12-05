@@ -71,7 +71,7 @@ useSeoMeta({
                                                                 </p>
                                                         </div>
                                                         <div class="col-md-6">
-                                                                <img src="/images/solstice-1.jpeg" alt="Winter Solstice Sunrise Experience" style="width: 100%; height: auto;">
+                                                                <img src="/images/solstice-1.jpeg" alt="Winter Solstice Sunrise Experience" style="width: 100%; height: auto; border-radius: 20px;">
                                                         </div>
                                                 </div>
                                         </div>
