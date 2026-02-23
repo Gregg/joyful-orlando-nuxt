@@ -18,6 +18,10 @@ if (!venue.value) {
 const { getEventsByLocationId } = useEvents();
 const venueEvents = computed(() => venue.value ? getEventsByLocationId(venue.value.id) : []);
 
+const { data: eventCounts } = await useFetch(() => `/api/venue-event-counts/${venue.value?.id}`, {
+        default: () => ({ upcoming: 0, previous: 0 }),
+});
+
 const mapSource = computed(() => {
         if (!venue.value) {
                 return "";
@@ -88,6 +92,11 @@ useSeoMeta({
                                                         <i class="fa fa-map-marker" />
                                                         {{ venue?.address }}
                                                 </p>
+                                                <p class="venue-event-counts">
+                                                        {{ eventCounts?.upcoming }} upcoming event{{ eventCounts?.upcoming === 1 ? '' : 's' }}
+                                                        &bull;
+                                                        {{ eventCounts?.previous }} previous event{{ eventCounts?.previous === 1 ? '' : 's' }}
+                                                </p>
                                         </div>
                                 </div>
 
@@ -157,5 +166,10 @@ useSeoMeta({
 .venue-address {
         font-size: 18px;
         color: #555;
+}
+
+.venue-event-counts {
+        font-size: 16px;
+        color: #777;
 }
 </style>
