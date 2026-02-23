@@ -77,18 +77,7 @@ useSeoMeta({
                                 <div class="row align-items-center gx-0 mt-40">
                                         <div class="col-xl-12">
                                                 <div class="hero-content text-center">
-                                                        <h1>{{ event?.name }}</h1>
-                                                        <p v-if="event" class="hero-event-date">
-                                                                {{ dateFormat(event.date) }}
-                                                        </p>
-                                                        <div
-                                                                v-if="categories"
-                                                                class="hero-categories">
-                                                                <CategoryButton
-                                                                        v-for="category in categories"
-                                                                        :key="category?.id"
-                                                                        :category="category" />
-                                                        </div>
+                                                        <h1>Event Details</h1>
                                                 </div>
                                                 <img
                                                         src="/images/white-star.webp"
@@ -112,6 +101,17 @@ useSeoMeta({
                                                 <div
                                                         v-if="event"
                                                         class="left-content">
+                                                        <h5>
+                                                                {{ event.name }}
+                                                        </h5>
+                                                        <div
+                                                                v-if="categories"
+                                                                class="event-btns-group">
+                                                                <CategoryButton
+                                                                        v-for="category in categories"
+                                                                        :key="category?.id"
+                                                                        :category="category" />
+                                                        </div>
                                                         <div class="time-detail">
                                                                 <i class="fa fa-calendar" />
                                                                 <p>
@@ -191,22 +191,5 @@ useSeoMeta({
 </template>
 
 <style scoped>
-.innpage-hero-section h1 {
-        font-size: 36px;
-}
 
-.hero-event-date {
-        font-size: 20px;
-        color: #fff;
-        margin-top: 8px;
-        margin-bottom: 8px;
-}
-
-.hero-categories {
-        display: flex;
-        justify-content: center;
-        gap: 8px;
-        flex-wrap: wrap;
-        margin-top: 4px;
-}
 </style>
