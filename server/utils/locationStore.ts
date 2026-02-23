@@ -25,8 +25,12 @@ export async function getLocations(): Promise<Array<ILocation>> {
 
                         let logo: string | undefined;
                         try {
-                                const logoField = record.get("Logo") as Array<{ url: string }> | undefined;
-                                logo = logoField && logoField.length > 0 ? logoField[0].url : undefined;
+                                const logoRaw = record.get("Logo");
+                                if (typeof logoRaw === "string" && logoRaw) {
+                                        logo = logoRaw;
+                                } else if (Array.isArray(logoRaw) && logoRaw.length > 0) {
+                                        logo = typeof logoRaw[0] === "string" ? logoRaw[0] : logoRaw[0]?.url;
+                                }
                         } catch {
                                 logo = undefined;
                         }

@@ -81,10 +81,9 @@ useSeoMeta({
                                         <div class="col-lg-8 text-center">
                                                 <img
                                                         v-if="venue?.logo"
-                                                        :src="venue.logo"
+                                                        :src="`/images/venues/${venue.logo}`"
                                                         :alt="venue.name"
                                                         class="venue-logo mb-4">
-                                                <h2>{{ venue?.name }}</h2>
                                                 <p class="venue-address">
                                                         <i class="fa fa-map-marker" />
                                                         {{ venue?.address }}
