@@ -23,6 +23,7 @@ useHead({
 });
 
 const formSubmitted = ref(false);
+const captchaShown = ref(false);
 
 onMounted(() => {
         (function (w, d, t, h, s, n) {
@@ -51,7 +52,13 @@ onMounted(() => {
 
         const observer = new MutationObserver(() => {
                 const container = document.querySelector(".ff-transfer-form");
-                if (container && container.hasAttribute("data-ff-stage") && container.getAttribute("data-ff-stage") === "success") {
+                if (!container) return;
+
+                if (container.querySelector(".fd-has-captcha") || container.classList.contains("fd-has-captcha")) {
+                        captchaShown.value = true;
+                }
+
+                if (container.getAttribute("data-ff-stage") === "success") {
                         formSubmitted.value = true;
                         setTimeout(() => {
                                 if (event.value?.url) {
@@ -59,7 +66,6 @@ onMounted(() => {
                                 }
                         }, 2000);
                 }
-
         });
 
         const container = document.querySelector(".ff-transfer-form");
@@ -115,7 +121,7 @@ onMounted(() => {
                                                         <h3 style="color: #01A652;">Thank you!</h3>
                                                         <p style="font-size: 18px;">Redirecting you to {{ event?.name }}...</p>
                                                 </div>
-                                                <div class="ff-transfer-form transfer-form-wrapper">
+                                                <div v-show="!formSubmitted" class="ff-transfer-form transfer-form-wrapper" :class="{ 'form-fields-hidden': captchaShown }">
                                                         <div
                                                                 data-ff-el="config"
                                                                 data-ff-config="eyJ0cmlnZ2VyIjp7Im1vZGUiOiJpbW1lZGlhdGVseSIsInZhbHVlIjowfSwib25TdWNjZXNzIjp7Im1vZGUiOiJtZXNzYWdlIiwibWVzc2FnZSI6IiIsInJlZGlyZWN0VXJsIjoiIn0sImNvaSI6ZmFsc2UsInNob3dGb3JSZXR1cm5WaXNpdG9ycyI6dHJ1ZSwibm90aWZpY2F0aW9uIjpmYWxzZX0="
@@ -254,6 +260,18 @@ onMounted(() => {
 <style>
 .ff-transfer-form .fd-has-captcha .fd-form-content > *:not(.fd-form-captcha),
 .ff-transfer-form.fd-has-captcha .fd-form-content > *:not(.fd-form-captcha) {
+        display: none !important;
+}
+
+.ff-transfer-form.form-fields-hidden .transfer-form-fields {
+        display: none !important;
+}
+
+.ff-transfer-form.form-fields-hidden .fd-form-success {
+        display: none !important;
+}
+
+.ff-transfer-form.form-fields-hidden .fd-form-error {
         display: none !important;
 }
 
