@@ -23,7 +23,6 @@ useHead({
 });
 
 const formSubmitted = ref(false);
-const showCaptcha = ref(false);
 
 onMounted(() => {
         (function (w, d, t, h, s, n) {
@@ -54,7 +53,6 @@ onMounted(() => {
                 const container = document.querySelector(".ff-transfer-form");
                 if (container && container.hasAttribute("data-ff-stage") && container.getAttribute("data-ff-stage") === "success") {
                         formSubmitted.value = true;
-                        showCaptcha.value = false;
                         setTimeout(() => {
                                 if (event.value?.url) {
                                         window.location.href = event.value.url;
@@ -62,10 +60,6 @@ onMounted(() => {
                         }, 2000);
                 }
 
-                const content = document.querySelector(".fd-form-content");
-                if (content && content.classList.contains("fd-has-captcha")) {
-                        showCaptcha.value = true;
-                }
         });
 
         const container = document.querySelector(".ff-transfer-form");
@@ -121,12 +115,7 @@ onMounted(() => {
                                                         <h3 style="color: #01A652;">Thank you!</h3>
                                                         <p style="font-size: 18px;">Redirecting you to {{ event?.name }}...</p>
                                                 </div>
-                                                <div
-                                                        v-if="showCaptcha"
-                                                        class="captcha-prompt text-center">
-                                                        <p>Please verify you're human to continue:</p>
-                                                </div>
-                                                <div class="ff-transfer-form transfer-form-wrapper" :class="{ 'captcha-active': showCaptcha }">
+                                                <div class="ff-transfer-form transfer-form-wrapper">
                                                         <div
                                                                 data-ff-el="config"
                                                                 data-ff-config="eyJ0cmlnZ2VyIjp7Im1vZGUiOiJpbW1lZGlhdGVseSIsInZhbHVlIjowfSwib25TdWNjZXNzIjp7Im1vZGUiOiJtZXNzYWdlIiwibWVzc2FnZSI6IiIsInJlZGlyZWN0VXJsIjoiIn0sImNvaSI6ZmFsc2UsInNob3dGb3JSZXR1cm5WaXNpdG9ycyI6dHJ1ZSwibm90aWZpY2F0aW9uIjpmYWxzZX0="
@@ -260,92 +249,62 @@ onMounted(() => {
         color: #fff;
 }
 
-.captcha-prompt p {
-        font-size: 20px;
-        font-weight: 600;
-        color: #333;
-        margin-bottom: 16px;
-}
 </style>
 
 <style>
-.captcha-active .transfer-form-fields {
-        display: none !important;
-}
-
-.captcha-active .fd-form-captcha {
+.ff-transfer-form .fd-form-captcha,
+[data-ff-el="root"] .fd-form-captcha {
         position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        width: 100% !important;
+        height: auto !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
+        min-height: 70px !important;
+        margin-top: 16px !important;
+        padding: 16px 24px !important;
+        background: #eafaf0 !important;
+        border: 2px solid #01A652 !important;
+        border-radius: 8px !important;
         opacity: 1 !important;
         visibility: visible !important;
-        min-height: 80px;
-        padding: 20px 0;
-        background: #f0f0f0;
-        border-radius: 8px;
-        border: 2px solid #01A652;
+        z-index: 10 !important;
 }
 
-.captcha-active .fd-form-captcha * {
+.ff-transfer-form .fd-form-captcha *,
+[data-ff-el="root"] .fd-form-captcha * {
+        color: #222 !important;
         opacity: 1 !important;
         visibility: visible !important;
-        color: #333 !important;
-}
-
-.captcha-active .fd-form-content {
-        position: relative !important;
-        min-height: auto !important;
-}
-
-.captcha-active .fd-form-content > *:not(.fd-form-captcha) {
-        display: none !important;
-}
-
-.ff-transfer-form .fd-form-captcha {
-        font-size: 18px !important;
-        color: #333 !important;
 }
 
 .ff-transfer-form .fd-form-captcha label,
-.ff-transfer-form .fd-form-captcha span {
-        color: #333 !important;
+[data-ff-el="root"] .fd-form-captcha label {
+        color: #222 !important;
         font-size: 18px !important;
+        font-weight: 600 !important;
         opacity: 1 !important;
-}
-
-.ff-transfer-form .fd-form-captcha input[type="checkbox"] {
-        width: 24px !important;
-        height: 24px !important;
-        margin-right: 10px !important;
-        accent-color: #01A652;
-}
-
-.ff-transfer-form .fd-has-captcha .fd-form-captcha {
-        position: relative !important;
+        visibility: visible !important;
+        cursor: pointer !important;
         display: flex !important;
         align-items: center !important;
-        justify-content: center !important;
-        opacity: 1 !important;
-        visibility: visible !important;
-        min-height: 80px;
-        padding: 20px;
-        background: #f0f0f0;
-        border-radius: 8px;
-        border: 2px solid #01A652;
-}
-
-.ff-transfer-form .fd-has-captcha .fd-form-captcha * {
-        opacity: 1 !important;
-        visibility: visible !important;
-        color: #333 !important;
-}
-
-.ff-transfer-form .fd-has-captcha > *:not(.fd-form-captcha) {
-        opacity: 0 !important;
-        height: 0 !important;
-        overflow: hidden !important;
+        gap: 12px !important;
         margin: 0 !important;
-        padding: 0 !important;
+}
+
+.ff-transfer-form .fd-form-captcha input[type="checkbox"],
+[data-ff-el="root"] .fd-form-captcha input[type="checkbox"] {
+        width: 24px !important;
+        height: 24px !important;
+        min-width: 24px !important;
+        min-height: 24px !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        cursor: pointer !important;
+        accent-color: #01A652 !important;
+        -webkit-appearance: checkbox !important;
+        appearance: checkbox !important;
 }
 </style>
