@@ -77,7 +77,7 @@ useSeoMeta({
                                 <div class="row align-items-center gx-0 mt-40">
                                         <div class="col-xl-12">
                                                 <div class="hero-content text-center">
-                                                        <h1>Event Details</h1>
+                                                        <h1>{{ event?.name }}</h1>
                                                 </div>
                                                 <img
                                                         src="/images/white-star.webp"
@@ -101,9 +101,12 @@ useSeoMeta({
                                                 <div
                                                         v-if="event"
                                                         class="left-content">
-                                                        <h5>
-                                                                {{ event.name }}
-                                                        </h5>
+                                                        <div class="time-detail">
+                                                                <i class="fa fa-calendar" />
+                                                                <p>
+                                                                        {{ dateFormat(event.date) }}
+                                                                </p>
+                                                        </div>
                                                         <div
                                                                 v-if="categories"
                                                                 class="event-btns-group">
@@ -111,12 +114,6 @@ useSeoMeta({
                                                                         v-for="category in categories"
                                                                         :key="category?.id"
                                                                         :category="category" />
-                                                        </div>
-                                                        <div class="time-detail">
-                                                                <i class="fa fa-calendar" />
-                                                                <p>
-                                                                        {{ dateFormat(event.date) }}
-                                                                </p>
                                                         </div>
                                                         <div>
                                                                 <p
@@ -191,5 +188,9 @@ useSeoMeta({
 </template>
 
 <style scoped>
-
+.innpage-hero-section .hero-content h1 {
+        font-size: 38px;
+        line-height: 1.3;
+        padding: 0 40px;
+}
 </style>
