@@ -4,4 +4,6 @@ export interface ILocation {
         address: string;
         slug: string;
         logo?: string;
+        url?: string;
+        venueListOrder?: number;
 }

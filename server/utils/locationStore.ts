@@ -14,7 +14,7 @@ export async function getLocations(): Promise<Array<ILocation>> {
 
         try {
                 const records = await base("Locations").select({
-                        fields: ["Name", "Address", "Logo"],
+                        fields: ["Name", "Address", "Logo", "URL", "Venue List Order"],
                 }).all();
 
                 const newLocations: Array<ILocation> = [];
@@ -35,12 +35,17 @@ export async function getLocations(): Promise<Array<ILocation>> {
                                 logo = undefined;
                         }
 
+                        const venueListOrder = record.get("Venue List Order") as number | undefined;
+                        const url = (record.get("URL") as string) || undefined;
+
                         newLocations.push({
                                 id: record.id,
                                 name,
                                 address: (record.get("Address") as string) || "",
                                 slug: generateSlug(name),
                                 logo,
+                                url,
+                                venueListOrder: venueListOrder || undefined,
                         });
                 });
 
