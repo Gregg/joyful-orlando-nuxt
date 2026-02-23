@@ -20,49 +20,39 @@ if (!event.value) {
 
 useHead({
         title: `You're almost there! | ${event.value?.name}`,
-        link: [
-                { rel: "preload", href: "https://assets.flodesk.com/flodesk-sans.css", as: "style" },
-                { rel: "stylesheet", href: "https://assets.flodesk.com/flodesk-sans.css" },
-        ],
 });
 
 const formSubmitted = ref(false);
 
 onMounted(() => {
-        const loadFlodesk = () => {
-                const w = window as any;
-                const d = document;
-                w.FlodeskObject = "fd";
+        (function (w, d, t, h, s, n) {
+                w.FlodeskObject = n;
                 const fn = function () {
-                        (w.fd.q = w.fd.q || []).push(arguments);
+                        (w[n].q = w[n].q || []).push(arguments);
                 };
-                w.fd = w.fd || fn;
-                const f = d.getElementsByTagName("script")[0];
+                w[n] = w[n] || fn;
+                const f = d.getElementsByTagName(t)[0];
                 const v = "?v=" + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
-                const sm = d.createElement("script");
+                const sm = d.createElement(t);
                 sm.async = true;
                 sm.type = "module";
-                sm.src = "https://assets.flodesk.com/universal.mjs" + v;
-                f.parentNode?.insertBefore(sm, f);
-                const sn = d.createElement("script");
+                sm.src = h + s + ".mjs" + v;
+                f.parentNode.insertBefore(sm, f);
+                const sn = d.createElement(t);
                 sn.async = true;
                 sn.noModule = true;
-                sn.src = "https://assets.flodesk.com/universal.js" + v;
-                f.parentNode?.insertBefore(sn, f);
-        };
-
-        loadFlodesk();
-
-        (window as any).fd("form:handle", {
+                sn.src = h + s + ".js" + v;
+                f.parentNode.insertBefore(sn, f);
+        })(window, document, "script", "https://assets.flodesk.com", "/universal", "fd");
+        window.fd("form:handle", {
                 formId: "68000160305e6b614244935a",
-                rootEl: ".ff-68000160305e6b614244935a",
+                rootEl: ".ff-transfer-form",
         });
 
         const observer = new MutationObserver(() => {
-                const root = document.querySelector(".ff-68000160305e6b614244935a");
-                if (root && root.getAttribute("data-ff-stage") === "success") {
+                const container = document.querySelector(".ff-transfer-form");
+                if (container && container.hasAttribute("data-ff-stage") && container.getAttribute("data-ff-stage") === "success") {
                         formSubmitted.value = true;
-                        observer.disconnect();
                         setTimeout(() => {
                                 if (event.value?.url) {
                                         window.location.href = event.value.url;
@@ -71,9 +61,9 @@ onMounted(() => {
                 }
         });
 
-        const root = document.querySelector(".ff-68000160305e6b614244935a");
-        if (root) {
-                observer.observe(root, { attributes: true, attributeFilter: ["data-ff-stage"] });
+        const container = document.querySelector(".ff-transfer-form");
+        if (container) {
+                observer.observe(container, { attributes: true });
         }
 });
 </script>
@@ -124,19 +114,12 @@ onMounted(() => {
                                                         <h3 style="color: #01A652;">Thank you!</h3>
                                                         <p style="font-size: 18px;">Redirecting you to {{ event?.name }}...</p>
                                                 </div>
-
-                                                <div
-                                                        class="ff-68000160305e6b614244935a"
-                                                        data-ff-el="root"
-                                                        data-ff-version="3"
-                                                        data-ff-type="inline"
-                                                        data-ff-name="ribbonBanner"
-                                                        data-ff-stage="default">
+                                                <div class="ff-transfer-form transfer-form-wrapper">
                                                         <div
                                                                 data-ff-el="config"
-                                                                data-ff-config="eyJ0cmlnZ2VyIjp7Im1vZGUiOiJpbW1lZGlhdGVseSIsInZhbHVlIjowfSwib25TdWNjZXNzIjp7Im1vZGUiOiJtZXNzYWdlIiwibWVzc2FnZSI6IiIsInJlZGlyZWN0VXJsIjoiIn0sImNvaSI6ZmFsc2UsInNob3dGb3JSZXR1cm5WaXNpdG9ycyI6dHJ1ZSwibm90aWZpY2F0aW9uIjpmYWxzZSwiZ2RwciI6eyJhY2NlcHRzTWFya2V0aW5nIjpmYWxzZSwicHJpdmFjeVBvbGljeSI6eyJlbmFibGVkIjpmYWxzZSwibWFuZGF0b3J5IjpmYWxzZX19LCJ0cmFja2luZ0NvbmZpZyI6eyJtZXRhUGl4ZWxJZCI6IiIsImNvb2tpZUJhbm5lckVuYWJsZWQiOmZhbHNlLCJnb29nbGVBbmFseXRpY3NJZCI6IiJ9fQ=="
+                                                                data-ff-config="eyJ0cmlnZ2VyIjp7Im1vZGUiOiJpbW1lZGlhdGVseSIsInZhbHVlIjowfSwib25TdWNjZXNzIjp7Im1vZGUiOiJtZXNzYWdlIiwibWVzc2FnZSI6IiIsInJlZGlyZWN0VXJsIjoiIn0sImNvaSI6ZmFsc2UsInNob3dGb3JSZXR1cm5WaXNpdG9ycyI6dHJ1ZSwibm90aWZpY2F0aW9uIjpmYWxzZX0="
                                                                 style="display: none" />
-                                                        <div class="ff-68000160305e6b614244935a__container">
+                                                        <div class="ff-transfer-form__container">
                                                                 <form
                                                                         class="ff-68000160305e6b614244935a__form"
                                                                         action="https://form.flodesk.com/forms/68000160305e6b614244935a/submit"
@@ -145,41 +128,35 @@ onMounted(() => {
                                                                         <div
                                                                                 class="ff-68000160305e6b614244935a__content fd-form-content"
                                                                                 data-ff-el="content">
-                                                                                <div
-                                                                                        class="ff-68000160305e6b614244935a__fields"
-                                                                                        data-ff-el="fields">
-                                                                                        <div class="ff-68000160305e6b614244935a__field fd-form-group">
-                                                                                                <div class="transfer-input-box">
-                                                                                                        <img
-                                                                                                                src="/images/profile.webp"
-                                                                                                                alt="">
-                                                                                                        <input
-                                                                                                                id="ff-68000160305e6b614244935a-firstName"
-                                                                                                                class="ff-68000160305e6b614244935a__control fd-form-control form-control transfer-input"
-                                                                                                                type="text"
-                                                                                                                maxlength="255"
-                                                                                                                name="firstName"
-                                                                                                                placeholder="First name"
-                                                                                                                data-ff-tab="firstName::email"
-                                                                                                                required>
-                                                                                                </div>
+                                                                                <div class="transfer-form-fields">
+                                                                                        <div class="transfer-input-box">
+                                                                                                <img
+                                                                                                        src="/images/profile.webp"
+                                                                                                        alt="">
+                                                                                                <input
+                                                                                                        id="transfer-firstName"
+                                                                                                        class="ff-68000160305e6b614244935a__control fd-form-control form-control"
+                                                                                                        type="text"
+                                                                                                        maxlength="255"
+                                                                                                        name="firstName"
+                                                                                                        placeholder="First name"
+                                                                                                        data-ff-tab="firstName::lastName"
+                                                                                                        required>
                                                                                         </div>
 
-                                                                                        <div class="ff-68000160305e6b614244935a__field fd-form-group">
-                                                                                                <div class="transfer-input-box">
-                                                                                                        <img
-                                                                                                                src="/images/sms.webp"
-                                                                                                                alt="">
-                                                                                                        <input
-                                                                                                                id="ff-68000160305e6b614244935a-email"
-                                                                                                                class="ff-68000160305e6b614244935a__control fd-form-control form-control transfer-input"
-                                                                                                                type="text"
-                                                                                                                maxlength="255"
-                                                                                                                name="email"
-                                                                                                                placeholder="Email address"
-                                                                                                                data-ff-tab="email:firstName:submit"
-                                                                                                                required>
-                                                                                                </div>
+                                                                                        <div class="transfer-input-box">
+                                                                                                <img
+                                                                                                        src="/images/sms.webp"
+                                                                                                        alt="">
+                                                                                                <input
+                                                                                                        id="transfer-email"
+                                                                                                        class="ff-68000160305e6b614244935a__control fd-form-control form-control"
+                                                                                                        type="email"
+                                                                                                        maxlength="255"
+                                                                                                        name="email"
+                                                                                                        placeholder="Email address"
+                                                                                                        data-ff-tab="email:lastName:submit"
+                                                                                                        required>
                                                                                         </div>
 
                                                                                         <input
@@ -187,26 +164,24 @@ onMounted(() => {
                                                                                                 maxlength="255"
                                                                                                 name="confirm_email_address"
                                                                                                 style="display: none">
-                                                                                </div>
 
-                                                                                <div
-                                                                                        class="ff-68000160305e6b614244935a__footer"
-                                                                                        data-ff-el="footer">
                                                                                         <button
                                                                                                 type="submit"
                                                                                                 class="ff-68000160305e6b614244935a__button fd-btn btn transfer-submit-btn"
                                                                                                 data-ff-el="submit"
                                                                                                 data-ff-tab="submit">
-                                                                                                <span>Sign Up & Continue</span>
+                                                                                                Sign Up & Continue
                                                                                         </button>
                                                                                 </div>
+
+                                                                                <div
+                                                                                        class="ff-68000160305e6b614244935a__success fd-form-success"
+                                                                                        data-ff-el="success">
+                                                                                </div>
+                                                                                <div
+                                                                                        class="ff-68000160305e6b614244935a__error fd-form-error"
+                                                                                        data-ff-el="error" />
                                                                         </div>
-                                                                        <div
-                                                                                class="ff-68000160305e6b614244935a__success fd-form-success"
-                                                                                data-ff-el="success" />
-                                                                        <div
-                                                                                class="ff-68000160305e6b614244935a__error fd-form-error"
-                                                                                data-ff-el="error" />
                                                                 </form>
                                                         </div>
                                                 </div>
@@ -224,6 +199,18 @@ onMounted(() => {
         color: #444;
 }
 
+.transfer-form-wrapper {
+        background: #f9f9f9;
+        border-radius: 12px;
+        padding: 32px;
+}
+
+.transfer-form-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+}
+
 .transfer-input-box {
         position: relative;
         display: flex;
@@ -236,30 +223,28 @@ onMounted(() => {
         width: 20px;
         height: 20px;
         pointer-events: none;
-        z-index: 1;
 }
 
-.transfer-input {
-        padding-left: 50px !important;
+.transfer-input-box input {
+        padding-left: 50px;
         width: 100%;
         height: 50px;
-        border-radius: 5px !important;
-        border: 1px solid #ccc !important;
+        border-radius: 5px;
+        border: 1px solid #ccc;
 }
 
 .transfer-submit-btn {
-        background-color: #01A652 !important;
-        border-color: #01A652 !important;
-        color: #fff !important;
-        padding: 15px 30px !important;
-        font-size: 1.1em !important;
-        width: 100% !important;
-        margin-top: 16px;
+        background-color: #01A652;
+        border-color: #01A652;
+        color: #fff;
+        padding: 15px 30px;
+        font-size: 1.1em;
+        width: 100%;
 }
 
 .transfer-submit-btn:hover {
-        background-color: #018a45 !important;
-        border-color: #018a45 !important;
-        color: #fff !important;
+        background-color: #018a45;
+        border-color: #018a45;
+        color: #fff;
 }
 </style>
