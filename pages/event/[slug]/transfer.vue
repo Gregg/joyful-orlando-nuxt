@@ -252,6 +252,11 @@ onMounted(() => {
 </style>
 
 <style>
+.ff-transfer-form .fd-has-captcha .fd-form-content > *:not(.fd-form-captcha),
+.ff-transfer-form.fd-has-captcha .fd-form-content > *:not(.fd-form-captcha) {
+        display: none !important;
+}
+
 .ff-transfer-form .fd-form-captcha,
 [data-ff-el="root"] .fd-form-captcha {
         position: relative !important;
