@@ -93,9 +93,9 @@ useSeoMeta({
                                                                 <a
                                                                         v-if="venue.url"
                                                                         :href="venue.url"
-                                                                        class="btn btn-dark"
+                                                                        class="btn venue-btn"
                                                                         target="_blank"
-                                                                        rel="noopener noreferrer">Visit Webpage</a>
+                                                                        rel="noopener noreferrer">Visit Website</a>
                                                         </div>
                                                 </div>
                                         </div>
@@ -115,14 +115,27 @@ useSeoMeta({
 }
 
 .venue-logo {
-        max-width: 300px;
+        width: 40%;
         max-height: 200px;
         object-fit: contain;
         flex-shrink: 0;
 }
 
 .venue-details {
+        width: 60%;
         text-align: left;
+}
+
+.venue-btn {
+        background-color: #01A652;
+        border-color: #01A652;
+        color: #fff;
+}
+
+.venue-btn:hover {
+        background-color: #018a45;
+        border-color: #018a45;
+        color: #fff;
 }
 
 .venue-name-link {
