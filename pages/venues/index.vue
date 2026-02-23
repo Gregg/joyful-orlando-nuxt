@@ -81,18 +81,18 @@ useSeoMeta({
                                         class="row justify-content-center mb-4">
                                         <div class="col-lg-8">
                                                 <div class="venue-list-item">
-                                                        <NuxtLink :to="`/venues/${venue.slug}`" class="venue-logo-wrapper">
+                                                        <a :href="venue.url || `/venues/${venue.slug}`" :target="venue.url ? '_blank' : undefined" :rel="venue.url ? 'noopener' : undefined" class="venue-logo-wrapper">
                                                                 <img
                                                                         v-if="venue.logo"
                                                                         :src="`/images/venues/${venue.logo}`"
                                                                         :alt="venue.name"
                                                                         class="venue-logo">
-                                                        </NuxtLink>
+                                                        </a>
                                                         <div class="venue-details">
                                                                 <h3>
-                                                                        <NuxtLink :to="`/venues/${venue.slug}`" class="venue-name-link">
+                                                                        <a :href="venue.url || `/venues/${venue.slug}`" :target="venue.url ? '_blank' : undefined" :rel="venue.url ? 'noopener' : undefined" class="venue-name-link">
                                                                                 {{ venue.name }}
-                                                                        </NuxtLink>
+                                                                        </a>
                                                                 </h3>
                                                                 <p class="venue-address">
                                                                         <i class="fa fa-map-marker" />
