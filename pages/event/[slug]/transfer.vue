@@ -31,25 +31,20 @@ async function handleSubmit() {
         submitting.value = true;
 
         try {
-                const formData = new FormData();
-                formData.append("firstName", firstName.value);
-                formData.append("email", email.value);
-
-                const response = await fetch("https://form.flodesk.com/forms/68000160305e6b614244935a/submit", {
+                await $fetch("/api/flodesk-submit", {
                         method: "POST",
-                        body: formData,
+                        body: {
+                                firstName: firstName.value,
+                                email: email.value,
+                        },
                 });
 
-                if (response.ok) {
-                        formSubmitted.value = true;
-                        setTimeout(() => {
-                                if (event.value?.url) {
-                                        window.location.href = event.value.url;
-                                }
-                        }, 2000);
-                } else {
-                        formError.value = "Something went wrong. Please try again.";
-                }
+                formSubmitted.value = true;
+                setTimeout(() => {
+                        if (event.value?.url) {
+                                window.location.href = event.value.url;
+                        }
+                }, 2000);
         } catch {
                 formError.value = "Something went wrong. Please try again.";
         } finally {
