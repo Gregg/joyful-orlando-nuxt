@@ -130,10 +130,38 @@ useSeoMeta({
                                                 :event="event" />
                                 </div>
                                 <div
+                                        v-if="venue?.url && venueEvents && venueEvents.length > 0"
+                                        class="row justify-content-center mt-4">
+                                        <div class="col-lg-8 text-center">
+                                                <a
+                                                        :href="venue.url"
+                                                        class="btn venue-website-btn"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer">Visit Venue Website</a>
+                                        </div>
+                                </div>
+                                <div
                                         v-if="!venueEvents || venueEvents.length === 0"
                                         class="row justify-content-center">
                                         <div class="col-lg-8 text-center">
-                                                <p style="font-size: 18px; color: #666;">No upcoming events at this venue right now. Check back soon!</p>
+                                                <p v-if="venue?.url" style="font-size: 18px; color: #666;">
+                                                        No upcoming events listed on Joyful Orlando,
+                                                        <a :href="venue.url" target="_blank" rel="noopener noreferrer" style="color: #01A652;">check the website.</a>
+                                                </p>
+                                                <p v-else style="font-size: 18px; color: #666;">
+                                                        No upcoming events listed on Joyful Orlando
+                                                </p>
+                                        </div>
+                                </div>
+                                <div
+                                        v-if="venue?.url && (!venueEvents || venueEvents.length === 0)"
+                                        class="row justify-content-center mt-3">
+                                        <div class="col-lg-8 text-center">
+                                                <a
+                                                        :href="venue.url"
+                                                        class="btn venue-website-btn"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer">Visit Venue Website</a>
                                         </div>
                                 </div>
                         </div>
@@ -208,6 +236,20 @@ useSeoMeta({
         font-size: 15px;
         color: #999;
         margin-bottom: 0;
+}
+
+.venue-website-btn {
+        background-color: #01A652;
+        border-color: #01A652;
+        color: #fff;
+        padding: 10px 28px;
+        font-size: 16px;
+}
+
+.venue-website-btn:hover {
+        background-color: #018a45;
+        border-color: #018a45;
+        color: #fff;
 }
 
 @media (max-width: 576px) {
