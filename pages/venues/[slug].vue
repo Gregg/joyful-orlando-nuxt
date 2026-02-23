@@ -181,8 +181,8 @@ useSeoMeta({
 }
 
 .venue-logo {
-        width: 200px;
-        height: 200px;
+        max-width: 300px;
+        max-height: 200px;
         object-fit: contain;
         flex-shrink: 0;
 }
