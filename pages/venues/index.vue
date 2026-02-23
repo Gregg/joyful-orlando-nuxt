@@ -115,14 +115,13 @@ useSeoMeta({
 }
 
 .venue-logo {
-        width: 40%;
+        max-width: 300px;
         max-height: 200px;
         object-fit: contain;
         flex-shrink: 0;
 }
 
 .venue-details {
-        width: 60%;
         text-align: left;
 }
 
