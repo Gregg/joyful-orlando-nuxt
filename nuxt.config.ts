@@ -36,6 +36,7 @@ export default defineNuxtConfig({
                 "/events": { isr: 12 * 60 * 60 },
                 "/event/**": { isr: true },
                 "/category/**": { isr: 12 * 60 * 60 },
+                "/venues/**": { isr: 12 * 60 * 60 },
         },
         compatibilityDate: "2024-11-01",
         eslint: {
