@@ -8,6 +8,14 @@ const listedVenues = computed(() => {
                 .sort((a, b) => (a.venueListOrder || 0) - (b.venueListOrder || 0));
 });
 
+const { data: allEventCounts } = await useFetch("/api/venue-event-counts", {
+        default: () => ({}),
+});
+
+function getUpcomingCount(venueId: string): number {
+        return allEventCounts.value?.[venueId]?.upcoming || 0;
+}
+
 useHead({
         title: "Conscious Venues",
         meta: [
@@ -90,6 +98,11 @@ useSeoMeta({
                                                                         <i class="fa fa-map-marker" />
                                                                         {{ venue.address }}
                                                                 </p>
+                                                                <p v-if="getUpcomingCount(venue.id) > 0" class="venue-upcoming-link">
+                                                                        <NuxtLink :to="`/venues/${venue.slug}`">
+                                                                                {{ getUpcomingCount(venue.id) }} Upcoming Event{{ getUpcomingCount(venue.id) === 1 ? '' : 's' }} on Joyful Orlando
+                                                                        </NuxtLink>
+                                                                </p>
                                                                 <a
                                                                         v-if="venue.url"
                                                                         :href="venue.url"
@@ -156,7 +169,22 @@ useSeoMeta({
 .venue-address {
         font-size: 18px;
         color: #555;
+        margin-bottom: 4px;
+}
+
+.venue-upcoming-link {
+        font-size: 16px;
+        font-weight: 600;
         margin-bottom: 12px;
+}
+
+.venue-upcoming-link a {
+        color: #01A652;
+        text-decoration: none;
+}
+
+.venue-upcoming-link a:hover {
+        text-decoration: underline;
 }
 
 @media (max-width: 576px) {
