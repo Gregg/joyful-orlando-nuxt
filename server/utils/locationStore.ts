@@ -3,9 +3,8 @@ import { base } from "~/server/client";
 
 const locations: Array<ILocation> = [];
 
-function generateSlug(name: string, id: string): string {
-        const nameSlug = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
-        return `${id}-${nameSlug}`;
+function generateSlug(name: string): string {
+        return name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 }
 
 export async function getLocations(): Promise<Array<ILocation>> {
@@ -36,7 +35,7 @@ export async function getLocations(): Promise<Array<ILocation>> {
                                 id: record.id,
                                 name,
                                 address: (record.get("Address") as string) || "",
-                                slug: generateSlug(name, record.id),
+                                slug: generateSlug(name),
                                 logo,
                         });
                 });
