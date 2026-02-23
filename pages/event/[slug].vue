@@ -35,6 +35,18 @@ const paragraphs = computed(() => {
         return event.value?.description?.split("\n") || [];
 });
 
+const eventSchemaLocation = computed(() => {
+        if (!location.value) return undefined;
+        return {
+                "@type": "Place" as const,
+                name: location.value.name,
+                address: {
+                        "@type": "PostalAddress" as const,
+                        streetAddress: location.value.address,
+                },
+        };
+});
+
 useSchemaOrg([
         defineEvent({
                 name: event.value?.name,
@@ -42,6 +54,18 @@ useSchemaOrg([
                 image: event.value?.imageUrl,
                 startDate: event.value?.date,
                 eventStatus: "EventScheduled",
+                eventAttendanceMode: "OfflineEventAttendanceMode",
+                location: eventSchemaLocation.value,
+                organizer: {
+                        "@type": "Organization",
+                        name: "Joyful Orlando",
+                        url: "https://joyfulorlando.com",
+                },
+                offers: event.value?.url ? {
+                        "@type": "Offer",
+                        url: event.value.url,
+                        availability: "InStock",
+                } : undefined,
         }),
 ]);
 
@@ -56,7 +80,11 @@ useHead({
 });
 
 useSeoMeta({
+        ogTitle: `${event.value?.name} | Joyful Orlando`,
+        ogDescription: event.value?.description,
         ogImage: event.value?.imageUrl,
+        ogType: "website",
+        twitterCard: "summary_large_image",
         twitterTitle: `${event.value?.name} | Joyful Orlando`,
         twitterDescription: event.value?.description,
         twitterImage: event.value?.imageUrl,
