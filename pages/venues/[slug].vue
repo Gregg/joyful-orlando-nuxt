@@ -93,9 +93,10 @@ useSeoMeta({
                                                                         <i class="fa fa-map-marker" />
                                                                         {{ venue?.address }}
                                                                 </p>
-                                                                <p class="venue-event-counts">
+                                                                <p class="venue-upcoming-count">
                                                                         {{ eventCounts?.upcoming }} upcoming event{{ eventCounts?.upcoming === 1 ? '' : 's' }}
-                                                                        &bull;
+                                                                </p>
+                                                                <p class="venue-previous-count">
                                                                         {{ eventCounts?.previous }} previous event{{ eventCounts?.previous === 1 ? '' : 's' }}
                                                                 </p>
                                                         </div>
@@ -105,9 +106,10 @@ useSeoMeta({
                                                                 <i class="fa fa-map-marker" />
                                                                 {{ venue?.address }}
                                                         </p>
-                                                        <p class="venue-event-counts">
+                                                        <p class="venue-upcoming-count">
                                                                 {{ eventCounts?.upcoming }} upcoming event{{ eventCounts?.upcoming === 1 ? '' : 's' }}
-                                                                &bull;
+                                                        </p>
+                                                        <p class="venue-previous-count">
                                                                 {{ eventCounts?.previous }} previous event{{ eventCounts?.previous === 1 ? '' : 's' }}
                                                         </p>
                                                 </div>
@@ -179,8 +181,8 @@ useSeoMeta({
 }
 
 .venue-logo {
-        width: 120px;
-        height: 120px;
+        width: 200px;
+        height: 200px;
         object-fit: contain;
         flex-shrink: 0;
 }
@@ -195,9 +197,16 @@ useSeoMeta({
         margin-bottom: 4px;
 }
 
-.venue-event-counts {
-        font-size: 16px;
-        color: #777;
+.venue-upcoming-count {
+        font-size: 18px;
+        font-weight: 600;
+        color: #01A652;
+        margin-bottom: 4px;
+}
+
+.venue-previous-count {
+        font-size: 15px;
+        color: #999;
         margin-bottom: 0;
 }
 
