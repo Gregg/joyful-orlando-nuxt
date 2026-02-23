@@ -12,20 +12,41 @@ export default defineEventHandler(async (event) => {
         formData.append("firstName", body.firstName);
         formData.append("email", body.email);
 
-        const response = await fetch("https://form.flodesk.com/forms/68000160305e6b614244935a/submit", {
+        const submitResponse = await fetch("https://form.flodesk.com/forms/68000160305e6b614244935a/submit", {
                 method: "POST",
                 headers: {
                         "Content-Type": "application/x-www-form-urlencoded",
                 },
                 body: formData.toString(),
+                redirect: "manual",
         });
 
-        if (!response.ok) {
-                throw createError({
-                        statusCode: response.status,
-                        statusMessage: "Failed to submit to Flodesk",
-                });
+        console.log(`Flodesk submit: status=${submitResponse.status}`);
+
+        if (submitResponse.status === 302 || submitResponse.status === 301) {
+                const verifyUrl = submitResponse.headers.get("location");
+                console.log(`Flodesk verify URL: ${verifyUrl}`);
+
+                if (verifyUrl) {
+                        const verifyResponse = await fetch(verifyUrl, {
+                                method: "GET",
+                                redirect: "follow",
+                        });
+                        console.log(`Flodesk verify: status=${verifyResponse.status}`);
+                }
+
+                return { success: true };
         }
 
-        return { success: true };
+        if (submitResponse.status === 200) {
+                return { success: true };
+        }
+
+        const responseText = await submitResponse.text();
+        console.error(`Flodesk submit failed: status=${submitResponse.status}, body=${responseText}`);
+
+        throw createError({
+                statusCode: submitResponse.status,
+                statusMessage: "Failed to submit to Flodesk",
+        });
 });
