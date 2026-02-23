@@ -108,7 +108,7 @@ useSeoMeta({
                                                                         :href="venue.url"
                                                                         class="btn venue-btn"
                                                                         target="_blank"
-                                                                        rel="noopener noreferrer">Visit Website</a>
+                                                                        rel="noopener">Visit Website</a>
                                                         </div>
                                                 </div>
                                         </div>

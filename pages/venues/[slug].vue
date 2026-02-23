@@ -137,7 +137,7 @@ useSeoMeta({
                                                         :href="venue.url"
                                                         class="btn venue-website-btn"
                                                         target="_blank"
-                                                        rel="noopener noreferrer">Visit Venue Website</a>
+                                                        rel="noopener">Visit Venue Website</a>
                                         </div>
                                 </div>
                                 <div
@@ -146,7 +146,7 @@ useSeoMeta({
                                         <div class="col-lg-8 text-center">
                                                 <p v-if="venue?.url" style="font-size: 18px; color: #666;">
                                                         No upcoming events listed on Joyful Orlando,
-                                                        <a :href="venue.url" target="_blank" rel="noopener noreferrer" style="color: #01A652;">check the website.</a>
+                                                        <a :href="venue.url" target="_blank" rel="noopener" style="color: #01A652;">check the website.</a>
                                                 </p>
                                                 <p v-else style="font-size: 18px; color: #666;">
                                                         No upcoming events listed on Joyful Orlando
@@ -161,7 +161,7 @@ useSeoMeta({
                                                         :href="venue.url"
                                                         class="btn venue-website-btn"
                                                         target="_blank"
-                                                        rel="noopener noreferrer">Visit Venue Website</a>
+                                                        rel="noopener">Visit Venue Website</a>
                                         </div>
                                 </div>
                         </div>
