@@ -108,6 +108,17 @@ useSeoMeta({
                                                                 </p>
                                                         </div>
                                                         <div
+                                                                v-if="location"
+                                                                class="time-detail">
+                                                                <i class="fa fa-map-marker" />
+                                                                <p>
+                                                                        <NuxtLink
+                                                                                :to="`/venues/${location.slug}`"
+                                                                                style="color: inherit; text-decoration: none;">{{ location.name }}</NuxtLink>
+                                                                        &mdash; {{ location.address }}
+                                                                </p>
+                                                        </div>
+                                                        <div
                                                                 v-if="categories"
                                                                 class="event-btns-group">
                                                                 <CategoryButton
