@@ -23,6 +23,7 @@ useHead({
 });
 
 const formSubmitted = ref(false);
+const showCaptcha = ref(false);
 
 onMounted(() => {
         (function (w, d, t, h, s, n) {
@@ -53,17 +54,23 @@ onMounted(() => {
                 const container = document.querySelector(".ff-transfer-form");
                 if (container && container.hasAttribute("data-ff-stage") && container.getAttribute("data-ff-stage") === "success") {
                         formSubmitted.value = true;
+                        showCaptcha.value = false;
                         setTimeout(() => {
                                 if (event.value?.url) {
                                         window.location.href = event.value.url;
                                 }
                         }, 2000);
                 }
+
+                const content = document.querySelector(".fd-form-content");
+                if (content && content.classList.contains("fd-has-captcha")) {
+                        showCaptcha.value = true;
+                }
         });
 
         const container = document.querySelector(".ff-transfer-form");
         if (container) {
-                observer.observe(container, { attributes: true });
+                observer.observe(container, { attributes: true, subtree: true, attributeFilter: ["class", "data-ff-stage"] });
         }
 });
 </script>
@@ -114,7 +121,12 @@ onMounted(() => {
                                                         <h3 style="color: #01A652;">Thank you!</h3>
                                                         <p style="font-size: 18px;">Redirecting you to {{ event?.name }}...</p>
                                                 </div>
-                                                <div class="ff-transfer-form transfer-form-wrapper">
+                                                <div
+                                                        v-if="showCaptcha"
+                                                        class="captcha-prompt text-center">
+                                                        <p>Please verify you're human to continue:</p>
+                                                </div>
+                                                <div class="ff-transfer-form transfer-form-wrapper" :class="{ 'captcha-active': showCaptcha }">
                                                         <div
                                                                 data-ff-el="config"
                                                                 data-ff-config="eyJ0cmlnZ2VyIjp7Im1vZGUiOiJpbW1lZGlhdGVseSIsInZhbHVlIjowfSwib25TdWNjZXNzIjp7Im1vZGUiOiJtZXNzYWdlIiwibWVzc2FnZSI6IiIsInJlZGlyZWN0VXJsIjoiIn0sImNvaSI6ZmFsc2UsInNob3dGb3JSZXR1cm5WaXNpdG9ycyI6dHJ1ZSwibm90aWZpY2F0aW9uIjpmYWxzZX0="
@@ -246,5 +258,36 @@ onMounted(() => {
         background-color: #018a45;
         border-color: #018a45;
         color: #fff;
+}
+
+.captcha-prompt p {
+        font-size: 20px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 16px;
+}
+
+.captcha-active .transfer-form-fields {
+        display: none !important;
+}
+
+.captcha-active :deep(.fd-form-captcha) {
+        position: relative !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        min-height: 80px;
+        padding: 20px 0;
+}
+
+.captcha-active :deep(.fd-form-content) {
+        position: relative !important;
+        min-height: auto !important;
+}
+
+.captcha-active :deep(.fd-form-content > *:not(.fd-form-captcha)) {
+        display: none !important;
 }
 </style>
