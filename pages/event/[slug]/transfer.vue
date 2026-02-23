@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { onMounted } from "vue";
-
 definePageMeta({
         layout: "transfer",
 });
@@ -22,50 +20,42 @@ useHead({
         title: `You're almost there! | ${event.value?.name}`,
 });
 
+const firstName = ref("");
+const email = ref("");
 const formSubmitted = ref(false);
+const formError = ref("");
+const submitting = ref(false);
 
-onMounted(() => {
-        (function (w, d, t, h, s, n) {
-                w.FlodeskObject = n;
-                const fn = function () {
-                        (w[n].q = w[n].q || []).push(arguments);
-                };
-                w[n] = w[n] || fn;
-                const f = d.getElementsByTagName(t)[0];
-                const v = "?v=" + Math.floor(new Date().getTime() / (120 * 1000)) * 60;
-                const sm = d.createElement(t);
-                sm.async = true;
-                sm.type = "module";
-                sm.src = h + s + ".mjs" + v;
-                f.parentNode.insertBefore(sm, f);
-                const sn = d.createElement(t);
-                sn.async = true;
-                sn.noModule = true;
-                sn.src = h + s + ".js" + v;
-                f.parentNode.insertBefore(sn, f);
-        })(window, document, "script", "https://assets.flodesk.com", "/universal", "fd");
-        window.fd("form:handle", {
-                formId: "68000160305e6b614244935a",
-                rootEl: ".ff-transfer-form",
-        });
+async function handleSubmit() {
+        formError.value = "";
+        submitting.value = true;
 
-        const observer = new MutationObserver(() => {
-                const container = document.querySelector(".ff-transfer-form");
-                if (container && container.hasAttribute("data-ff-stage") && container.getAttribute("data-ff-stage") === "success") {
+        try {
+                const formData = new FormData();
+                formData.append("firstName", firstName.value);
+                formData.append("email", email.value);
+
+                const response = await fetch("https://form.flodesk.com/forms/68000160305e6b614244935a/submit", {
+                        method: "POST",
+                        body: formData,
+                });
+
+                if (response.ok) {
                         formSubmitted.value = true;
                         setTimeout(() => {
                                 if (event.value?.url) {
                                         window.location.href = event.value.url;
                                 }
                         }, 2000);
+                } else {
+                        formError.value = "Something went wrong. Please try again.";
                 }
-        });
-
-        const container = document.querySelector(".ff-transfer-form");
-        if (container) {
-                observer.observe(container, { attributes: true });
+        } catch {
+                formError.value = "Something went wrong. Please try again.";
+        } finally {
+                submitting.value = false;
         }
-});
+}
 </script>
 
 <template>
@@ -114,77 +104,57 @@ onMounted(() => {
                                                         <h3 style="color: #01A652;">Thank you!</h3>
                                                         <p style="font-size: 18px;">Redirecting you to {{ event?.name }}...</p>
                                                 </div>
-                                                <div class="ff-transfer-form transfer-form-wrapper">
-                                                        <div
-                                                                data-ff-el="config"
-                                                                data-ff-config="eyJ0cmlnZ2VyIjp7Im1vZGUiOiJpbW1lZGlhdGVseSIsInZhbHVlIjowfSwib25TdWNjZXNzIjp7Im1vZGUiOiJtZXNzYWdlIiwibWVzc2FnZSI6IiIsInJlZGlyZWN0VXJsIjoiIn0sImNvaSI6ZmFsc2UsInNob3dGb3JSZXR1cm5WaXNpdG9ycyI6dHJ1ZSwibm90aWZpY2F0aW9uIjpmYWxzZX0="
-                                                                style="display: none" />
-                                                        <div class="ff-transfer-form__container">
-                                                                <form
-                                                                        class="ff-68000160305e6b614244935a__form"
-                                                                        action="https://form.flodesk.com/forms/68000160305e6b614244935a/submit"
-                                                                        method="post"
-                                                                        data-ff-el="form">
-                                                                        <div
-                                                                                class="ff-68000160305e6b614244935a__content fd-form-content"
-                                                                                data-ff-el="content">
-                                                                                <div class="transfer-form-fields">
-                                                                                        <div class="transfer-input-box">
-                                                                                                <img
-                                                                                                        src="/images/profile.webp"
-                                                                                                        alt="">
-                                                                                                <input
-                                                                                                        id="transfer-firstName"
-                                                                                                        class="ff-68000160305e6b614244935a__control fd-form-control form-control"
-                                                                                                        type="text"
-                                                                                                        maxlength="255"
-                                                                                                        name="firstName"
-                                                                                                        placeholder="First name"
-                                                                                                        data-ff-tab="firstName::lastName"
-                                                                                                        required>
-                                                                                        </div>
+                                                <form
+                                                        v-else
+                                                        class="transfer-form-wrapper"
+                                                        @submit.prevent="handleSubmit">
+                                                        <div class="transfer-form-fields">
+                                                                <div class="transfer-input-box">
+                                                                        <img
+                                                                                src="/images/profile.webp"
+                                                                                alt="">
+                                                                        <input
+                                                                                v-model="firstName"
+                                                                                type="text"
+                                                                                maxlength="255"
+                                                                                placeholder="First name"
+                                                                                class="form-control"
+                                                                                required>
+                                                                </div>
 
-                                                                                        <div class="transfer-input-box">
-                                                                                                <img
-                                                                                                        src="/images/sms.webp"
-                                                                                                        alt="">
-                                                                                                <input
-                                                                                                        id="transfer-email"
-                                                                                                        class="ff-68000160305e6b614244935a__control fd-form-control form-control"
-                                                                                                        type="email"
-                                                                                                        maxlength="255"
-                                                                                                        name="email"
-                                                                                                        placeholder="Email address"
-                                                                                                        data-ff-tab="email:lastName:submit"
-                                                                                                        required>
-                                                                                        </div>
+                                                                <div class="transfer-input-box">
+                                                                        <img
+                                                                                src="/images/sms.webp"
+                                                                                alt="">
+                                                                        <input
+                                                                                v-model="email"
+                                                                                type="email"
+                                                                                maxlength="255"
+                                                                                placeholder="Email address"
+                                                                                class="form-control"
+                                                                                required>
+                                                                </div>
 
-                                                                                        <input
-                                                                                                type="text"
-                                                                                                maxlength="255"
-                                                                                                name="confirm_email_address"
-                                                                                                style="display: none">
+                                                                <input
+                                                                        type="text"
+                                                                        maxlength="255"
+                                                                        name="confirm_email_address"
+                                                                        style="display: none">
 
-                                                                                        <button
-                                                                                                type="submit"
-                                                                                                class="ff-68000160305e6b614244935a__button fd-btn btn transfer-submit-btn"
-                                                                                                data-ff-el="submit"
-                                                                                                data-ff-tab="submit">
-                                                                                                Sign Up & Continue
-                                                                                        </button>
-                                                                                </div>
+                                                                <button
+                                                                        type="submit"
+                                                                        class="btn transfer-submit-btn"
+                                                                        :disabled="submitting">
+                                                                        {{ submitting ? 'Submitting...' : 'Sign Up & Continue' }}
+                                                                </button>
 
-                                                                                <div
-                                                                                        class="ff-68000160305e6b614244935a__success fd-form-success"
-                                                                                        data-ff-el="success">
-                                                                                </div>
-                                                                                <div
-                                                                                        class="ff-68000160305e6b614244935a__error fd-form-error"
-                                                                                        data-ff-el="error" />
-                                                                        </div>
-                                                                </form>
+                                                                <p
+                                                                        v-if="formError"
+                                                                        class="text-danger text-center mt-2">
+                                                                        {{ formError }}
+                                                                </p>
                                                         </div>
-                                                </div>
+                                                </form>
                                         </div>
                                 </div>
                         </div>
@@ -246,5 +216,10 @@ onMounted(() => {
         background-color: #018a45;
         border-color: #018a45;
         color: #fff;
+}
+
+.transfer-submit-btn:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
 }
 </style>
