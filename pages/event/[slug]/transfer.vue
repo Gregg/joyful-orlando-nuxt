@@ -266,12 +266,14 @@ onMounted(() => {
         color: #333;
         margin-bottom: 16px;
 }
+</style>
 
+<style>
 .captcha-active .transfer-form-fields {
         display: none !important;
 }
 
-.captcha-active :deep(.fd-form-captcha) {
+.captcha-active .fd-form-captcha {
         position: relative !important;
         display: flex !important;
         align-items: center !important;
@@ -280,14 +282,70 @@ onMounted(() => {
         visibility: visible !important;
         min-height: 80px;
         padding: 20px 0;
+        background: #f0f0f0;
+        border-radius: 8px;
+        border: 2px solid #01A652;
 }
 
-.captcha-active :deep(.fd-form-content) {
+.captcha-active .fd-form-captcha * {
+        opacity: 1 !important;
+        visibility: visible !important;
+        color: #333 !important;
+}
+
+.captcha-active .fd-form-content {
         position: relative !important;
         min-height: auto !important;
 }
 
-.captcha-active :deep(.fd-form-content > *:not(.fd-form-captcha)) {
+.captcha-active .fd-form-content > *:not(.fd-form-captcha) {
         display: none !important;
+}
+
+.ff-transfer-form .fd-form-captcha {
+        font-size: 18px !important;
+        color: #333 !important;
+}
+
+.ff-transfer-form .fd-form-captcha label,
+.ff-transfer-form .fd-form-captcha span {
+        color: #333 !important;
+        font-size: 18px !important;
+        opacity: 1 !important;
+}
+
+.ff-transfer-form .fd-form-captcha input[type="checkbox"] {
+        width: 24px !important;
+        height: 24px !important;
+        margin-right: 10px !important;
+        accent-color: #01A652;
+}
+
+.ff-transfer-form .fd-has-captcha .fd-form-captcha {
+        position: relative !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        opacity: 1 !important;
+        visibility: visible !important;
+        min-height: 80px;
+        padding: 20px;
+        background: #f0f0f0;
+        border-radius: 8px;
+        border: 2px solid #01A652;
+}
+
+.ff-transfer-form .fd-has-captcha .fd-form-captcha * {
+        opacity: 1 !important;
+        visibility: visible !important;
+        color: #333 !important;
+}
+
+.ff-transfer-form .fd-has-captcha > *:not(.fd-form-captcha) {
+        opacity: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
 }
 </style>
