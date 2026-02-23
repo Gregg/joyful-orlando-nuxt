@@ -82,21 +82,35 @@ useSeoMeta({
                 <section class="sec-padding">
                         <div class="container">
                                 <div class="row justify-content-center mb-5">
-                                        <div class="col-lg-8 text-center">
-                                                <img
-                                                        v-if="venue?.logo"
-                                                        :src="`/images/venues/${venue.logo}`"
-                                                        :alt="venue.name"
-                                                        class="venue-logo mb-4">
-                                                <p class="venue-address">
-                                                        <i class="fa fa-map-marker" />
-                                                        {{ venue?.address }}
-                                                </p>
-                                                <p class="venue-event-counts">
-                                                        {{ eventCounts?.upcoming }} upcoming event{{ eventCounts?.upcoming === 1 ? '' : 's' }}
-                                                        &bull;
-                                                        {{ eventCounts?.previous }} previous event{{ eventCounts?.previous === 1 ? '' : 's' }}
-                                                </p>
+                                        <div class="col-lg-8">
+                                                <div v-if="venue?.logo" class="venue-info-row">
+                                                        <img
+                                                                :src="`/images/venues/${venue.logo}`"
+                                                                :alt="venue.name"
+                                                                class="venue-logo">
+                                                        <div class="venue-details">
+                                                                <p class="venue-address">
+                                                                        <i class="fa fa-map-marker" />
+                                                                        {{ venue?.address }}
+                                                                </p>
+                                                                <p class="venue-event-counts">
+                                                                        {{ eventCounts?.upcoming }} upcoming event{{ eventCounts?.upcoming === 1 ? '' : 's' }}
+                                                                        &bull;
+                                                                        {{ eventCounts?.previous }} previous event{{ eventCounts?.previous === 1 ? '' : 's' }}
+                                                                </p>
+                                                        </div>
+                                                </div>
+                                                <div v-else class="text-center">
+                                                        <p class="venue-address">
+                                                                <i class="fa fa-map-marker" />
+                                                                {{ venue?.address }}
+                                                        </p>
+                                                        <p class="venue-event-counts">
+                                                                {{ eventCounts?.upcoming }} upcoming event{{ eventCounts?.upcoming === 1 ? '' : 's' }}
+                                                                &bull;
+                                                                {{ eventCounts?.previous }} previous event{{ eventCounts?.previous === 1 ? '' : 's' }}
+                                                        </p>
+                                                </div>
                                         </div>
                                 </div>
 
@@ -157,19 +171,44 @@ useSeoMeta({
 </template>
 
 <style scoped>
+.venue-info-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+}
+
 .venue-logo {
-        max-width: 250px;
-        max-height: 250px;
+        width: 120px;
+        height: 120px;
         object-fit: contain;
+        flex-shrink: 0;
+}
+
+.venue-details {
+        text-align: left;
 }
 
 .venue-address {
         font-size: 18px;
         color: #555;
+        margin-bottom: 4px;
 }
 
 .venue-event-counts {
         font-size: 16px;
         color: #777;
+        margin-bottom: 0;
+}
+
+@media (max-width: 576px) {
+        .venue-info-row {
+                flex-direction: column;
+                text-align: center;
+        }
+
+        .venue-details {
+                text-align: center;
+        }
 }
 </style>
