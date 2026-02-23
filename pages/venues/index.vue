@@ -73,7 +73,7 @@ useSeoMeta({
                                         class="row justify-content-center mb-4">
                                         <div class="col-lg-8">
                                                 <div class="venue-list-item">
-                                                        <NuxtLink :to="`/venues/${venue.slug}`">
+                                                        <NuxtLink :to="`/venues/${venue.slug}`" class="venue-logo-wrapper">
                                                                 <img
                                                                         v-if="venue.logo"
                                                                         :src="`/images/venues/${venue.logo}`"
@@ -114,11 +114,18 @@ useSeoMeta({
         border-bottom: 1px solid #eee;
 }
 
+.venue-logo-wrapper {
+        width: 300px;
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+}
+
 .venue-logo {
-        max-width: 300px;
+        max-width: 100%;
         max-height: 200px;
         object-fit: contain;
-        flex-shrink: 0;
 }
 
 .venue-details {
