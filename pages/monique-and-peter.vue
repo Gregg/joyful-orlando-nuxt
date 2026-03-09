@@ -83,7 +83,7 @@ useSeoMeta({
                                                 :key="event?.id"
                                                 class="col-xl-4 col-lg-6 col-md-12 event-card-outer">
                                                 <a
-                                                        :href="event!.url"
+                                                        :href="`${event!.url}?discount=joyful10`"
                                                         target="_blank"
                                                         rel="noopener noreferrer"
                                                         role="button">
