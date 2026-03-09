@@ -1,5 +1,8 @@
 <script setup lang="ts">
+import { dateFormat } from "~/utils/dateFormat";
+
 const { getEventBySlug } = useEvents();
+const { getCategoryById } = useCategories();
 
 const eventSlugs = [
         "81057-latihan-qigong-dance-night",
@@ -12,6 +15,10 @@ const featuredEvents = computed(() => {
                 .map(slug => getEventBySlug(slug))
                 .filter(Boolean);
 });
+
+function getCategories(event: any) {
+        return event.categories.map((id: string) => getCategoryById(id)).filter(Boolean);
+}
 
 useHead({
         title: "A Weekend of Connection & Conscious Exploration | Joyful Orlando",
@@ -71,10 +78,37 @@ useSeoMeta({
                                 </div>
 
                                 <div class="row mt-5">
-                                        <EventCard
+                                        <div
                                                 v-for="event in featuredEvents"
                                                 :key="event?.id"
-                                                :event="event!" />
+                                                class="col-xl-4 col-lg-6 col-md-12 event-card-outer">
+                                                <a
+                                                        :href="event!.url"
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        role="button">
+                                                        <div class="event-card">
+                                                                <div class="event-thumb-img">
+                                                                        <img
+                                                                                :src="event!.imageUrl"
+                                                                                class="img-fluid"
+                                                                                :alt="event!.name">
+                                                                </div>
+                                                                <div class="event-list-content">
+                                                                        <h5>{{ event!.name }}</h5>
+                                                                        <p>{{ dateFormat(event!.date) }}</p>
+                                                                        <div
+                                                                                v-for="category in getCategories(event!)"
+                                                                                :key="category?.id"
+                                                                                class="event-list-icon">
+                                                                                <img
+                                                                                        :src="`/images/icons/${category?.icon}`"
+                                                                                        alt=""> {{ category?.name }}
+                                                                        </div>
+                                                                </div>
+                                                        </div>
+                                                </a>
+                                        </div>
                                 </div>
                         </div>
                 </section>
